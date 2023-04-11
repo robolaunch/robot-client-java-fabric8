@@ -1,4 +1,4 @@
-name: Generate Java Model From CRD
+name: Generate Java Fabric8 Model From CRD
 on:
   workflow_dispatch:
     inputs:

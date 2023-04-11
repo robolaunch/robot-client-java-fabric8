@@ -1,7 +1,7 @@
 name: Publish Maven Package to GitHub Packages
 on:
   workflow_run:
-    workflows: ["Generate Java Model From CRD"]
+    workflows: ["Generate Java Fabric8 Model From CRD"]
     types:
     - completed
 jobs:
