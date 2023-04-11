@@ -24,6 +24,16 @@
       <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>io.fabric8</groupId>
+      <artifactId>kubernetes-client</artifactId>
+      <version>6.4.0</version>
+    </dependency>
+    <dependency>
+      <groupId>io.fabric8</groupId>
+      <artifactId>generator-annotations</artifactId>
+      <version>6.4.0</version>
+    </dependency>
   </dependencies>
 
   <build>
