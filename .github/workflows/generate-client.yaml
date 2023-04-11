@@ -1,0 +1,90 @@
+name: Generate Java Model From CRD
+on:
+  workflow_dispatch:
+    inputs:
+      fabric8Version:
+        type: string
+        required: true
+        description: 'Fabric8 version'
+      robotOperatorTag:
+        type: string
+        required: true
+        description: 'Robot Operator tag. (existing)'
+      fleetOperatorTag:
+        type: string
+        required: true
+        description: 'Fleet Operator tag. (existing)'
+      clientTag:
+        type: string
+        required: true
+        description: 'Kubernetes Java Fabric8 Client tag. (will be generated)'
+      isPrerelease:
+        type: boolean
+        required: true
+        description: 'Is this a prerelease of Kubernetes Java client?'
+
+env:
+  GEN_DIR: .
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ github.head_ref }}
+    - name: Release name
+      run: |
+        sudo apt-get update && sudo apt-get install xmlstarlet -y
+        xmlstarlet edit -L -N p=http://maven.apache.org/POM/4.0.0 --update '/p:project/p:version' --value ${{ github.event.inputs.clientTag }} pom.xml
+    - name: Fetch CRDs
+      run: |
+        rm -rf crds/base/*.yaml
+        # fleet.roboscale.io
+        wget -P ./crds/ https://raw.githubusercontent.com/robolaunch/fleet-operator/${{ github.event.inputs.fleetOperatorTag }}/config/crd/bases/fleet.roboscale.io_fleets.yaml
+        # robot.roboscale.io
+        wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_robots.yaml
+        wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_workspacemanagers.yaml
+        wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_buildmanagers.yaml
+        wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_launchmanagers.yaml
+        # wget -P ./crds/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_metricsexporters.yaml
+    
+    - name: Configure Code Generator
+      run: |
+        wget https://oss.sonatype.org/content/repositories/releases/io/fabric8/java-generator-cli/${{ github.event.inputs.fabric8Version }}/java-generator-cli-${{ github.event.inputs.fabric8Version }}.sh
+        mv java-generator-cli-${{ github.event.inputs.fabric8Version }}.sh java-gen
+        mv java-gen /usr/local/bin/
+
+    - name: Generate Models for Base CRDs
+      run: |
+        java-gen -s crds/base --target src/main/java
+
+    - name: Generate Models for Federated CRDs
+      run: |
+        java-gen -s crds/federated --target src/main/java
+
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "build(ci): generate fabric8 models ${{ github.event.inputs.clientTag }} for robot.roboscale.io ${{ github.event.inputs.robotOperatorTag }} and fleet.roboscale.io ${{ github.event.inputs.fleetOperatorTag }}"
+        tagging_message: ${{ github.event.inputs.clientTag }}
+    - uses: ncipollo/release-action@v1
+      with:
+        artifacts: target/robot-fabric8-client*.jar"
+        tag: ${{ github.event.inputs.clientTag }}
+        name: ${{ github.event.inputs.clientTag }}
+        prerelease: "${{ github.event.inputs.isPrerelease }}"
+        body: |
+          This release (${{ github.event.inputs.clientTag }}) supports the operator versions below:
+          |                                 Components                                | Release Version |
+          |:-------------------------------------------------------------------------:|:---------------:|
+          | [robolaunch Robot Operator](https://github.com/robolaunch/robot-operator) |     ${{ github.event.inputs.robotOperatorTag }}     |
+          | [robolaunch Fleet Operator](https://github.com/robolaunch/fleet-operator) |     ${{ github.event.inputs.fleetOperatorTag }}      |
+    - uses: actions/upload-artifact@v3
+      with:
+        name: generated-java-crd-model
+        path: |
+          ${{ env.GEN_DIR }}
