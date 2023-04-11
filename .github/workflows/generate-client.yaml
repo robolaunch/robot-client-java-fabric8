@@ -57,15 +57,16 @@ jobs:
       run: |
         wget https://oss.sonatype.org/content/repositories/releases/io/fabric8/java-generator-cli/${{ github.event.inputs.fabric8Version }}/java-generator-cli-${{ github.event.inputs.fabric8Version }}.sh
         mv java-generator-cli-${{ github.event.inputs.fabric8Version }}.sh java-gen
-        sudo mv java-gen /usr/local/bin/
+        chmod +x java-gen
+        mv java-gen /usr/local/bin/
 
     - name: Generate Models for Base CRDs
       run: |
-        java-gen -s crds/base --target src/main/java
+        sudo /usr/local/bin/java-gen -s crds/base --target src/main/java
 
     - name: Generate Models for Federated CRDs
       run: |
-        java-gen -s crds/federated --target src/main/java
+        sudo /usr/local/bin/java-gen -s crds/federated --target src/main/java
 
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
