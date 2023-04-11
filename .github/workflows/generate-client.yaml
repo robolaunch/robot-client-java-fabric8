@@ -57,7 +57,7 @@ jobs:
       run: |
         wget https://oss.sonatype.org/content/repositories/releases/io/fabric8/java-generator-cli/${{ github.event.inputs.fabric8Version }}/java-generator-cli-${{ github.event.inputs.fabric8Version }}.sh
         mv java-generator-cli-${{ github.event.inputs.fabric8Version }}.sh java-gen
-        mv java-gen /usr/local/bin/
+        sudo mv java-gen /usr/local/bin/
 
     - name: Generate Models for Base CRDs
       run: |
