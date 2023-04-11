@@ -4,6 +4,7 @@ on:
     inputs:
       fabric8Version:
         type: string
+        default: "6.4.0"
         required: true
         description: 'Fabric8 version'
       robotOperatorTag:
@@ -20,6 +21,7 @@ on:
         description: 'Kubernetes Java Fabric8 Client tag. (will be generated)'
       isPrerelease:
         type: boolean
+        default: true
         required: true
         description: 'Is this a prerelease of Kubernetes Java client?'
 
