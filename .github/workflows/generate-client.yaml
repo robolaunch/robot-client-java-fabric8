@@ -47,7 +47,7 @@ jobs:
       run: |
         rm -rf crds/base/*.yaml
         # fleet.roboscale.io
-        wget -P ./crds/ https://raw.githubusercontent.com/robolaunch/fleet-operator/${{ github.event.inputs.fleetOperatorTag }}/config/crd/bases/fleet.roboscale.io_fleets.yaml
+        wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/fleet-operator/${{ github.event.inputs.fleetOperatorTag }}/config/crd/bases/fleet.roboscale.io_fleets.yaml
         # robot.roboscale.io
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_robots.yaml
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_workspacemanagers.yaml
