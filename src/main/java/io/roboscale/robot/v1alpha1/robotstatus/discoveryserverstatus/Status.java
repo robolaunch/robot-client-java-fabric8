@@ -6,7 +6,11 @@ package io.roboscale.robot.v1alpha1.robotstatus.discoveryserverstatus;
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class Status implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
+    /**
+     * Status of the DiscoveryServer config map.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("configMapStatus")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Status of the DiscoveryServer config map.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.discoveryserverstatus.status.ConfigMapStatus configMapStatus;
 
@@ -18,7 +22,11 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
         this.configMapStatus = configMapStatus;
     }
 
+    /**
+     * Connection information.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("connectionInfo")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Connection information.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.discoveryserverstatus.status.ConnectionInfo connectionInfo;
 
@@ -30,7 +38,11 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
         this.connectionInfo = connectionInfo;
     }
 
+    /**
+     * Phase of the DiscoveryServer.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("phase")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Phase of the DiscoveryServer.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String phase;
 
@@ -42,7 +54,11 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
         this.phase = phase;
     }
 
+    /**
+     * Status of the DiscoveryServer pod.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("podStatus")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Status of the DiscoveryServer pod.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.discoveryserverstatus.status.PodStatus podStatus;
 
@@ -54,7 +70,11 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
         this.podStatus = podStatus;
     }
 
+    /**
+     * Status of the DiscoveryServer ServiceExport.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("serviceExportStatus")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Status of the DiscoveryServer ServiceExport.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.discoveryserverstatus.status.ServiceExportStatus serviceExportStatus;
 
@@ -66,7 +86,11 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
         this.serviceExportStatus = serviceExportStatus;
     }
 
+    /**
+     * Status of the DiscoveryServer service.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("serviceStatus")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Status of the DiscoveryServer service.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.discoveryserverstatus.status.ServiceStatus serviceStatus;
 

@@ -6,7 +6,11 @@ package io.roboscale.robot.v1alpha1.robotspec;
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class RobotDevSuiteTemplate implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
+    /**
+     * If `true`, a Cloud IDE will be provisioned inside development suite.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("ideEnabled")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("If `true`, a Cloud IDE will be provisioned inside development suite.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean ideEnabled;
 
@@ -19,10 +23,10 @@ public class RobotDevSuiteTemplate implements io.fabric8.kubernetes.api.model.Ku
     }
 
     /**
-     * RobotIDESpec defines the desired state of RobotIDE
+     * Configurational parameters of RobotIDE. Applied if `.spec.ideEnabled` is set to `true`.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("robotIDETemplate")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("RobotIDESpec defines the desired state of RobotIDE")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Configurational parameters of RobotIDE. Applied if `.spec.ideEnabled` is set to `true`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotspec.robotdevsuitetemplate.RobotIDETemplate robotIDETemplate;
 
@@ -35,10 +39,10 @@ public class RobotDevSuiteTemplate implements io.fabric8.kubernetes.api.model.Ku
     }
 
     /**
-     * RobotVDISpec defines the desired state of RobotVDI
+     * Configurational parameters of RobotVDI. Applied if `.spec.vdiEnabled` is set to `true`.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("robotVDITemplate")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("RobotVDISpec defines the desired state of RobotVDI")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Configurational parameters of RobotVDI. Applied if `.spec.vdiEnabled` is set to `true`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotspec.robotdevsuitetemplate.RobotVDITemplate robotVDITemplate;
 
@@ -50,7 +54,11 @@ public class RobotDevSuiteTemplate implements io.fabric8.kubernetes.api.model.Ku
         this.robotVDITemplate = robotVDITemplate;
     }
 
+    /**
+     * If `true`, a Cloud VDI will be provisioned inside development suite.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("vdiEnabled")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("If `true`, a Cloud VDI will be provisioned inside development suite.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean vdiEnabled;
 

@@ -10,9 +10,7 @@ public class Ros implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
         @com.fasterxml.jackson.annotation.JsonProperty("foxy")
         FOXY("foxy"), @com.fasterxml.jackson.annotation.JsonProperty("galactic")
-        GALACTIC("galactic"), @com.fasterxml.jackson.annotation.JsonProperty("noetic")
-        NOETIC("noetic"), @com.fasterxml.jackson.annotation.JsonProperty("melodic")
-        MELODIC("melodic"), @com.fasterxml.jackson.annotation.JsonProperty("humble")
+        GALACTIC("galactic"), @com.fasterxml.jackson.annotation.JsonProperty("humble")
         HUMBLE("humble");
 
         java.lang.String value;
@@ -28,10 +26,10 @@ public class Ros implements io.fabric8.kubernetes.api.model.KubernetesResource {
     }
 
     /**
-     * ROS distro selection. Allowed distros are Foxy and Galactic. It is aimed to support Humble, Melodic and Noetic in further versions.
+     * ROS distribution for bridge.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("distro")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ROS distro selection. Allowed distros are Foxy and Galactic. It is aimed to support Humble, Melodic and Noetic in further versions.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ROS distribution for bridge.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Distro distro;
 
@@ -43,7 +41,11 @@ public class Ros implements io.fabric8.kubernetes.api.model.KubernetesResource {
         this.distro = distro;
     }
 
+    /**
+     * If `true`, resources and workloads are created by ROSBridge.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("enabled")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("If `true`, resources and workloads are created by ROSBridge.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean enabled;
 

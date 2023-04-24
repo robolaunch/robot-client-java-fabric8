@@ -6,8 +6,12 @@ package io.roboscale.robot.v1alpha1.robotspec.launchmanagertemplates.run;
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class Resources implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
+    /**
+     * CPU resource limit.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("cpu")
     @io.fabric8.generator.annotation.Pattern("^([0-9])+(m)$")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("CPU resource limit.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String cpu;
 
@@ -19,7 +23,11 @@ public class Resources implements io.fabric8.kubernetes.api.model.KubernetesReso
         this.cpu = cpu;
     }
 
+    /**
+     * GPU core number that will be allocated.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("gpuCore")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("GPU core number that will be allocated.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Long gpuCore;
 
@@ -31,8 +39,12 @@ public class Resources implements io.fabric8.kubernetes.api.model.KubernetesReso
         this.gpuCore = gpuCore;
     }
 
+    /**
+     * Memory resource limit.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("memory")
     @io.fabric8.generator.annotation.Pattern("^([0-9])+(Mi|Gi)$")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Memory resource limit.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String memory;
 

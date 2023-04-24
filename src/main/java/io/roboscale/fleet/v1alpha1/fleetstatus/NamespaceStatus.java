@@ -6,7 +6,11 @@ package io.roboscale.fleet.v1alpha1.fleetstatus;
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class NamespaceStatus implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
+    /**
+     * Sets to `true` if the owned namespace is federated.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("federated")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Sets to `true` if the owned namespace is federated.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean federated;
 
@@ -18,7 +22,11 @@ public class NamespaceStatus implements io.fabric8.kubernetes.api.model.Kubernet
         this.federated = federated;
     }
 
+    /**
+     * Sets to `true` if the namespace is ready for the resources to be deployed such as robot.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("ready")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Sets to `true` if the namespace is ready for the resources to be deployed such as robot.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean ready;
 
@@ -30,7 +38,11 @@ public class NamespaceStatus implements io.fabric8.kubernetes.api.model.Kubernet
         this.ready = ready;
     }
 
+    /**
+     * Generic structure of the most recent status of an owned object. For detailed information, refer the document for the API group `robot.roboscale.io`.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("resource")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Generic structure of the most recent status of an owned object. For detailed information, refer the document for the API group `robot.roboscale.io`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.fleet.v1alpha1.fleetstatus.namespacestatus.Resource resource;
 

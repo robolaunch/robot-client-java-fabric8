@@ -7,10 +7,10 @@ package io.roboscale.robot.v1alpha1;
 public class RobotSpec implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * Build manager template for initial configuration
+     * [*alpha*] Build manager template for initial configuration.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("buildManagerTemplate")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Build manager template for initial configuration")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*alpha*] Build manager template for initial configuration.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotspec.BuildManagerTemplate buildManagerTemplate;
 
@@ -23,10 +23,10 @@ public class RobotSpec implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * Development enabled
+     * [*alpha*] Switch to development mode if `true`.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("development")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Development enabled")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*alpha*] Switch to development mode if `true`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean development;
 
@@ -39,10 +39,10 @@ public class RobotSpec implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * Discovery server template
+     * Discovery server configurational parameters.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("discoveryServerTemplate")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Discovery server template")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Discovery server configurational parameters.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotspec.DiscoveryServerTemplate discoveryServerTemplate;
 
@@ -58,9 +58,7 @@ public class RobotSpec implements io.fabric8.kubernetes.api.model.KubernetesReso
 
         @com.fasterxml.jackson.annotation.JsonProperty("foxy")
         FOXY("foxy"), @com.fasterxml.jackson.annotation.JsonProperty("galactic")
-        GALACTIC("galactic"), @com.fasterxml.jackson.annotation.JsonProperty("noetic")
-        NOETIC("noetic"), @com.fasterxml.jackson.annotation.JsonProperty("melodic")
-        MELODIC("melodic"), @com.fasterxml.jackson.annotation.JsonProperty("humble")
+        GALACTIC("galactic"), @com.fasterxml.jackson.annotation.JsonProperty("humble")
         HUMBLE("humble");
 
         java.lang.String value;
@@ -76,11 +74,11 @@ public class RobotSpec implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * ROS distro to be used.
+     * ROS 2 distributions to be used. You can select multiple distributions if they are supported in the same underlying OS. (eg. `foxy` and `galactic` are supported in Ubuntu Focal, so they can be used together but both cannot be used with `humble`)
      */
     @com.fasterxml.jackson.annotation.JsonProperty("distributions")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ROS distro to be used.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ROS 2 distributions to be used. You can select multiple distributions if they are supported in the same underlying OS. (eg. `foxy` and `galactic` are supported in Ubuntu Focal, so they can be used together but both cannot be used with `humble`)")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.List<Distributions> distributions;
 
@@ -93,10 +91,10 @@ public class RobotSpec implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * Launch manager template for initial configuration
+     * [*alpha*] Launch manager template for initial configuration.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("launchManagerTemplates")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Launch manager template for initial configuration")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*alpha*] Launch manager template for initial configuration.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.List<io.roboscale.robot.v1alpha1.robotspec.LaunchManagerTemplates> launchManagerTemplates;
 
@@ -159,10 +157,10 @@ public class RobotSpec implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * Root DNS configuration.
+     * [*alpha*] Root DNS configuration.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("rootDNSConfig")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Root DNS configuration.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*alpha*] Root DNS configuration.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotspec.RootDNSConfig rootDNSConfig;
 
@@ -175,10 +173,10 @@ public class RobotSpec implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * ROS bridge template
+     * ROS bridge configurational parameters.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("rosBridgeTemplate")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ROS bridge template")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ROS bridge configurational parameters.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotspec.RosBridgeTemplate rosBridgeTemplate;
 
@@ -191,10 +189,10 @@ public class RobotSpec implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * Resource limitations of robot containers.
+     * Total storage amount to persist via Robot. Unit of measurement is MB. (eg. `10240` corresponds 10 GB) This amount is being shared between different components.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("storage")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Resource limitations of robot containers.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Total storage amount to persist via Robot. Unit of measurement is MB. (eg. `10240` corresponds 10 GB) This amount is being shared between different components.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotspec.Storage storage;
 
@@ -207,10 +205,10 @@ public class RobotSpec implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * TLS secret reference.
+     * [*alpha*] TLS secret reference.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("tlsSecretRef")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("TLS secret reference.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*alpha*] TLS secret reference.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotspec.TlsSecretRef tlsSecretRef;
 
@@ -223,10 +221,10 @@ public class RobotSpec implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * Workspace manager template
+     * Workspace manager template to configure ROS 2 workspaces.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("workspaceManagerTemplate")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Workspace manager template")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Workspace manager template to configure ROS 2 workspaces.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotspec.WorkspaceManagerTemplate workspaceManagerTemplate;
 

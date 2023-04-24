@@ -7,11 +7,11 @@ package io.roboscale.robot.v1alpha1.robotspec;
 public class RootDNSConfig implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * DNS host.
+     * [*alpha*] Root DNS name..
      */
     @com.fasterxml.jackson.annotation.JsonProperty("host")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("DNS host.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*alpha*] Root DNS name..")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String host;
 

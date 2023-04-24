@@ -7,11 +7,11 @@ package io.roboscale.robot.v1alpha1.robotspec;
 public class TlsSecretRef implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * TLS secret object name.
+     * [*alpha*] TLS secret object name.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("name")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("TLS secret object name.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*alpha*] TLS secret object name.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String name;
 
@@ -24,11 +24,11 @@ public class TlsSecretRef implements io.fabric8.kubernetes.api.model.KubernetesR
     }
 
     /**
-     * TLS secret object namespace.
+     * [*alpha*] TLS secret object namespace.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("namespace")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("TLS secret object namespace.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*alpha*] TLS secret object namespace.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String namespace;
 

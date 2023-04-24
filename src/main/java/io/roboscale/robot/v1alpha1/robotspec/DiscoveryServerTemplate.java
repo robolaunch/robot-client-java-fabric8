@@ -6,7 +6,11 @@ package io.roboscale.robot.v1alpha1.robotspec;
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class DiscoveryServerTemplate implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
+    /**
+     * Entrypoint of the DiscoveryServer. Applied if the instance type is `Server`.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("args")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Entrypoint of the DiscoveryServer. Applied if the instance type is `Server`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.List<String> args;
 
@@ -18,7 +22,11 @@ public class DiscoveryServerTemplate implements io.fabric8.kubernetes.api.model.
         this.args = args;
     }
 
+    /**
+     * Cloud instance name that holds DiscoveryServer instance with `Server` type.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("cluster")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Cloud instance name that holds DiscoveryServer instance with `Server` type.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String cluster;
 
@@ -30,7 +38,11 @@ public class DiscoveryServerTemplate implements io.fabric8.kubernetes.api.model.
         this.cluster = cluster;
     }
 
+    /**
+     * If instance type is `Server`, it can be an arbitrary value. If instance type is `Client`, it should be the same with Server's hostname. Used for getting Server's IP over DNS.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("hostname")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("If instance type is `Server`, it can be an arbitrary value. If instance type is `Client`, it should be the same with Server's hostname. Used for getting Server's IP over DNS.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String hostname;
 
@@ -42,7 +54,11 @@ public class DiscoveryServerTemplate implements io.fabric8.kubernetes.api.model.
         this.hostname = hostname;
     }
 
+    /**
+     * Image for discovery server. Recommended to use images which has configured ROS 2.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("image")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Image for discovery server. Recommended to use images which has configured ROS 2.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String image;
 
@@ -55,11 +71,10 @@ public class DiscoveryServerTemplate implements io.fabric8.kubernetes.api.model.
     }
 
     /**
-     * ObjectReference contains enough information to let you inspect or modify the referred object. --- New uses of this type are discouraged because of difficulty describing its usage when embedded in APIs. 1. Ignored fields.  It includes many fields which are not generally honored.  For instance, ResourceVersion and FieldPath are both very rarely valid in actual usage. 2. Invalid usage help.  It is impossible to add specific help for individual usage.  In most embedded usages, there are particular restrictions like, "must refer only to types A and B" or "UID not honored" or "name must be restricted". Those cannot be well described when embedded. 3. Inconsistent validation.  Because the usages are different, the validation rules are different by usage, which makes it hard for users to predict what will happen. 4. The fields are both imprecise and overly precise.  Kind is not a precise mapping to a URL. This can produce ambiguity during interpretation and require a REST mapping.  In most cases, the dependency is on the group,resource tuple and the version of the actual struct is irrelevant. 5. We cannot easily change it.  Because this type is embedded in many locations, updates to this type will affect numerous schemas.  Don't make new APIs embed an underspecified API type they do not control.
-     *  Instead of using this type, create a locally provided and used type that is well-focused on your reference. For example, ServiceReferences for admission registration: https://github.com/kubernetes/api/blob/release-1.17/admissionregistration/v1/types.go#L533 .
+     * Reference to the `Server` instance. It is used if `.spec.type` is `Client`. Referenced object can be provisioned in another cluster.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("reference")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ObjectReference contains enough information to let you inspect or modify the referred object. --- New uses of this type are discouraged because of difficulty describing its usage when embedded in APIs. 1. Ignored fields.  It includes many fields which are not generally honored.  For instance, ResourceVersion and FieldPath are both very rarely valid in actual usage. 2. Invalid usage help.  It is impossible to add specific help for individual usage.  In most embedded usages, there are particular restrictions like, \"must refer only to types A and B\" or \"UID not honored\" or \"name must be restricted\". Those cannot be well described when embedded. 3. Inconsistent validation.  Because the usages are different, the validation rules are different by usage, which makes it hard for users to predict what will happen. 4. The fields are both imprecise and overly precise.  Kind is not a precise mapping to a URL. This can produce ambiguity during interpretation and require a REST mapping.  In most cases, the dependency is on the group,resource tuple and the version of the actual struct is irrelevant. 5. We cannot easily change it.  Because this type is embedded in many locations, updates to this type will affect numerous schemas.  Don't make new APIs embed an underspecified API type they do not control. \n Instead of using this type, create a locally provided and used type that is well-focused on your reference. For example, ServiceReferences for admission registration: https://github.com/kubernetes/api/blob/release-1.17/admissionregistration/v1/types.go#L533 .")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Reference to the `Server` instance. It is used if `.spec.type` is `Client`. Referenced object can be provisioned in another cluster.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotspec.discoveryservertemplate.Reference reference;
 
@@ -71,7 +86,11 @@ public class DiscoveryServerTemplate implements io.fabric8.kubernetes.api.model.
         this.reference = reference;
     }
 
+    /**
+     * If instance type is `Server`, it can be an arbitrary value. If instance type is `Client`, it should be the same with Server's subdomain. Used for getting Server's IP over DNS.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("subdomain")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("If instance type is `Server`, it can be an arbitrary value. If instance type is `Client`, it should be the same with Server's subdomain. Used for getting Server's IP over DNS.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String subdomain;
 
@@ -83,7 +102,11 @@ public class DiscoveryServerTemplate implements io.fabric8.kubernetes.api.model.
         this.subdomain = subdomain;
     }
 
+    /**
+     * Instance type can be either `Server` or `Client`. If `Server`, instance creates discovery server resources and workloads. Other `Client` instances can connect to the `Server` instance. If `Client`, instance tries to connect a `Server` instance and hold `Server` configuration in a ConfigMap.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("type")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Instance type can be either `Server` or `Client`. If `Server`, instance creates discovery server resources and workloads. Other `Client` instances can connect to the `Server` instance. If `Client`, instance tries to connect a `Server` instance and hold `Server` configuration in a ConfigMap.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String type;
 

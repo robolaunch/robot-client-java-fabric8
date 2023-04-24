@@ -24,10 +24,10 @@ public class Repositories implements io.fabric8.kubernetes.api.model.KubernetesR
     }
 
     /**
-     * [Autofilled] Hash of last commit
+     * [*Autofilled*] Hash of last commit
      */
     @com.fasterxml.jackson.annotation.JsonProperty("hash")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[Autofilled] Hash of last commit")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*Autofilled*] Hash of last commit")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String hash;
 
@@ -40,10 +40,10 @@ public class Repositories implements io.fabric8.kubernetes.api.model.KubernetesR
     }
 
     /**
-     * [Autofilled] User or organization, maintainer of repository
+     * [*Autofilled*] User or organization, maintainer of repository
      */
     @com.fasterxml.jackson.annotation.JsonProperty("owner")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[Autofilled] User or organization, maintainer of repository")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*Autofilled*] User or organization, maintainer of repository")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String owner;
 
@@ -56,10 +56,10 @@ public class Repositories implements io.fabric8.kubernetes.api.model.KubernetesR
     }
 
     /**
-     * [Autofilled] Absolute path of repository
+     * [*Autofilled*] Absolute path of repository
      */
     @com.fasterxml.jackson.annotation.JsonProperty("path")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[Autofilled] Absolute path of repository")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*Autofilled*] Absolute path of repository")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String path;
 
@@ -72,10 +72,10 @@ public class Repositories implements io.fabric8.kubernetes.api.model.KubernetesR
     }
 
     /**
-     * [Autofilled] Repository name
+     * [*Autofilled*] Repository name
      */
     @com.fasterxml.jackson.annotation.JsonProperty("repo")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[Autofilled] Repository name")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*Autofilled*] Repository name")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String repo;
 

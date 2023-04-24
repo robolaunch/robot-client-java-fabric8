@@ -6,8 +6,12 @@ package io.roboscale.fleet.v1alpha1.fleetstatus.attachedrobots;
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class FleetCompatibility implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
+    /**
+     * Indicates the robot's compatibility with fleet.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("isCompatible")
     @io.fabric8.generator.annotation.Required()
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Indicates the robot's compatibility with fleet.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean isCompatible;
 
@@ -19,7 +23,11 @@ public class FleetCompatibility implements io.fabric8.kubernetes.api.model.Kuber
         this.isCompatible = isCompatible;
     }
 
+    /**
+     * Indicates the possible incompatibility reason of an attached robot.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("reason")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Indicates the possible incompatibility reason of an attached robot.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String reason;
 

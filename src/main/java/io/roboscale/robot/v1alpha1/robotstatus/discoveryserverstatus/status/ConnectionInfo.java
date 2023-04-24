@@ -6,7 +6,11 @@ package io.roboscale.robot.v1alpha1.robotstatus.discoveryserverstatus.status;
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class ConnectionInfo implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
+    /**
+     * Name of the config map that holds discovery server configuration.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("configMapName")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Name of the config map that holds discovery server configuration.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String configMapName;
 
@@ -18,7 +22,11 @@ public class ConnectionInfo implements io.fabric8.kubernetes.api.model.Kubernete
         this.configMapName = configMapName;
     }
 
+    /**
+     * IP of the discovery server. IP is being obtained from the DNS name, which is being built according to the discovery server configuration.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("ip")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("IP of the discovery server. IP is being obtained from the DNS name, which is being built according to the discovery server configuration.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String ip;
 

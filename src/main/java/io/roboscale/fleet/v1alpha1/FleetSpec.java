@@ -7,10 +7,10 @@ package io.roboscale.fleet.v1alpha1;
 public class FleetSpec implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * DiscoveryServerSpec defines the desired state of DiscoveryServer
+     * Discovery server configuration of fleet. For detailed information, refer the document for the API group `robot.roboscale.io`.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("discoveryServerTemplate")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("DiscoveryServerSpec defines the desired state of DiscoveryServer")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Discovery server configuration of fleet. For detailed information, refer the document for the API group `robot.roboscale.io`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.fleet.v1alpha1.fleetspec.DiscoveryServerTemplate discoveryServerTemplate;
 
@@ -22,7 +22,11 @@ public class FleetSpec implements io.fabric8.kubernetes.api.model.KubernetesReso
         this.discoveryServerTemplate = discoveryServerTemplate;
     }
 
+    /**
+     * Determines if the fleet should be federated across clusters or not.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("hybrid")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Determines if the fleet should be federated across clusters or not.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean hybrid;
 
@@ -34,7 +38,11 @@ public class FleetSpec implements io.fabric8.kubernetes.api.model.KubernetesReso
         this.hybrid = hybrid;
     }
 
+    /**
+     * If `.spec.hybrid` is true, this field includes Kubernetes cluster names which the fleet will be federated to.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("instances")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("If `.spec.hybrid` is true, this field includes Kubernetes cluster names which the fleet will be federated to.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.List<String> instances;
 

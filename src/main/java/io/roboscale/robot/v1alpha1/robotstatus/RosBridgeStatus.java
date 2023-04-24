@@ -6,7 +6,11 @@ package io.roboscale.robot.v1alpha1.robotstatus;
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class RosBridgeStatus implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
+    /**
+     * Generic status for any owned resource.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("resource")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Generic status for any owned resource.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.rosbridgestatus.Resource resource;
 
@@ -19,10 +23,10 @@ public class RosBridgeStatus implements io.fabric8.kubernetes.api.model.Kubernet
     }
 
     /**
-     * ROSBridgeStatus defines the observed state of ROSBridge
+     * Status of the ROSBridge instance.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("status")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ROSBridgeStatus defines the observed state of ROSBridge")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Status of the ROSBridge instance.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.rosbridgestatus.Status status;
 

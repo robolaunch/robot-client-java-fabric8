@@ -6,7 +6,11 @@ package io.roboscale.robot.v1alpha1.robotstatus.attachedlaunchobjects;
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class Status implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
+    /**
+     * Indicates if the LaunchManager is attached to a Robot and actively running.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("active")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Indicates if the LaunchManager is attached to a Robot and actively running.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean active;
 
@@ -18,7 +22,11 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
         this.active = active;
     }
 
+    /**
+     * Collective statuses of launch pod and launch objects.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("launchPodStatus")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Collective statuses of launch pod and launch objects.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.attachedlaunchobjects.status.LaunchPodStatus launchPodStatus;
 
@@ -30,7 +38,11 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
         this.launchPodStatus = launchPodStatus;
     }
 
+    /**
+     * Phase of LaunchManager.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("phase")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Phase of LaunchManager.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String phase;
 

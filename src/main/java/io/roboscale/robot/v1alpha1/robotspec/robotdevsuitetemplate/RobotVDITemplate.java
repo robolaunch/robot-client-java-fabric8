@@ -6,7 +6,11 @@ package io.roboscale.robot.v1alpha1.robotspec.robotdevsuitetemplate;
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class RobotVDITemplate implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
+    /**
+     * [*alpha*] RobotIDE will create an Ingress resource if `true`.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("ingress")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*alpha*] RobotIDE will create an Ingress resource if `true`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean ingress;
 
@@ -19,10 +23,10 @@ public class RobotVDITemplate implements io.fabric8.kubernetes.api.model.Kuberne
     }
 
     /**
-     * NAT1TO1 for Neko.
+     * NAT1TO1 option for Cloud VDI.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("nat1to1")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("NAT1TO1 for Neko.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("NAT1TO1 option for Cloud VDI.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String nat1to1;
 
@@ -34,7 +38,11 @@ public class RobotVDITemplate implements io.fabric8.kubernetes.api.model.Kuberne
         this.nat1to1 = nat1to1;
     }
 
+    /**
+     * If `true`, containers of RobotIDE will be privileged containers. It can be used in physical instances where it's necessary to access I/O devices on the host machine. Not recommended to activate this field on cloud instances.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("privileged")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("If `true`, containers of RobotIDE will be privileged containers. It can be used in physical instances where it's necessary to access I/O devices on the host machine. Not recommended to activate this field on cloud instances.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean privileged;
 
@@ -66,10 +74,10 @@ public class RobotVDITemplate implements io.fabric8.kubernetes.api.model.Kuberne
     }
 
     /**
-     * VDI screen resolution options.
+     * VDI screen resolution options. Default is `2048x1152`.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("resolution")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("VDI screen resolution options.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("VDI screen resolution options. Default is `2048x1152`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Resolution resolution = io.fabric8.kubernetes.client.utils.Serialization.unmarshal("\"2048x1152\"", Resolution.class);
 
@@ -82,10 +90,10 @@ public class RobotVDITemplate implements io.fabric8.kubernetes.api.model.Kuberne
     }
 
     /**
-     * VDI resource limits.
+     * Resource limitations of Cloud IDE.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("resources")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("VDI resource limits.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Resource limitations of Cloud IDE.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotspec.robotdevsuitetemplate.robotvditemplate.Resources resources;
 
@@ -116,10 +124,10 @@ public class RobotVDITemplate implements io.fabric8.kubernetes.api.model.Kuberne
     }
 
     /**
-     * ServiceType
+     * Service type of Cloud IDE. `ClusterIP` and `NodePort` is supported.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("serviceType")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ServiceType")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Service type of Cloud IDE. `ClusterIP` and `NodePort` is supported.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private ServiceType serviceType = io.fabric8.kubernetes.client.utils.Serialization.unmarshal("\"NodePort\"", ServiceType.class);
 
@@ -131,8 +139,12 @@ public class RobotVDITemplate implements io.fabric8.kubernetes.api.model.Kuberne
         this.serviceType = serviceType;
     }
 
+    /**
+     * UDP port range to used in WebRTC connections.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("webrtcPortRange")
     @io.fabric8.generator.annotation.Pattern("^([0-9])+-([0-9])+$")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("UDP port range to used in WebRTC connections.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String webrtcPortRange;
 

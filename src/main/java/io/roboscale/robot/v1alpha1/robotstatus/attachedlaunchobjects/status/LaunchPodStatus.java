@@ -6,7 +6,11 @@ package io.roboscale.robot.v1alpha1.robotstatus.attachedlaunchobjects.status;
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class LaunchPodStatus implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
+    /**
+     * Status of launch objects. Every launch object generates a `ros2 launch` command that will run as an entrypoint in a container.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("launchStatus")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Status of launch objects. Every launch object generates a `ros2 launch` command that will run as an entrypoint in a container.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.Map<java.lang.String, io.roboscale.robot.v1alpha1.robotstatus.attachedlaunchobjects.status.launchpodstatus.LaunchStatus> launchStatus;
 
@@ -18,7 +22,11 @@ public class LaunchPodStatus implements io.fabric8.kubernetes.api.model.Kubernet
         this.launchStatus = launchStatus;
     }
 
+    /**
+     * Launch pod status. Every LaunchManager creates one pod if active.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("status")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Launch pod status. Every LaunchManager creates one pod if active.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.attachedlaunchobjects.status.launchpodstatus.Status status;
 

@@ -6,7 +6,11 @@ package io.roboscale.robot.v1alpha1.robotstatus;
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class VolumeStatuses implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
+    /**
+     * Holds PVC status of the `/etc` directory of underlying OS.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("etcDir")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Holds PVC status of the `/etc` directory of underlying OS.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.volumestatuses.EtcDir etcDir;
 
@@ -18,7 +22,11 @@ public class VolumeStatuses implements io.fabric8.kubernetes.api.model.Kubernete
         this.etcDir = etcDir;
     }
 
+    /**
+     * Holds PVC status of the `/opt` directory of underlying OS.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("optDir")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Holds PVC status of the `/opt` directory of underlying OS.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.volumestatuses.OptDir optDir;
 
@@ -30,7 +38,11 @@ public class VolumeStatuses implements io.fabric8.kubernetes.api.model.Kubernete
         this.optDir = optDir;
     }
 
+    /**
+     * Holds PVC status of the `/usr` directory of underlying OS.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("usrDir")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Holds PVC status of the `/usr` directory of underlying OS.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.volumestatuses.UsrDir usrDir;
 
@@ -42,7 +54,11 @@ public class VolumeStatuses implements io.fabric8.kubernetes.api.model.Kubernete
         this.usrDir = usrDir;
     }
 
+    /**
+     * Holds PVC status of the `/var` directory of underlying OS.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("varDir")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Holds PVC status of the `/var` directory of underlying OS.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.volumestatuses.VarDir varDir;
 
@@ -54,7 +70,11 @@ public class VolumeStatuses implements io.fabric8.kubernetes.api.model.Kubernete
         this.varDir = varDir;
     }
 
+    /**
+     * Holds PVC status of the workspaces directory of underlying OS.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("workspaceDir")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Holds PVC status of the workspaces directory of underlying OS.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.volumestatuses.WorkspaceDir workspaceDir;
 

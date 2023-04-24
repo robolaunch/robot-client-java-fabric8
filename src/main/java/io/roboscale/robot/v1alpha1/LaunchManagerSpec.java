@@ -7,10 +7,10 @@ package io.roboscale.robot.v1alpha1;
 public class LaunchManagerSpec implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * Display connection.
+     * Launch processes connects an X11 socket if it's set to `true` and a target RobotVDI resource is set in labels with key `robolaunch.io/target-vdi`. Applications that requires GUI can be executed such as rViz.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("display")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Display connection.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Launch processes connects an X11 socket if it's set to `true` and a target RobotVDI resource is set in labels with key `robolaunch.io/target-vdi`. Applications that requires GUI can be executed such as rViz.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean display;
 
@@ -22,7 +22,11 @@ public class LaunchManagerSpec implements io.fabric8.kubernetes.api.model.Kubern
         this.display = display;
     }
 
+    /**
+     * Launch descriptions. Every object defined here generates a `ros2 launch` command in the specified workspace.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("launch")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Launch descriptions. Every object defined here generates a `ros2 launch` command in the specified workspace.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.Map<java.lang.String, io.roboscale.robot.v1alpha1.launchmanagerspec.Launch> launch;
 
@@ -34,7 +38,11 @@ public class LaunchManagerSpec implements io.fabric8.kubernetes.api.model.Kubern
         this.launch = launch;
     }
 
+    /**
+     * Every object defined here generates a `ros2 run` command in the specified workspace.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("run")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Every object defined here generates a `ros2 run` command in the specified workspace.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.Map<java.lang.String, io.roboscale.robot.v1alpha1.launchmanagerspec.Run> run;
 

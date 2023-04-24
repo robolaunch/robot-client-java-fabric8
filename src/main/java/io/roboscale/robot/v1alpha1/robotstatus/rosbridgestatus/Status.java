@@ -6,7 +6,11 @@ package io.roboscale.robot.v1alpha1.robotstatus.rosbridgestatus;
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class Status implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
+    /**
+     * Phase of ROSBridge.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("phase")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Phase of ROSBridge.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String phase;
 
@@ -18,7 +22,11 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
         this.phase = phase;
     }
 
+    /**
+     * Status of ROSBridge pod.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("podStatus")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Status of ROSBridge pod.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.rosbridgestatus.status.PodStatus podStatus;
 
@@ -30,7 +38,11 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
         this.podStatus = podStatus;
     }
 
+    /**
+     * Status of ROSBridge service.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("serviceStatus")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Status of ROSBridge service.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.rosbridgestatus.status.ServiceStatus serviceStatus;
 

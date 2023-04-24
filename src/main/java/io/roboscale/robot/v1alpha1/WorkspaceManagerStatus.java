@@ -6,7 +6,11 @@ package io.roboscale.robot.v1alpha1;
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class WorkspaceManagerStatus implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
+    /**
+     * Status of cleanup jobs that runs while reconfiguring workspaces.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("cleanupJobStatus")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Status of cleanup jobs that runs while reconfiguring workspaces.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.workspacemanagerstatus.CleanupJobStatus cleanupJobStatus;
 
@@ -18,7 +22,11 @@ public class WorkspaceManagerStatus implements io.fabric8.kubernetes.api.model.K
         this.cleanupJobStatus = cleanupJobStatus;
     }
 
+    /**
+     * Status of cloner job.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("clonerJobStatus")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Status of cloner job.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.workspacemanagerstatus.ClonerJobStatus clonerJobStatus;
 
@@ -30,7 +38,11 @@ public class WorkspaceManagerStatus implements io.fabric8.kubernetes.api.model.K
         this.clonerJobStatus = clonerJobStatus;
     }
 
+    /**
+     * Phase of WorkspaceManager.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("phase")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Phase of WorkspaceManager.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String phase;
 
@@ -42,7 +54,11 @@ public class WorkspaceManagerStatus implements io.fabric8.kubernetes.api.model.K
         this.phase = phase;
     }
 
+    /**
+     * Incremental version of workspace configuration map. Used to determine changes in configuration.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("version")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Incremental version of workspace configuration map. Used to determine changes in configuration.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Long version;
 

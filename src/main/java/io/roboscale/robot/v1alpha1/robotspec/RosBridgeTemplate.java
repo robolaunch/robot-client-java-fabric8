@@ -6,7 +6,11 @@ package io.roboscale.robot.v1alpha1.robotspec;
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class RosBridgeTemplate implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
+    /**
+     * Image contains ROS/2 bridge packages.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("image")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Image contains ROS/2 bridge packages.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String image;
 
@@ -18,7 +22,11 @@ public class RosBridgeTemplate implements io.fabric8.kubernetes.api.model.Kubern
         this.image = image;
     }
 
+    /**
+     * Configurational parameters for ROS bridge.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("ros")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Configurational parameters for ROS bridge.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotspec.rosbridgetemplate.Ros ros;
 
@@ -30,7 +38,11 @@ public class RosBridgeTemplate implements io.fabric8.kubernetes.api.model.Kubern
         this.ros = ros;
     }
 
+    /**
+     * Configurational parameters for ROS 2 bridge.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("ros2")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Configurational parameters for ROS 2 bridge.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotspec.rosbridgetemplate.Ros2 ros2;
 

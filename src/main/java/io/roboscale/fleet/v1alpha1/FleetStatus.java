@@ -7,10 +7,10 @@ package io.roboscale.fleet.v1alpha1;
 public class FleetStatus implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * Attached launch object information
+     * Attached launch object information.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("attachedRobots")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Attached launch object information")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Attached launch object information.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.List<io.roboscale.fleet.v1alpha1.fleetstatus.AttachedRobots> attachedRobots;
 
@@ -22,7 +22,11 @@ public class FleetStatus implements io.fabric8.kubernetes.api.model.KubernetesRe
         this.attachedRobots = attachedRobots;
     }
 
+    /**
+     * Discovery server instance status. For detailed information, refer the document for the API group `robot.roboscale.io`.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("discoveryServerStatus")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Discovery server instance status. For detailed information, refer the document for the API group `robot.roboscale.io`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.fleet.v1alpha1.fleetstatus.DiscoveryServerStatus discoveryServerStatus;
 
@@ -34,7 +38,11 @@ public class FleetStatus implements io.fabric8.kubernetes.api.model.KubernetesRe
         this.discoveryServerStatus = discoveryServerStatus;
     }
 
+    /**
+     * Namespace status. Fleet creates namespace if the `.spec.hybrid` is set to `true`. It creates `FederatedNamespace` if `false`.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("namespaceStatus")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Namespace status. Fleet creates namespace if the `.spec.hybrid` is set to `true`. It creates `FederatedNamespace` if `false`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.fleet.v1alpha1.fleetstatus.NamespaceStatus namespaceStatus;
 
@@ -46,7 +54,11 @@ public class FleetStatus implements io.fabric8.kubernetes.api.model.KubernetesRe
         this.namespaceStatus = namespaceStatus;
     }
 
+    /**
+     * Fleet phase.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("phase")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Fleet phase.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String phase;
 

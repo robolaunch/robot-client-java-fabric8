@@ -7,10 +7,10 @@ package io.roboscale.robot.v1alpha1.robotspec.robotdevsuitetemplate;
 public class RobotIDETemplate implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * Display configuration.
+     * Cloud IDE connects an X11 socket if it's set to `true` and a target RobotVDI resource is set in labels with key `robolaunch.io/target-vdi`. Applications that requires GUI can be executed such as rViz.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("display")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Display configuration.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Cloud IDE connects an X11 socket if it's set to `true` and a target RobotVDI resource is set in labels with key `robolaunch.io/target-vdi`. Applications that requires GUI can be executed such as rViz.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean display;
 
@@ -22,7 +22,11 @@ public class RobotIDETemplate implements io.fabric8.kubernetes.api.model.Kuberne
         this.display = display;
     }
 
+    /**
+     * [*alpha*] RobotIDE will create an Ingress resource if `true`.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("ingress")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*alpha*] RobotIDE will create an Ingress resource if `true`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean ingress;
 
@@ -34,7 +38,11 @@ public class RobotIDETemplate implements io.fabric8.kubernetes.api.model.Kuberne
         this.ingress = ingress;
     }
 
+    /**
+     * If `true`, containers of RobotIDE will be privileged containers. It can be used in physical instances where it's necessary to access I/O devices on the host machine. Not recommended to activate this field on cloud instances.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("privileged")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("If `true`, containers of RobotIDE will be privileged containers. It can be used in physical instances where it's necessary to access I/O devices on the host machine. Not recommended to activate this field on cloud instances.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean privileged;
 
@@ -47,10 +55,10 @@ public class RobotIDETemplate implements io.fabric8.kubernetes.api.model.Kuberne
     }
 
     /**
-     * VDI resource limits.
+     * Resource limitations of Cloud IDE.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("resources")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("VDI resource limits.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Resource limitations of Cloud IDE.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotspec.robotdevsuitetemplate.robotidetemplate.Resources resources;
 
@@ -81,10 +89,10 @@ public class RobotIDETemplate implements io.fabric8.kubernetes.api.model.Kuberne
     }
 
     /**
-     * ServiceType
+     * Service type of Cloud IDE. `ClusterIP` and `NodePort` is supported.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("serviceType")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ServiceType")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Service type of Cloud IDE. `ClusterIP` and `NodePort` is supported.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private ServiceType serviceType = io.fabric8.kubernetes.client.utils.Serialization.unmarshal("\"NodePort\"", ServiceType.class);
 

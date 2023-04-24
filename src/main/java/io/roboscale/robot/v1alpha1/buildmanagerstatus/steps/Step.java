@@ -7,10 +7,10 @@ package io.roboscale.robot.v1alpha1.buildmanagerstatus.steps;
 public class Step implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * Bash command to run.
+     * Bash command to run. Assume that your command will be `/bin/bash -c <COMMAND>`. Use logical operators (eg. `&&`) and pipes if the multiple dependent commands will be executed.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("command")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Bash command to run.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Bash command to run. Assume that your command will be `/bin/bash -c <COMMAND>`. Use logical operators (eg. `&&`) and pipes if the multiple dependent commands will be executed.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String command;
 
@@ -72,10 +72,10 @@ public class Step implements io.fabric8.kubernetes.api.model.KubernetesResource 
     }
 
     /**
-     * Cluster selector.
+     * Cluster selector. If empty, step will be executed. If `robolaunch.io/cloud-instance` is specified only, step will be running on the cloud instance. If `robolaunch.io/physical-instance` is specified only, step will be running on the physical instance.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("selector")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Cluster selector.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Cluster selector. If empty, step will be executed. If `robolaunch.io/cloud-instance` is specified only, step will be running on the cloud instance. If `robolaunch.io/physical-instance` is specified only, step will be running on the physical instance.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.Map<java.lang.String, String> selector;
 
@@ -88,11 +88,11 @@ public class Step implements io.fabric8.kubernetes.api.model.KubernetesResource 
     }
 
     /**
-     * Name of the workspace.
+     * Name of the workspace. Should be selected among the existing workspaces in WorkspaceManager's manifests.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("workspace")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Name of the workspace.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Name of the workspace. Should be selected among the existing workspaces in WorkspaceManager's manifests.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String workspace;
 

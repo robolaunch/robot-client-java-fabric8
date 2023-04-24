@@ -10,9 +10,7 @@ public class Workspaces implements io.fabric8.kubernetes.api.model.KubernetesRes
 
         @com.fasterxml.jackson.annotation.JsonProperty("foxy")
         FOXY("foxy"), @com.fasterxml.jackson.annotation.JsonProperty("galactic")
-        GALACTIC("galactic"), @com.fasterxml.jackson.annotation.JsonProperty("noetic")
-        NOETIC("noetic"), @com.fasterxml.jackson.annotation.JsonProperty("melodic")
-        MELODIC("melodic"), @com.fasterxml.jackson.annotation.JsonProperty("humble")
+        GALACTIC("galactic"), @com.fasterxml.jackson.annotation.JsonProperty("humble")
         HUMBLE("humble");
 
         java.lang.String value;
@@ -28,11 +26,11 @@ public class Workspaces implements io.fabric8.kubernetes.api.model.KubernetesRes
     }
 
     /**
-     * ROS distro selection. Allowed distros are Foxy and Galactic. It is aimed to support Humble, Melodic and Noetic in further versions.
+     * ROS 2 distribution selection. Currently supported distributions are Humble, Foxy, Galactic.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("distro")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ROS distro selection. Allowed distros are Foxy and Galactic. It is aimed to support Humble, Melodic and Noetic in further versions.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ROS 2 distribution selection. Currently supported distributions are Humble, Foxy, Galactic.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Distro distro;
 

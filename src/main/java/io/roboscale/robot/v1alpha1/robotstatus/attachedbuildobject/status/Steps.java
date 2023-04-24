@@ -6,7 +6,11 @@ package io.roboscale.robot.v1alpha1.robotstatus.attachedbuildobject.status;
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class Steps implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
+    /**
+     * Generic status for any owned resource.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("resource")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Generic status for any owned resource.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.attachedbuildobject.status.steps.Resource resource;
 
@@ -19,10 +23,10 @@ public class Steps implements io.fabric8.kubernetes.api.model.KubernetesResource
     }
 
     /**
-     * Step is a command or script to execute when building a robot. Either `command` or `script` should be specified for each step.
+     * Status of the step.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("step")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Step is a command or script to execute when building a robot. Either `command` or `script` should be specified for each step.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Status of the step.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.attachedbuildobject.status.steps.Step step;
 

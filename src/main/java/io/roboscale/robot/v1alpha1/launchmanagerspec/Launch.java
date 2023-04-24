@@ -40,10 +40,10 @@ public class Launch implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * Name of the repository.
+     * ROS 2 namespacing. May not be suitable for all launchfiles. If used, all the node names and topic names should be defined relative, not absolute. (eg. `cmd_vel` instead of /cmd_vel``)
      */
     @com.fasterxml.jackson.annotation.JsonProperty("namespacing")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Name of the repository.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ROS 2 namespacing. May not be suitable for all launchfiles. If used, all the node names and topic names should be defined relative, not absolute. (eg. `cmd_vel` instead of /cmd_vel``)")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean namespacing;
 
@@ -104,11 +104,11 @@ public class Launch implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * Name of the repository.
+     * Name of the repository which includes the launchfile.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("repository")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Name of the repository.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Name of the repository which includes the launchfile.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String repository;
 
@@ -137,10 +137,10 @@ public class Launch implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * Cluster selector.
+     * Cluster selector. If empty, launch pod will be created. If `robolaunch.io/cloud-instance` is specified only, launch will be running on the cloud instance. If `robolaunch.io/physical-instance` is specified only, launch will be running on the physical instance.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("selector")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Cluster selector.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Cluster selector. If empty, launch pod will be created. If `robolaunch.io/cloud-instance` is specified only, launch will be running on the cloud instance. If `robolaunch.io/physical-instance` is specified only, launch will be running on the physical instance.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.Map<java.lang.String, String> selector;
 
@@ -153,11 +153,11 @@ public class Launch implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * Name of the workspace.
+     * Name of the workspace. Should be selected among the existing workspaces in WorkspaceManager's manifests.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("workspace")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Name of the workspace.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Name of the workspace. Should be selected among the existing workspaces in WorkspaceManager's manifests.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String workspace;
 

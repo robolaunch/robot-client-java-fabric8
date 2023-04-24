@@ -18,7 +18,8 @@ spec:
   - name: v1alpha1
     schema:
       openAPIV3Schema:
-        description: WorkspaceManager is the Schema for the workspacemanagers API
+        description: WorkspaceManager configures the ROS 2 workspaces and repositories
+          by executing Kubernetes jobs.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation
@@ -33,27 +34,27 @@ spec:
           metadata:
             type: object
           spec:
-            description: WorkspaceManagerSpec defines the desired state of WorkspaceManager
+            description: Specification of the desired behavior of the WorkspaceManager.
             properties:
               updateNeeded:
-                description: Need update
+                description: WorkspaceManager is triggered if this field is set to
+                  `true`. Then the workspaces are being configured again while backing
+                  up the old configurations. This field is often used by operator.
                 type: boolean
               workspaces:
-                description: Workspace definitions of robot.
+                description: Workspace definitions of robot. Multiple ROS 2 workspaces
+                  can be configured over this field.
                 items:
                   description: Workspace description. Each robot should contain at
                     least one workspace. A workspace should contain at least one repository
                     in it.
                   properties:
                     distro:
-                      description: ROS distro selection. Allowed distros are Foxy
-                        and Galactic. It is aimed to support Humble, Melodic and Noetic
-                        in further versions.
+                      description: ROS 2 distribution selection. Currently supported
+                        distributions are Humble, Foxy, Galactic.
                       enum:
                       - foxy
                       - galactic
-                      - noetic
-                      - melodic
                       - humble
                       type: string
                     name:
@@ -68,17 +69,17 @@ spec:
                             description: Branch of the repository to clone.
                             type: string
                           hash:
-                            description: '[Autofilled] Hash of last commit'
+                            description: '[*Autofilled*] Hash of last commit'
                             type: string
                           owner:
-                            description: '[Autofilled] User or organization, maintainer
+                            description: '[*Autofilled*] User or organization, maintainer
                               of repository'
                             type: string
                           path:
-                            description: '[Autofilled] Absolute path of repository'
+                            description: '[*Autofilled*] Absolute path of repository'
                             type: string
                           repo:
-                            description: '[Autofilled] Repository name'
+                            description: '[*Autofilled*] Repository name'
                             type: string
                           url:
                             description: Base URL of the repository.
@@ -98,45 +99,25 @@ spec:
                 minItems: 1
                 type: array
               workspacesPath:
-                description: Global path of workspaces. It's fixed to `/home/workspaces`
+                description: Global path of workspaces. It's fixed to `/root/workspaces`
                   path.
                 type: string
             type: object
           status:
-            description: WorkspaceManagerStatus defines the observed state of WorkspaceManager
+            description: Most recently observed status of the WorkspaceManager.
             properties:
               cleanupJobStatus:
+                description: Status of cleanup jobs that runs while reconfiguring
+                  workspaces.
                 properties:
                   created:
+                    description: Shows if the owned resource is created.
                     type: boolean
                   phase:
+                    description: Phase of the owned resource.
                     type: string
                   reference:
-                    description: "ObjectReference contains enough information to let
-                      you inspect or modify the referred object. --- New uses of this
-                      type are discouraged because of difficulty describing its usage
-                      when embedded in APIs. 1. Ignored fields.  It includes many
-                      fields which are not generally honored.  For instance, ResourceVersion
-                      and FieldPath are both very rarely valid in actual usage. 2.
-                      Invalid usage help.  It is impossible to add specific help for
-                      individual usage.  In most embedded usages, there are particular
-                      restrictions like, \"must refer only to types A and B\" or \"UID
-                      not honored\" or \"name must be restricted\". Those cannot be
-                      well described when embedded. 3. Inconsistent validation.  Because
-                      the usages are different, the validation rules are different
-                      by usage, which makes it hard for users to predict what will
-                      happen. 4. The fields are both imprecise and overly precise.
-                      \ Kind is not a precise mapping to a URL. This can produce ambiguity
-                      during interpretation and require a REST mapping.  In most cases,
-                      the dependency is on the group,resource tuple and the version
-                      of the actual struct is irrelevant. 5. We cannot easily change
-                      it.  Because this type is embedded in many locations, updates
-                      to this type will affect numerous schemas.  Don't make new APIs
-                      embed an underspecified API type they do not control. \n Instead
-                      of using this type, create a locally provided and used type
-                      that is well-focused on your reference. For example, ServiceReferences
-                      for admission registration: https://github.com/kubernetes/api/blob/release-1.17/admissionregistration/v1/types.go#L533
-                      ."
+                    description: Reference to the owned resource.
                     properties:
                       apiVersion:
                         description: API version of the referent.
@@ -176,37 +157,16 @@ spec:
                 - created
                 type: object
               clonerJobStatus:
+                description: Status of cloner job.
                 properties:
                   created:
+                    description: Shows if the owned resource is created.
                     type: boolean
                   phase:
+                    description: Phase of the owned resource.
                     type: string
                   reference:
-                    description: "ObjectReference contains enough information to let
-                      you inspect or modify the referred object. --- New uses of this
-                      type are discouraged because of difficulty describing its usage
-                      when embedded in APIs. 1. Ignored fields.  It includes many
-                      fields which are not generally honored.  For instance, ResourceVersion
-                      and FieldPath are both very rarely valid in actual usage. 2.
-                      Invalid usage help.  It is impossible to add specific help for
-                      individual usage.  In most embedded usages, there are particular
-                      restrictions like, \"must refer only to types A and B\" or \"UID
-                      not honored\" or \"name must be restricted\". Those cannot be
-                      well described when embedded. 3. Inconsistent validation.  Because
-                      the usages are different, the validation rules are different
-                      by usage, which makes it hard for users to predict what will
-                      happen. 4. The fields are both imprecise and overly precise.
-                      \ Kind is not a precise mapping to a URL. This can produce ambiguity
-                      during interpretation and require a REST mapping.  In most cases,
-                      the dependency is on the group,resource tuple and the version
-                      of the actual struct is irrelevant. 5. We cannot easily change
-                      it.  Because this type is embedded in many locations, updates
-                      to this type will affect numerous schemas.  Don't make new APIs
-                      embed an underspecified API type they do not control. \n Instead
-                      of using this type, create a locally provided and used type
-                      that is well-focused on your reference. For example, ServiceReferences
-                      for admission registration: https://github.com/kubernetes/api/blob/release-1.17/admissionregistration/v1/types.go#L533
-                      ."
+                    description: Reference to the owned resource.
                     properties:
                       apiVersion:
                         description: API version of the referent.
@@ -246,8 +206,11 @@ spec:
                 - created
                 type: object
               phase:
+                description: Phase of WorkspaceManager.
                 type: string
               version:
+                description: Incremental version of workspace configuration map. Used
+                  to determine changes in configuration.
                 type: integer
             type: object
         type: object

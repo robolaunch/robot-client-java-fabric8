@@ -6,7 +6,11 @@ package io.roboscale.robot.v1alpha1.robotstatus.attacheddevobjects;
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class Status implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
+    /**
+     * [*alpha*] Indicates if RobotDevSuite is attached to a Robot and actively provisioned it's resources.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("active")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*alpha*] Indicates if RobotDevSuite is attached to a Robot and actively provisioned it's resources.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean active;
 
@@ -18,7 +22,11 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
         this.active = active;
     }
 
+    /**
+     * Phase of RobotDevSuite.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("phase")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Phase of RobotDevSuite.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String phase;
 
@@ -30,7 +38,11 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
         this.phase = phase;
     }
 
+    /**
+     * Status of RobotIDE.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("robotIDEStatus")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Status of RobotIDE.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.attacheddevobjects.status.RobotIDEStatus robotIDEStatus;
 
@@ -42,7 +54,11 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
         this.robotIDEStatus = robotIDEStatus;
     }
 
+    /**
+     * Status of RobotVDI.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("robotVDIStatus")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Status of RobotVDI.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.attacheddevobjects.status.RobotVDIStatus robotVDIStatus;
 

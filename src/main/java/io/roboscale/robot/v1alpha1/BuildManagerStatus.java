@@ -6,7 +6,11 @@ package io.roboscale.robot.v1alpha1;
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class BuildManagerStatus implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
+    /**
+     * Indicates if the BuildManager is currently executing it's jobs.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("active")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Indicates if the BuildManager is currently executing it's jobs.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean active;
 
@@ -18,7 +22,11 @@ public class BuildManagerStatus implements io.fabric8.kubernetes.api.model.Kuber
         this.active = active;
     }
 
+    /**
+     * Phase of BuildManager.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("phase")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Phase of BuildManager.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String phase;
 
@@ -30,7 +38,11 @@ public class BuildManagerStatus implements io.fabric8.kubernetes.api.model.Kuber
         this.phase = phase;
     }
 
+    /**
+     * Status of the ConfigMap that holds scripts. If a script is specified inside `.spec.steps[k]`, they are mounted to the step jobs via this ConfigMap.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("scriptConfigMapStatus")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Status of the ConfigMap that holds scripts. If a script is specified inside `.spec.steps[k]`, they are mounted to the step jobs via this ConfigMap.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.buildmanagerstatus.ScriptConfigMapStatus scriptConfigMapStatus;
 
@@ -42,7 +54,11 @@ public class BuildManagerStatus implements io.fabric8.kubernetes.api.model.Kuber
         this.scriptConfigMapStatus = scriptConfigMapStatus;
     }
 
+    /**
+     * Statuses of the build steps.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("steps")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Statuses of the build steps.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.List<io.roboscale.robot.v1alpha1.buildmanagerstatus.Steps> steps;
 

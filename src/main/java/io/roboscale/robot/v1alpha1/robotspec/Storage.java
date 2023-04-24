@@ -7,10 +7,10 @@ package io.roboscale.robot.v1alpha1.robotspec;
 public class Storage implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * Specifies how much storage will be allocated in total.
+     * Specifies how much storage will be allocated in total. Use MB as a unit of measurement. (eg. `10240` is equal to 10 GB)
      */
     @com.fasterxml.jackson.annotation.JsonProperty("amount")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Specifies how much storage will be allocated in total.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Specifies how much storage will be allocated in total. Use MB as a unit of measurement. (eg. `10240` is equal to 10 GB)")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Long amount = 10000L;
 

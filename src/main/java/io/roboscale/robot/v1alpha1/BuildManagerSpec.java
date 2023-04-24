@@ -6,7 +6,11 @@ package io.roboscale.robot.v1alpha1;
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class BuildManagerSpec implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
+    /**
+     * Defines the building steps.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("steps")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Defines the building steps.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.List<io.roboscale.robot.v1alpha1.buildmanagerspec.Steps> steps;
 

@@ -6,7 +6,11 @@ package io.roboscale.robot.v1alpha1.robotstatus.attachedlaunchobjects.status.lau
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class Status implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
+    /**
+     * IP of the pod.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("ip")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("IP of the pod.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String ip;
 
@@ -18,7 +22,11 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
         this.ip = ip;
     }
 
+    /**
+     * Generic status for any owned resource.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("resource")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Generic status for any owned resource.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.attachedlaunchobjects.status.launchpodstatus.status.Resource resource;
 

@@ -6,7 +6,11 @@ package io.roboscale.robot.v1alpha1.robotstatus.attachedlaunchobjects.status.lau
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class LaunchStatus implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
+    /**
+     * Inditaces if the launch process are actively running on cluster. It may not be selected by launch cluster selectors.
+     */
     @com.fasterxml.jackson.annotation.JsonProperty("active")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Inditaces if the launch process are actively running on cluster. It may not be selected by launch cluster selectors.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean active;
 
@@ -19,10 +23,10 @@ public class LaunchStatus implements io.fabric8.kubernetes.api.model.KubernetesR
     }
 
     /**
-     * ContainerStatus contains details for the current status of this container.
+     * Statuses of the containers of pods owned by LaunchManager.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("containerStatus")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ContainerStatus contains details for the current status of this container.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Statuses of the containers of pods owned by LaunchManager.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.attachedlaunchobjects.status.launchpodstatus.launchstatus.ContainerStatus containerStatus;
 
