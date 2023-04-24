@@ -1,32 +1,16 @@
 package io.roboscale.robot.v1alpha1.robotspec;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"args","cluster","hostname","image","reference","subdomain","type"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"cluster","hostname","reference","subdomain","type"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class DiscoveryServerTemplate implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * Entrypoint of the DiscoveryServer. Applied if the instance type is `Server`.
-     */
-    @com.fasterxml.jackson.annotation.JsonProperty("args")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Entrypoint of the DiscoveryServer. Applied if the instance type is `Server`.")
-    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private java.util.List<String> args;
-
-    public java.util.List<String> getArgs() {
-        return args;
-    }
-
-    public void setArgs(java.util.List<String> args) {
-        this.args = args;
-    }
-
-    /**
-     * Cloud instance name that holds DiscoveryServer instance with `Server` type.
+     * Cloud instance name that holds DiscoveryServer instance with `Server` type. Should be empty if the type is `Server` since it takes cloud instance's name automatically. Should be set if the type is `Client`.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("cluster")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Cloud instance name that holds DiscoveryServer instance with `Server` type.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Cloud instance name that holds DiscoveryServer instance with `Server` type. Should be empty if the type is `Server` since it takes cloud instance's name automatically. Should be set if the type is `Client`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String cluster;
 
@@ -55,26 +39,10 @@ public class DiscoveryServerTemplate implements io.fabric8.kubernetes.api.model.
     }
 
     /**
-     * Image for discovery server. Recommended to use images which has configured ROS 2.
-     */
-    @com.fasterxml.jackson.annotation.JsonProperty("image")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Image for discovery server. Recommended to use images which has configured ROS 2.")
-    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private String image;
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    /**
-     * Reference to the `Server` instance. It is used if `.spec.type` is `Client`. Referenced object can be provisioned in another cluster.
+     * Reference to the `Server` instance. It is used if `.spec.type` is `Client`. Referenced object can be previously provisioned in another cluster. In that case, cluster's name can be specified in `.spec.cluster` field.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("reference")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Reference to the `Server` instance. It is used if `.spec.type` is `Client`. Referenced object can be provisioned in another cluster.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Reference to the `Server` instance. It is used if `.spec.type` is `Client`. Referenced object can be previously provisioned in another cluster. In that case, cluster's name can be specified in `.spec.cluster` field.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotspec.discoveryservertemplate.Reference reference;
 
