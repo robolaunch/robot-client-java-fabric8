@@ -1,69 +1,50 @@
-# <img src="https://raw.githubusercontent.com/robolaunch/trademark/main/logos/svg/rocket.svg" width="40" height="40" align="top"> robolaunch Project Template
-
-[EDIT THIS: You can put badges to the README using [shields.io](https://shields.io/). Explain the repository's purpose shortly.]
+# <img src="https://raw.githubusercontent.com/robolaunch/trademark/main/logos/svg/rocket.svg" width="40" height="40" align="top"> Java Fabric8 Models for Fleet & Robot
 
 <div align="center">
   <p align="center">
-    <a href="https://github.com/robolaunch/template/releases">
-      <img src="https://img.shields.io/badge/python-3.7-blue" alt="release">
+    <a href="https://github.com/robolaunch/robot-client-java-fabric8/releases">
+      <img src="https://img.shields.io/badge/Java-11-blue" alt="release">
     </a>
-    <a href="https://github.com/robolaunch/template/releases">
-      <img src="https://img.shields.io/badge/release-v2.0.7-green" alt="release">
+    <a href="https://github.com/robolaunch/robot-client-java-fabric8/releases">
+      <img src="https://img.shields.io/github/v/release/robolaunch/robot-client-java-fabric8" alt="release">
     </a>
-    <a href="https://github.com/robolaunch/template/blob/main/LICENSE">
-      <img src="https://img.shields.io/github/license/robolaunch/template" alt="license">
+    <a href="https://github.com/robolaunch/robot-client-java-fabric8/blob/main/LICENSE">
+      <img src="https://img.shields.io/github/license/robolaunch/robot-client-java-fabric8" alt="license">
     </a>
-    <a href="https://github.com/robolaunch/template/issues">
-      <img src="https://img.shields.io/github/issues/robolaunch/template" alt="issues">
+    <a href="https://github.com/robolaunch/robot-client-java-fabric8/issues">
+      <img src="https://img.shields.io/github/issues/robolaunch/robot-client-java-fabric8" alt="issues">
     </a>
-    <a href="https://github.com/robolaunch/template/actions">
-      <img src="https://img.shields.io/badge/build-passing-dgreen" alt="build">
-    </a>
+    <!-- <a href="https://github.com/robolaunch/robot-client-java-fabric8/actions">
+      <img src="https://github.com/robolaunch/robot-client-java-fabric8/actions/workflows/generate-client.yaml/badge.svg" alt="build">
+    </a> -->
   </p>
 </div>
 
-robolaunch Template helps organization members to have a generic project template before opening a repository. [Use this repository as a template](https://github.com/robolaunch/template/generate) for the new [robolaunch Organization](https://github.com/robolaunch) repository and specialize it according to project's needs.
+Java Fabric8 models for custom resources
+- Fleets (`fleets.fleet.roboscale.io`)
+- Robots (`robots.robot.roboscale.io`)
+- WorkspaceManagers (`workspacemanagers.robot.roboscale.io`)
+- BuildManagers (`buildmanagers.robot.roboscale.io`)
+- LaunchManagers (`launchmanagers.robot.roboscale.io`)
+
+Check out the [robolaunch Robot Operator](https://github.com/robolaunch/robot-operator) and [robolaunch Fleet Operator](https://github.com/robolaunch/fleet-operator) for more information about custom resources.
 
 ## Table of Contents
 
-[EDIT THIS: Add your headers to table of contents.]
-
-- [Overview](#overview)
 - [Quick Start](#quick-start)
-- [Aims & Roadmap](#aims--roadmap)
+  - [Importing](#importing)
+  - [Usage](#usage)
 - [Contributing](#contributing)
-
-
-## Overview
-
-[EDIT THIS: Give more insight about the project. Provide a feature list.]
-
-The aim of this project is to maintain a generic template for robolaunch projects. Members of robolaunch organization can fork this repository and start developing their projects following conventions such as:
-
-- Following a code of conduct
-- Having a contributing guide
-- Having a style guide
-- Applying Apache 2.0 license
-- Having a README template
-- Having issue & pull request templates
-- Using worklows for testing & build
 
 ## Quick Start
 
-[EDIT THIS: Explain how starters can try the project's functionality.]
+### Importing
 
-After [using this project as template](https://github.com/robolaunch/template/generate), you can:
-- Update generic fields at README, specialize it to the project
-- Create first release to stage new features
-- Add custom workflows for CI/CD
-- Specialize issue & PR templates if needed
+You can import Kubernetes Java client for Robot following [these instructions](./docs/importing-client.md).
 
-## Aims & Roadmap
+### Usage
 
-[EDIT THIS: Add roadmap items for the project.]
-
-- Extending the open source conventions
-- Enforcing conventional commit messages
+See [Java Quarkus examples](https://github.com/robolaunch/robot-fabric8-quarkus-examples).
 
 ## Contributing
 
