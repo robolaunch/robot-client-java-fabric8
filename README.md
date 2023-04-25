@@ -41,7 +41,7 @@ Check out the [robolaunch Robot Operator](https://github.com/robolaunch/robot-op
 
 ### Importing
 
-You can import Kubernetes Java client for Robot following [these instructions](./docs/importing-client.md).
+You can import Kubernetes Java client for Robot following [these instructions](./docs/importing-models.md).
 
 ### Usage
 
