@@ -26,6 +26,7 @@ Java Fabric8 models for custom resources
 - WorkspaceManagers (`workspacemanagers.robot.roboscale.io`)
 - BuildManagers (`buildmanagers.robot.roboscale.io`)
 - LaunchManagers (`launchmanagers.robot.roboscale.io`)
+- and **federated versions** of these resources.
 
 Check out the [robolaunch Robot Operator](https://github.com/robolaunch/robot-operator) and [robolaunch Fleet Operator](https://github.com/robolaunch/fleet-operator) for more information about custom resources.
 
