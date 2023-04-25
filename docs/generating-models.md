@@ -13,4 +13,4 @@ You will see 6 inputs:
 ***Kubernetes Java Fabric8 Client tag***: Name of your future release. Use the current convention.
 ***Prerelease***: Mark your release as prerelease if one of the components from Robot Operator or Fleet Operator has unstable version.
 
-Run the action. After it succeeds, another action that publishes Maven package to GitHub Packages will be triggered.
+Run the action. After it succeeds, another action (`Publish Maven Package to GitHub Packages`) that publishes Maven package to GitHub Packages will be triggered.
