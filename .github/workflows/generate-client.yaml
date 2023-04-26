@@ -15,6 +15,10 @@ on:
         type: string
         required: true
         description: 'Fleet Operator tag. (existing)'
+      connectionHubOperatorTag:
+        type: string
+        required: true
+        description: 'Connection Hub Operator tag. (existing)'
       clientTag:
         type: string
         required: true
@@ -46,6 +50,10 @@ jobs:
     - name: Fetch CRDs
       run: |
         rm -rf crds/base/*.yaml
+        # connection-hub.roboscale.io
+        wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/connection-hub-operator/${{ github.event.inputs.connectionHubOperatorTag }}/config/crd/bases/connection-hub.roboscale.io_connectionhubs.yaml
+        wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/connection-hub-operator/${{ github.event.inputs.connectionHubOperatorTag }}/config/crd/bases/connection-hub.roboscale.io_cloudinstances.yaml
+        wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/connection-hub-operator/${{ github.event.inputs.connectionHubOperatorTag }}/config/crd/bases/connection-hub.roboscale.io_physicalinstances.yaml
         # fleet.roboscale.io
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/fleet-operator/${{ github.event.inputs.fleetOperatorTag }}/config/crd/bases/fleet.roboscale.io_fleets.yaml
         # robot.roboscale.io
@@ -72,7 +80,7 @@ jobs:
 
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: "build(ci): generate fabric8 models ${{ github.event.inputs.clientTag }} for robot.roboscale.io ${{ github.event.inputs.robotOperatorTag }} and fleet.roboscale.io ${{ github.event.inputs.fleetOperatorTag }}"
+        commit_message: "build(ci): generate fabric8 models ${{ github.event.inputs.clientTag }} for robot.roboscale.io ${{ github.event.inputs.robotOperatorTag }}, fleet.roboscale.io ${{ github.event.inputs.fleetOperatorTag }} and connection-hub.roboscale.io ${{ github.event.inputs.connectionHubOperatorTag }}"
         tagging_message: ${{ github.event.inputs.clientTag }}
     - uses: ncipollo/release-action@v1
       with:
@@ -86,6 +94,7 @@ jobs:
           |:-------------------------------------------------------------------------:|:---------------:|
           | [robolaunch Robot Operator](https://github.com/robolaunch/robot-operator) |     ${{ github.event.inputs.robotOperatorTag }}     |
           | [robolaunch Fleet Operator](https://github.com/robolaunch/fleet-operator) |     ${{ github.event.inputs.fleetOperatorTag }}      |
+          | [robolaunch Connection Hub Operator](https://github.com/robolaunch/connection-hub-operator) |     ${{ github.event.inputs.connectionHubOperatorTag }}      |
     - uses: actions/upload-artifact@v3
       with:
         name: generated-java-crd-model
