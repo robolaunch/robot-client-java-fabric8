@@ -14,6 +14,8 @@ You will see 6 inputs:
 
 ***Fleet Operator tag***: The version of Fleet Operator. See the [tag list](https://github.com/robolaunch/fleet-operator/tags).
 
+***Connection Hub Operator tag***: The version of Connection Hub Operator. See the [tag list](https://github.com/robolaunch/connection-hub-operator/tags).
+
 ***Kubernetes Java Fabric8 Client tag***: Name of your future release. Use the current convention.
 
 ***Prerelease***: Mark your release as prerelease if one of the components from Robot Operator or Fleet Operator has unstable version.
