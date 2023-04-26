@@ -16,7 +16,7 @@ You will see 6 inputs:
 
 ***Connection Hub Operator tag***: The version of Connection Hub Operator. See the [tag list](https://github.com/robolaunch/connection-hub-operator/tags).
 
-***Kubernetes Java Fabric8 Client tag***: Name of your future release. Use the current convention.
+***Kubernetes Java Fabric8 Client tag***: Name of your future release. Use semantic versioning. Current format is `<MAJOR>-<ROBOT-OPERATOR-MAJOR>-<FLEET-OPERATOR-MAJOR>-<CONNECTION-HUB-OPERATOR-MAJOR>-<PRERELEASE-INDICATOR>.<MINOR>`. (eg. `0.1.0-0.2.5p-0.1.6p-0.1.7p-alpha.1`, minor `p` indicates prerelease of the component)
 
 ***Prerelease***: Mark your release as prerelease if one of the components from Robot Operator or Fleet Operator has unstable version.
 
