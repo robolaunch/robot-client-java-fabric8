@@ -7,10 +7,10 @@ package io.roboscale.robot.v1alpha1.robotspec;
 public class RosBridgeTemplate implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * [*alpha*] RobotIDE will create an Ingress resource if `true`.
+     * [*alpha*] ROSBridge will create an Ingress resource if `true`.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("ingress")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*alpha*] RobotIDE will create an Ingress resource if `true`.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*alpha*] ROSBridge will create an Ingress resource if `true`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean ingress;
 
