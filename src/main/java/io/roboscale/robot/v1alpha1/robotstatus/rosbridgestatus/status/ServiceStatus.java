@@ -1,58 +1,41 @@
 package io.roboscale.robot.v1alpha1.robotstatus.rosbridgestatus.status;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"created","phase","reference"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"resource","url"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class ServiceStatus implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * Shows if the owned resource is created.
+     * Generic status for any owned resource.
      */
-    @com.fasterxml.jackson.annotation.JsonProperty("created")
-    @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Shows if the owned resource is created.")
+    @com.fasterxml.jackson.annotation.JsonProperty("resource")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Generic status for any owned resource.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private Boolean created;
+    private io.roboscale.robot.v1alpha1.robotstatus.rosbridgestatus.status.servicestatus.Resource resource;
 
-    public Boolean getCreated() {
-        return created;
+    public io.roboscale.robot.v1alpha1.robotstatus.rosbridgestatus.status.servicestatus.Resource getResource() {
+        return resource;
     }
 
-    public void setCreated(Boolean created) {
-        this.created = created;
+    public void setResource(io.roboscale.robot.v1alpha1.robotstatus.rosbridgestatus.status.servicestatus.Resource resource) {
+        this.resource = resource;
     }
 
     /**
-     * Phase of the owned resource.
+     * Connection URL.
      */
-    @com.fasterxml.jackson.annotation.JsonProperty("phase")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Phase of the owned resource.")
+    @com.fasterxml.jackson.annotation.JsonProperty("url")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Connection URL.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private String phase;
+    private String url;
 
-    public String getPhase() {
-        return phase;
+    public String getUrl() {
+        return url;
     }
 
-    public void setPhase(String phase) {
-        this.phase = phase;
-    }
-
-    /**
-     * Reference to the owned resource.
-     */
-    @com.fasterxml.jackson.annotation.JsonProperty("reference")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Reference to the owned resource.")
-    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private io.roboscale.robot.v1alpha1.robotstatus.rosbridgestatus.status.servicestatus.Reference reference;
-
-    public io.roboscale.robot.v1alpha1.robotstatus.rosbridgestatus.status.servicestatus.Reference getReference() {
-        return reference;
-    }
-
-    public void setReference(io.roboscale.robot.v1alpha1.robotstatus.rosbridgestatus.status.servicestatus.Reference reference) {
-        this.reference = reference;
+    public void setUrl(String url) {
+        this.url = url;
     }
 }
 
