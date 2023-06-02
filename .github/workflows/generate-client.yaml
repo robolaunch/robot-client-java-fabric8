@@ -11,6 +11,10 @@ on:
         type: string
         required: true
         description: 'Robot Operator tag. (existing)'
+      devspaceOperatorTag:
+        type: string
+        required: true
+        description: 'DevSpace Operator tag. (existing)'
       fleetOperatorTag:
         type: string
         required: true
@@ -56,6 +60,9 @@ jobs:
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/connection-hub-operator/${{ github.event.inputs.connectionHubOperatorTag }}/config/crd/bases/connection-hub.roboscale.io_physicalinstances.yaml
         # fleet.roboscale.io
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/fleet-operator/${{ github.event.inputs.fleetOperatorTag }}/config/crd/bases/fleet.roboscale.io_fleets.yaml
+        # dev.roboscale.io
+        wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/devspace-operator/${{ github.event.inputs.devspaceOperatorTag }}/config/crd/bases/dev.roboscale.io_devspaces.yaml
+        wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/devspace-operator/${{ github.event.inputs.devspaceOperatorTag }}/config/crd/bases/dev.roboscale.io_workspacemanagers.yaml
         # robot.roboscale.io
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_robots.yaml
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_workspacemanagers.yaml
@@ -80,7 +87,7 @@ jobs:
 
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: "build(ci): generate fabric8 models ${{ github.event.inputs.clientTag }} for robot.roboscale.io ${{ github.event.inputs.robotOperatorTag }}, fleet.roboscale.io ${{ github.event.inputs.fleetOperatorTag }} and connection-hub.roboscale.io ${{ github.event.inputs.connectionHubOperatorTag }}"
+        commit_message: "build(ci): generate fabric8 models ${{ github.event.inputs.clientTag }} for robot.roboscale.io ${{ github.event.inputs.robotOperatorTag }}, dev.roboscale.io ${{ github.event.inputs.devspaceOperatorTag }}, fleet.roboscale.io ${{ github.event.inputs.fleetOperatorTag }} and connection-hub.roboscale.io ${{ github.event.inputs.connectionHubOperatorTag }}"
         tagging_message: ${{ github.event.inputs.clientTag }}
     - uses: ncipollo/release-action@v1
       with:
@@ -93,6 +100,7 @@ jobs:
           |                                 Components                                | Release Version |
           |:-------------------------------------------------------------------------:|:---------------:|
           | [robolaunch Robot Operator](https://github.com/robolaunch/robot-operator) |     ${{ github.event.inputs.robotOperatorTag }}     |
+          | [robolaunch DevSpace Operator](https://github.com/robolaunch/devspace-operator) |     ${{ github.event.inputs.devspaceOperatorTag }}     |
           | [robolaunch Fleet Operator](https://github.com/robolaunch/fleet-operator) |     ${{ github.event.inputs.fleetOperatorTag }}      |
           | [robolaunch Connection Hub Operator](https://github.com/robolaunch/connection-hub-operator) |     ${{ github.event.inputs.connectionHubOperatorTag }}      |
     - uses: actions/upload-artifact@v3
