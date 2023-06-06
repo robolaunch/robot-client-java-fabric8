@@ -1,10 +1,22 @@
 package io.roboscale.connection_hub.v1alpha1;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"federation","federationPhase","multicastPhase","phase","submariner","subnets"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"connectionURL","federation","federationPhase","multicastPhase","phase","relayServerPodStatus","relayServerServiceStatus","submariner","subnets"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class PhysicalInstanceStatus implements io.fabric8.kubernetes.api.model.KubernetesResource {
+
+    @com.fasterxml.jackson.annotation.JsonProperty("connectionURL")
+    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
+    private String connectionURL;
+
+    public String getConnectionURL() {
+        return connectionURL;
+    }
+
+    public void setConnectionURL(String connectionURL) {
+        this.connectionURL = connectionURL;
+    }
 
     @com.fasterxml.jackson.annotation.JsonProperty("federation")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
@@ -52,6 +64,30 @@ public class PhysicalInstanceStatus implements io.fabric8.kubernetes.api.model.K
 
     public void setPhase(String phase) {
         this.phase = phase;
+    }
+
+    @com.fasterxml.jackson.annotation.JsonProperty("relayServerPodStatus")
+    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
+    private io.roboscale.connection_hub.v1alpha1.physicalinstancestatus.RelayServerPodStatus relayServerPodStatus;
+
+    public io.roboscale.connection_hub.v1alpha1.physicalinstancestatus.RelayServerPodStatus getRelayServerPodStatus() {
+        return relayServerPodStatus;
+    }
+
+    public void setRelayServerPodStatus(io.roboscale.connection_hub.v1alpha1.physicalinstancestatus.RelayServerPodStatus relayServerPodStatus) {
+        this.relayServerPodStatus = relayServerPodStatus;
+    }
+
+    @com.fasterxml.jackson.annotation.JsonProperty("relayServerServiceStatus")
+    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
+    private io.roboscale.connection_hub.v1alpha1.physicalinstancestatus.RelayServerServiceStatus relayServerServiceStatus;
+
+    public io.roboscale.connection_hub.v1alpha1.physicalinstancestatus.RelayServerServiceStatus getRelayServerServiceStatus() {
+        return relayServerServiceStatus;
+    }
+
+    public void setRelayServerServiceStatus(io.roboscale.connection_hub.v1alpha1.physicalinstancestatus.RelayServerServiceStatus relayServerServiceStatus) {
+        this.relayServerServiceStatus = relayServerServiceStatus;
     }
 
     @com.fasterxml.jackson.annotation.JsonProperty("submariner")
