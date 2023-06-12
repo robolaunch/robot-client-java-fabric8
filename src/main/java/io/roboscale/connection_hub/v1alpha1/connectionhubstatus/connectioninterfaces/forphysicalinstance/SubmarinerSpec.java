@@ -1,7 +1,7 @@
 package io.roboscale.connection_hub.v1alpha1.connectionhubstatus.connectioninterfaces.forphysicalinstance;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"apiServerURL","broker","brokerHelmChart","clusterCIDR","gatewayImage","helmRepository","instanceType","networkType","operatorHelmChart","operatorImage","presharedKey","serviceCIDR","submarinerImages"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"apiServerURL","broker","brokerHelmChart","clusterCIDR","helmRepository","instanceType","networkType","operatorHelmChart","presharedKey","serviceCIDR"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class SubmarinerSpec implements io.fabric8.kubernetes.api.model.KubernetesResource {
@@ -55,19 +55,6 @@ public class SubmarinerSpec implements io.fabric8.kubernetes.api.model.Kubernete
 
     public void setClusterCIDR(String clusterCIDR) {
         this.clusterCIDR = clusterCIDR;
-    }
-
-    @com.fasterxml.jackson.annotation.JsonProperty("gatewayImage")
-    @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private io.roboscale.connection_hub.v1alpha1.connectionhubstatus.connectioninterfaces.forphysicalinstance.submarinerspec.GatewayImage gatewayImage;
-
-    public io.roboscale.connection_hub.v1alpha1.connectionhubstatus.connectioninterfaces.forphysicalinstance.submarinerspec.GatewayImage getGatewayImage() {
-        return gatewayImage;
-    }
-
-    public void setGatewayImage(io.roboscale.connection_hub.v1alpha1.connectionhubstatus.connectioninterfaces.forphysicalinstance.submarinerspec.GatewayImage gatewayImage) {
-        this.gatewayImage = gatewayImage;
     }
 
     @com.fasterxml.jackson.annotation.JsonProperty("helmRepository")
@@ -156,19 +143,6 @@ public class SubmarinerSpec implements io.fabric8.kubernetes.api.model.Kubernete
         this.operatorHelmChart = operatorHelmChart;
     }
 
-    @com.fasterxml.jackson.annotation.JsonProperty("operatorImage")
-    @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private io.roboscale.connection_hub.v1alpha1.connectionhubstatus.connectioninterfaces.forphysicalinstance.submarinerspec.OperatorImage operatorImage;
-
-    public io.roboscale.connection_hub.v1alpha1.connectionhubstatus.connectioninterfaces.forphysicalinstance.submarinerspec.OperatorImage getOperatorImage() {
-        return operatorImage;
-    }
-
-    public void setOperatorImage(io.roboscale.connection_hub.v1alpha1.connectionhubstatus.connectioninterfaces.forphysicalinstance.submarinerspec.OperatorImage operatorImage) {
-        this.operatorImage = operatorImage;
-    }
-
     @com.fasterxml.jackson.annotation.JsonProperty("presharedKey")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String presharedKey;
@@ -191,19 +165,6 @@ public class SubmarinerSpec implements io.fabric8.kubernetes.api.model.Kubernete
 
     public void setServiceCIDR(String serviceCIDR) {
         this.serviceCIDR = serviceCIDR;
-    }
-
-    @com.fasterxml.jackson.annotation.JsonProperty("submarinerImages")
-    @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private io.roboscale.connection_hub.v1alpha1.connectionhubstatus.connectioninterfaces.forphysicalinstance.submarinerspec.SubmarinerImages submarinerImages;
-
-    public io.roboscale.connection_hub.v1alpha1.connectionhubstatus.connectioninterfaces.forphysicalinstance.submarinerspec.SubmarinerImages getSubmarinerImages() {
-        return submarinerImages;
-    }
-
-    public void setSubmarinerImages(io.roboscale.connection_hub.v1alpha1.connectionhubstatus.connectioninterfaces.forphysicalinstance.submarinerspec.SubmarinerImages submarinerImages) {
-        this.submarinerImages = submarinerImages;
     }
 }
 
