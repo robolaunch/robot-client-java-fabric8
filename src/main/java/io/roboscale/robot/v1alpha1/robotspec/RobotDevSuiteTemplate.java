@@ -1,7 +1,7 @@
 package io.roboscale.robot.v1alpha1.robotspec;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"ideEnabled","robotIDETemplate","robotVDITemplate","vdiEnabled"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"ideEnabled","remoteIDEEnabled","remoteIDERelayServerTemplate","robotIDETemplate","robotVDITemplate","vdiEnabled"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class RobotDevSuiteTemplate implements io.fabric8.kubernetes.api.model.KubernetesResource {
@@ -20,6 +20,38 @@ public class RobotDevSuiteTemplate implements io.fabric8.kubernetes.api.model.Ku
 
     public void setIdeEnabled(Boolean ideEnabled) {
         this.ideEnabled = ideEnabled;
+    }
+
+    /**
+     * If `true`, a relay server for remote Cloud IDE will be provisioned inside development suite.
+     */
+    @com.fasterxml.jackson.annotation.JsonProperty("remoteIDEEnabled")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("If `true`, a relay server for remote Cloud IDE will be provisioned inside development suite.")
+    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
+    private Boolean remoteIDEEnabled;
+
+    public Boolean getRemoteIDEEnabled() {
+        return remoteIDEEnabled;
+    }
+
+    public void setRemoteIDEEnabled(Boolean remoteIDEEnabled) {
+        this.remoteIDEEnabled = remoteIDEEnabled;
+    }
+
+    /**
+     * Configurational parameters of remote IDE. Applied if `.spec.remoteIDEEnabled` is set to `true`.
+     */
+    @com.fasterxml.jackson.annotation.JsonProperty("remoteIDERelayServerTemplate")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Configurational parameters of remote IDE. Applied if `.spec.remoteIDEEnabled` is set to `true`.")
+    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
+    private io.roboscale.robot.v1alpha1.robotspec.robotdevsuitetemplate.RemoteIDERelayServerTemplate remoteIDERelayServerTemplate;
+
+    public io.roboscale.robot.v1alpha1.robotspec.robotdevsuitetemplate.RemoteIDERelayServerTemplate getRemoteIDERelayServerTemplate() {
+        return remoteIDERelayServerTemplate;
+    }
+
+    public void setRemoteIDERelayServerTemplate(io.roboscale.robot.v1alpha1.robotspec.robotdevsuitetemplate.RemoteIDERelayServerTemplate remoteIDERelayServerTemplate) {
+        this.remoteIDERelayServerTemplate = remoteIDERelayServerTemplate;
     }
 
     /**

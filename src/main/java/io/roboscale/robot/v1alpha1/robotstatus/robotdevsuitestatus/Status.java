@@ -1,7 +1,7 @@
 package io.roboscale.robot.v1alpha1.robotstatus.robotdevsuitestatus;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"active","phase","robotIDEStatus","robotVDIStatus"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"active","phase","remoteIDERelayServerStatus","robotIDEStatus","robotVDIStatus"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class Status implements io.fabric8.kubernetes.api.model.KubernetesResource {
@@ -36,6 +36,22 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
 
     public void setPhase(String phase) {
         this.phase = phase;
+    }
+
+    /**
+     * Status of remote Cloud IDE RelayServer. Created only if the instance type is Physical Instance.
+     */
+    @com.fasterxml.jackson.annotation.JsonProperty("remoteIDERelayServerStatus")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Status of remote Cloud IDE RelayServer. Created only if the instance type is Physical Instance.")
+    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
+    private io.roboscale.robot.v1alpha1.robotstatus.robotdevsuitestatus.status.RemoteIDERelayServerStatus remoteIDERelayServerStatus;
+
+    public io.roboscale.robot.v1alpha1.robotstatus.robotdevsuitestatus.status.RemoteIDERelayServerStatus getRemoteIDERelayServerStatus() {
+        return remoteIDERelayServerStatus;
+    }
+
+    public void setRemoteIDERelayServerStatus(io.roboscale.robot.v1alpha1.robotstatus.robotdevsuitestatus.status.RemoteIDERelayServerStatus remoteIDERelayServerStatus) {
+        this.remoteIDERelayServerStatus = remoteIDERelayServerStatus;
     }
 
     /**
