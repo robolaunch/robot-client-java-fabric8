@@ -68,7 +68,7 @@ jobs:
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_workspacemanagers.yaml
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_buildmanagers.yaml
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_launchmanagers.yaml
-        # wget -P ./crds/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_metricsexporters.yaml
+        wget -P ./crds/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_metricsexporters.yaml
     
     - name: Configure Code Generator
       run: |
