@@ -20,7 +20,7 @@ public class Template implements io.fabric8.kubernetes.api.model.KubernetesResou
     }
 
     @com.fasterxml.jackson.annotation.JsonAnySetter()
-    public void setAdditionalProperty(java.lang.String key, java.lang.Object value) {
+    public void setAdditionalProperty(String key, Object value) {
         this.additionalProperties.put(key, value);
     }
 }
