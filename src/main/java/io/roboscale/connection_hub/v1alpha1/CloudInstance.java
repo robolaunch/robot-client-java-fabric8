@@ -5,6 +5,6 @@ package io.roboscale.connection_hub.v1alpha1;
 @io.fabric8.kubernetes.model.annotation.Singular("cloudinstance")
 @io.fabric8.kubernetes.model.annotation.Plural("cloudinstances")
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
-public class CloudInstance extends io.fabric8.kubernetes.client.CustomResource<io.roboscale.connection_hub.v1alpha1.CloudInstanceSpec, io.roboscale.connection_hub.v1alpha1.CloudInstanceStatus> implements io.fabric8.kubernetes.api.model.Namespaced {
+public class CloudInstance extends io.fabric8.kubernetes.client.CustomResource<io.roboscale.connection_hub.v1alpha1.CloudInstanceSpec, io.roboscale.connection_hub.v1alpha1.CloudInstanceStatus> {
 }
 
