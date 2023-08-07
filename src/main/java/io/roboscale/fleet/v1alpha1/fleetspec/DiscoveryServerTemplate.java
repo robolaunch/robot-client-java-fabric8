@@ -1,7 +1,7 @@
 package io.roboscale.fleet.v1alpha1.fleetspec;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"cluster","hostname","reference","subdomain","type"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"cluster","domainID","hostname","reference","subdomain","type"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class DiscoveryServerTemplate implements io.fabric8.kubernetes.api.model.KubernetesResource {
@@ -20,6 +20,25 @@ public class DiscoveryServerTemplate implements io.fabric8.kubernetes.api.model.
 
     public void setCluster(String cluster) {
         this.cluster = cluster;
+    }
+
+    /**
+     * ROS domain ID for robot. See https://docs.ros.org/en/foxy/Concepts/About-Domain-ID.html.
+     */
+    @com.fasterxml.jackson.annotation.JsonProperty("domainID")
+    @io.fabric8.generator.annotation.Required()
+    @io.fabric8.generator.annotation.Max(101.0)
+    @io.fabric8.generator.annotation.Min(0.0)
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ROS domain ID for robot. See https://docs.ros.org/en/foxy/Concepts/About-Domain-ID.html.")
+    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
+    private Long domainID = 0L;
+
+    public Long getDomainID() {
+        return domainID;
+    }
+
+    public void setDomainID(Long domainID) {
+        this.domainID = domainID;
     }
 
     /**
