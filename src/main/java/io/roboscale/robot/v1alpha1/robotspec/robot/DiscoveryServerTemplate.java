@@ -1,4 +1,4 @@
-package io.roboscale.fleet.v1alpha1.fleetspec;
+package io.roboscale.robot.v1alpha1.robotspec.robot;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
 @com.fasterxml.jackson.annotation.JsonPropertyOrder({"cluster","domainID","hostname","reference","subdomain","type"})
@@ -63,13 +63,13 @@ public class DiscoveryServerTemplate implements io.fabric8.kubernetes.api.model.
     @com.fasterxml.jackson.annotation.JsonProperty("reference")
     @com.fasterxml.jackson.annotation.JsonPropertyDescription("Reference to the `Server` instance. It is used if `.spec.type` is `Client`. Referenced object can be previously provisioned in another cluster. In that case, cluster's name can be specified in `.spec.cluster` field.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private io.roboscale.fleet.v1alpha1.fleetspec.discoveryservertemplate.Reference reference;
+    private io.roboscale.robot.v1alpha1.robotspec.robot.discoveryservertemplate.Reference reference;
 
-    public io.roboscale.fleet.v1alpha1.fleetspec.discoveryservertemplate.Reference getReference() {
+    public io.roboscale.robot.v1alpha1.robotspec.robot.discoveryservertemplate.Reference getReference() {
         return reference;
     }
 
-    public void setReference(io.roboscale.fleet.v1alpha1.fleetspec.discoveryservertemplate.Reference reference) {
+    public void setReference(io.roboscale.robot.v1alpha1.robotspec.robot.discoveryservertemplate.Reference reference) {
         this.reference = reference;
     }
 

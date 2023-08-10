@@ -1,162 +1,41 @@
 package io.roboscale.robot.v1alpha1;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"buildManagerTemplate","development","discoveryServerTemplate","distributions","domainID","launchManagerTemplates","rmwImplementation","robotDevSuiteTemplate","rootDNSConfig","rosBridgeTemplate","storage","tlsSecretRef","workspaceManagerTemplate"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"environment","robot","robotDevSuiteTemplate","rootDNSConfig","storage","tlsSecretRef","type","workspaceManagerTemplate"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class RobotSpec implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * [*alpha*] Build manager template for initial configuration.
+     * Holds environment's configuration. Applied if `.spec.type` is `Environment` and must be `nil` otherwise.
      */
-    @com.fasterxml.jackson.annotation.JsonProperty("buildManagerTemplate")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*alpha*] Build manager template for initial configuration.")
+    @com.fasterxml.jackson.annotation.JsonProperty("environment")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Holds environment's configuration. Applied if `.spec.type` is `Environment` and must be `nil` otherwise.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private io.roboscale.robot.v1alpha1.robotspec.BuildManagerTemplate buildManagerTemplate;
+    private io.roboscale.robot.v1alpha1.robotspec.Environment environment;
 
-    public io.roboscale.robot.v1alpha1.robotspec.BuildManagerTemplate getBuildManagerTemplate() {
-        return buildManagerTemplate;
+    public io.roboscale.robot.v1alpha1.robotspec.Environment getEnvironment() {
+        return environment;
     }
 
-    public void setBuildManagerTemplate(io.roboscale.robot.v1alpha1.robotspec.BuildManagerTemplate buildManagerTemplate) {
-        this.buildManagerTemplate = buildManagerTemplate;
+    public void setEnvironment(io.roboscale.robot.v1alpha1.robotspec.Environment environment) {
+        this.environment = environment;
     }
 
     /**
-     * [*alpha*] Switch to development mode if `true`.
+     * Holds robot's configuration. Applied if `.spec.type` is `Robot` and must be `nil` otherwise.
      */
-    @com.fasterxml.jackson.annotation.JsonProperty("development")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*alpha*] Switch to development mode if `true`.")
+    @com.fasterxml.jackson.annotation.JsonProperty("robot")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Holds robot's configuration. Applied if `.spec.type` is `Robot` and must be `nil` otherwise.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private Boolean development;
+    private io.roboscale.robot.v1alpha1.robotspec.Robot robot;
 
-    public Boolean getDevelopment() {
-        return development;
+    public io.roboscale.robot.v1alpha1.robotspec.Robot getRobot() {
+        return robot;
     }
 
-    public void setDevelopment(Boolean development) {
-        this.development = development;
-    }
-
-    /**
-     * Discovery server configurational parameters.
-     */
-    @com.fasterxml.jackson.annotation.JsonProperty("discoveryServerTemplate")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Discovery server configurational parameters.")
-    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private io.roboscale.robot.v1alpha1.robotspec.DiscoveryServerTemplate discoveryServerTemplate;
-
-    public io.roboscale.robot.v1alpha1.robotspec.DiscoveryServerTemplate getDiscoveryServerTemplate() {
-        return discoveryServerTemplate;
-    }
-
-    public void setDiscoveryServerTemplate(io.roboscale.robot.v1alpha1.robotspec.DiscoveryServerTemplate discoveryServerTemplate) {
-        this.discoveryServerTemplate = discoveryServerTemplate;
-    }
-
-    public enum Distributions {
-
-        @com.fasterxml.jackson.annotation.JsonProperty("foxy")
-        FOXY("foxy"), @com.fasterxml.jackson.annotation.JsonProperty("galactic")
-        GALACTIC("galactic"), @com.fasterxml.jackson.annotation.JsonProperty("humble")
-        HUMBLE("humble");
-
-        java.lang.String value;
-
-        Distributions(java.lang.String value) {
-            this.value = value;
-        }
-
-        @com.fasterxml.jackson.annotation.JsonValue()
-        public java.lang.String getValue() {
-            return value;
-        }
-    }
-
-    /**
-     * ROS 2 distributions to be used. You can select multiple distributions if they are supported in the same underlying OS. (eg. `foxy` and `galactic` are supported in Ubuntu Focal, so they can be used together but both cannot be used with `humble`)
-     */
-    @com.fasterxml.jackson.annotation.JsonProperty("distributions")
-    @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ROS 2 distributions to be used. You can select multiple distributions if they are supported in the same underlying OS. (eg. `foxy` and `galactic` are supported in Ubuntu Focal, so they can be used together but both cannot be used with `humble`)")
-    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private java.util.List<Distributions> distributions;
-
-    public java.util.List<Distributions> getDistributions() {
-        return distributions;
-    }
-
-    public void setDistributions(java.util.List<Distributions> distributions) {
-        this.distributions = distributions;
-    }
-
-    /**
-     * ROS domain ID for robot. See https://docs.ros.org/en/foxy/Concepts/About-Domain-ID.html.
-     */
-    @com.fasterxml.jackson.annotation.JsonProperty("domainID")
-    @io.fabric8.generator.annotation.Required()
-    @io.fabric8.generator.annotation.Max(101.0)
-    @io.fabric8.generator.annotation.Min(0.0)
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ROS domain ID for robot. See https://docs.ros.org/en/foxy/Concepts/About-Domain-ID.html.")
-    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private Long domainID = 0L;
-
-    public Long getDomainID() {
-        return domainID;
-    }
-
-    public void setDomainID(Long domainID) {
-        this.domainID = domainID;
-    }
-
-    /**
-     * [*alpha*] Launch manager template for initial configuration.
-     */
-    @com.fasterxml.jackson.annotation.JsonProperty("launchManagerTemplates")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*alpha*] Launch manager template for initial configuration.")
-    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private java.util.List<io.roboscale.robot.v1alpha1.robotspec.LaunchManagerTemplates> launchManagerTemplates;
-
-    public java.util.List<io.roboscale.robot.v1alpha1.robotspec.LaunchManagerTemplates> getLaunchManagerTemplates() {
-        return launchManagerTemplates;
-    }
-
-    public void setLaunchManagerTemplates(java.util.List<io.roboscale.robot.v1alpha1.robotspec.LaunchManagerTemplates> launchManagerTemplates) {
-        this.launchManagerTemplates = launchManagerTemplates;
-    }
-
-    public enum RmwImplementation {
-
-        @com.fasterxml.jackson.annotation.JsonProperty("rmw_fastrtps_cpp")
-        RMW_FASTRTPS_CPP("rmw_fastrtps_cpp");
-
-        java.lang.String value;
-
-        RmwImplementation(java.lang.String value) {
-            this.value = value;
-        }
-
-        @com.fasterxml.jackson.annotation.JsonValue()
-        public java.lang.String getValue() {
-            return value;
-        }
-    }
-
-    /**
-     * RMW implementation selection. Robot operator currently supports only FastRTPS. See https://docs.ros.org/en/foxy/How-To-Guides/Working-with-multiple-RMW-implementations.html.
-     */
-    @com.fasterxml.jackson.annotation.JsonProperty("rmwImplementation")
-    @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("RMW implementation selection. Robot operator currently supports only FastRTPS. See https://docs.ros.org/en/foxy/How-To-Guides/Working-with-multiple-RMW-implementations.html.")
-    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private RmwImplementation rmwImplementation = io.fabric8.kubernetes.client.utils.Serialization.unmarshal("\"rmw_fastrtps_cpp\"", RmwImplementation.class);
-
-    public RmwImplementation getRmwImplementation() {
-        return rmwImplementation;
-    }
-
-    public void setRmwImplementation(RmwImplementation rmwImplementation) {
-        this.rmwImplementation = rmwImplementation;
+    public void setRobot(io.roboscale.robot.v1alpha1.robotspec.Robot robot) {
+        this.robot = robot;
     }
 
     /**
@@ -192,22 +71,6 @@ public class RobotSpec implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * ROS bridge configurational parameters.
-     */
-    @com.fasterxml.jackson.annotation.JsonProperty("rosBridgeTemplate")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ROS bridge configurational parameters.")
-    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private io.roboscale.robot.v1alpha1.robotspec.RosBridgeTemplate rosBridgeTemplate;
-
-    public io.roboscale.robot.v1alpha1.robotspec.RosBridgeTemplate getRosBridgeTemplate() {
-        return rosBridgeTemplate;
-    }
-
-    public void setRosBridgeTemplate(io.roboscale.robot.v1alpha1.robotspec.RosBridgeTemplate rosBridgeTemplate) {
-        this.rosBridgeTemplate = rosBridgeTemplate;
-    }
-
-    /**
      * Total storage amount to persist via Robot. Unit of measurement is MB. (eg. `10240` corresponds 10 GB) This amount is being shared between different components.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("storage")
@@ -237,6 +100,22 @@ public class RobotSpec implements io.fabric8.kubernetes.api.model.KubernetesReso
 
     public void setTlsSecretRef(io.roboscale.robot.v1alpha1.robotspec.TlsSecretRef tlsSecretRef) {
         this.tlsSecretRef = tlsSecretRef;
+    }
+
+    /**
+     * Determines the object type. If "Environment", operator will provision an environment according to the specifications. (`.spec.environment`) If "Robot", operator will provision an environment specialized for ROS 2 according to the specifications. (`.spec.robot`)
+     */
+    @com.fasterxml.jackson.annotation.JsonProperty("type")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Determines the object type. If \"Environment\", operator will provision an environment according to the specifications. (`.spec.environment`) If \"Robot\", operator will provision an environment specialized for ROS 2 according to the specifications. (`.spec.robot`)")
+    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
+    private String type;
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     /**
