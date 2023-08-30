@@ -61,8 +61,8 @@ jobs:
         # fleet.roboscale.io
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/fleet-operator/${{ github.event.inputs.fleetOperatorTag }}/config/crd/bases/fleet.roboscale.io_fleets.yaml
         # dev.roboscale.io
-        wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/devspace-operator/${{ github.event.inputs.devspaceOperatorTag }}/config/crd/bases/dev.roboscale.io_devspaces.yaml
-        wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/devspace-operator/${{ github.event.inputs.devspaceOperatorTag }}/config/crd/bases/dev.roboscale.io_workspacemanagers.yaml
+        # wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/devspace-operator/${{ github.event.inputs.devspaceOperatorTag }}/config/crd/bases/dev.roboscale.io_devspaces.yaml
+        # wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/devspace-operator/${{ github.event.inputs.devspaceOperatorTag }}/config/crd/bases/dev.roboscale.io_workspacemanagers.yaml
         # robot.roboscale.io
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_robots.yaml
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_workspacemanagers.yaml
