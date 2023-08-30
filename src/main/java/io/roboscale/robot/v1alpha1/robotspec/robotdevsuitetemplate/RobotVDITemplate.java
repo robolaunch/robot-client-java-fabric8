@@ -1,10 +1,26 @@
 package io.roboscale.robot.v1alpha1.robotspec.robotdevsuitetemplate;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"ingress","nat1to1","privileged","resolution","resources","serviceType","webrtcPortRange"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"disableNvenc","ingress","nat1to1","privileged","resolution","resources","serviceType","webrtcPortRange"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class RobotVDITemplate implements io.fabric8.kubernetes.api.model.KubernetesResource {
+
+    /**
+     * If true, VDI uses plain h264 instead of nvh264enc.
+     */
+    @com.fasterxml.jackson.annotation.JsonProperty("disableNvenc")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("If true, VDI uses plain h264 instead of nvh264enc.")
+    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
+    private Boolean disableNvenc;
+
+    public Boolean getDisableNvenc() {
+        return disableNvenc;
+    }
+
+    public void setDisableNvenc(Boolean disableNvenc) {
+        this.disableNvenc = disableNvenc;
+    }
 
     /**
      * [*alpha*] RobotIDE will create an Ingress resource if `true`.
