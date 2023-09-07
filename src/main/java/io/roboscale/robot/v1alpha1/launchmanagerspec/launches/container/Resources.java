@@ -1,7 +1,7 @@
 package io.roboscale.robot.v1alpha1.launchmanagerspec.launches.container;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"cpu","gpuCore","memory"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"cpu","gpuCore","gpuInstance","memory"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class Resources implements io.fabric8.kubernetes.api.model.KubernetesResource {
@@ -37,6 +37,22 @@ public class Resources implements io.fabric8.kubernetes.api.model.KubernetesReso
 
     public void setGpuCore(Long gpuCore) {
         this.gpuCore = gpuCore;
+    }
+
+    /**
+     * GPU instance that will be allocated. eg. nvidia.com/mig-1g.5gb. Defaults to "nvidia.com/gpu".
+     */
+    @com.fasterxml.jackson.annotation.JsonProperty("gpuInstance")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("GPU instance that will be allocated. eg. nvidia.com/mig-1g.5gb. Defaults to \"nvidia.com/gpu\".")
+    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
+    private String gpuInstance = "nvidia.com/gpu";
+
+    public String getGpuInstance() {
+        return gpuInstance;
+    }
+
+    public void setGpuInstance(String gpuInstance) {
+        this.gpuInstance = gpuInstance;
     }
 
     /**
