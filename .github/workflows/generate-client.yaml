@@ -49,6 +49,7 @@ jobs:
         xmlstarlet edit -L -N p=http://maven.apache.org/POM/4.0.0 --update '/p:project/p:version' --value ${{ github.event.inputs.clientTag }} pom.xml
     - name: Fetch CRDs
       run: |
+        rm -rf src/
         rm -rf crds/base/*.yaml
         # connection-hub.roboscale.io
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/connection-hub-operator/${{ github.event.inputs.connectionHubOperatorTag }}/config/crd/bases/connection-hub.roboscale.io_connectionhubs.yaml
