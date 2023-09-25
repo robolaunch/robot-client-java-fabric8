@@ -1,7 +1,7 @@
 package io.roboscale.robot.v1alpha1;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"attachedBuildObject","attachedDevObjects","attachedLaunchObjects","discoveryServerStatus","image","initialBuildManagerStatus","initialLaunchManagerStatuses","loaderJobStatus","nodeName","phase","robotDevSuiteStatus","rosBridgeStatus","volumeStatuses","workspaceManagerStatus"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"attachedBuildObject","attachedDevObjects","attachedLaunchObjects","discoveryServerStatus","image","loaderJobStatus","nodeName","phase","robotDevSuiteStatus","rosBridgeStatus","uid","volumeStatuses","workspaceManagerStatus"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class RobotStatus implements io.fabric8.kubernetes.api.model.KubernetesResource {
@@ -87,38 +87,6 @@ public class RobotStatus implements io.fabric8.kubernetes.api.model.KubernetesRe
     }
 
     /**
-     * [*alpha*] Initial build manager creation status if exists.
-     */
-    @com.fasterxml.jackson.annotation.JsonProperty("initialBuildManagerStatus")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*alpha*] Initial build manager creation status if exists.")
-    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private io.roboscale.robot.v1alpha1.robotstatus.InitialBuildManagerStatus initialBuildManagerStatus;
-
-    public io.roboscale.robot.v1alpha1.robotstatus.InitialBuildManagerStatus getInitialBuildManagerStatus() {
-        return initialBuildManagerStatus;
-    }
-
-    public void setInitialBuildManagerStatus(io.roboscale.robot.v1alpha1.robotstatus.InitialBuildManagerStatus initialBuildManagerStatus) {
-        this.initialBuildManagerStatus = initialBuildManagerStatus;
-    }
-
-    /**
-     * [*alpha*] Initial launch manager creation status if exists.
-     */
-    @com.fasterxml.jackson.annotation.JsonProperty("initialLaunchManagerStatuses")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*alpha*] Initial launch manager creation status if exists.")
-    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private java.util.List<io.roboscale.robot.v1alpha1.robotstatus.InitialLaunchManagerStatuses> initialLaunchManagerStatuses;
-
-    public java.util.List<io.roboscale.robot.v1alpha1.robotstatus.InitialLaunchManagerStatuses> getInitialLaunchManagerStatuses() {
-        return initialLaunchManagerStatuses;
-    }
-
-    public void setInitialLaunchManagerStatuses(java.util.List<io.roboscale.robot.v1alpha1.robotstatus.InitialLaunchManagerStatuses> initialLaunchManagerStatuses) {
-        this.initialLaunchManagerStatuses = initialLaunchManagerStatuses;
-    }
-
-    /**
      * Status of loader job that configures environment.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("loaderJobStatus")
@@ -196,6 +164,22 @@ public class RobotStatus implements io.fabric8.kubernetes.api.model.KubernetesRe
 
     public void setRosBridgeStatus(io.roboscale.robot.v1alpha1.robotstatus.RosBridgeStatus rosBridgeStatus) {
         this.rosBridgeStatus = rosBridgeStatus;
+    }
+
+    /**
+     * User ID of robolaunch user in image.
+     */
+    @com.fasterxml.jackson.annotation.JsonProperty("uid")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("User ID of robolaunch user in image.")
+    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
+    private Long uid;
+
+    public Long getUid() {
+        return uid;
+    }
+
+    public void setUid(Long uid) {
+        this.uid = uid;
     }
 
     /**

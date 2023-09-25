@@ -1,10 +1,26 @@
 package io.roboscale.robot.v1alpha1;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"environment","robot","robotDevSuiteTemplate","rootDNSConfig","storage","tlsSecretRef","type","workspaceManagerTemplate"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"additionalConfigs","environment","robot","robotDevSuiteTemplate","rootDNSConfig","storage","tlsSecretRef","type","workspaceManagerTemplate"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class RobotSpec implements io.fabric8.kubernetes.api.model.KubernetesResource {
+
+    /**
+     * Key value pairs that operator uses to extend configuration.
+     */
+    @com.fasterxml.jackson.annotation.JsonProperty("additionalConfigs")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Key value pairs that operator uses to extend configuration.")
+    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
+    private java.util.Map<java.lang.String, io.roboscale.robot.v1alpha1.robotspec.AdditionalConfigs> additionalConfigs;
+
+    public java.util.Map<java.lang.String, io.roboscale.robot.v1alpha1.robotspec.AdditionalConfigs> getAdditionalConfigs() {
+        return additionalConfigs;
+    }
+
+    public void setAdditionalConfigs(java.util.Map<java.lang.String, io.roboscale.robot.v1alpha1.robotspec.AdditionalConfigs> additionalConfigs) {
+        this.additionalConfigs = additionalConfigs;
+    }
 
     /**
      * Holds environment's configuration. Applied if `.spec.type` is `Environment` and must be `nil` otherwise.
