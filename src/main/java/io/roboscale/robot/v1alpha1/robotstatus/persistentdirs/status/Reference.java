@@ -1,4 +1,4 @@
-package io.roboscale.robot.v1alpha1.robotstatus.volumestatuses.workspacedir;
+package io.roboscale.robot.v1alpha1.robotstatus.persistentdirs.status;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
 @com.fasterxml.jackson.annotation.JsonPropertyOrder({"apiVersion","fieldPath","kind","name","namespace","resourceVersion","uid"})

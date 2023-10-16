@@ -1,7 +1,7 @@
 package io.roboscale.robot.v1alpha1;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"attachedBuildObject","attachedDevObjects","attachedLaunchObjects","discoveryServerStatus","image","loaderJobStatus","nodeName","phase","robotDevSuiteStatus","rosBridgeStatus","uid","volumeStatuses","workspaceManagerStatus"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"attachedBuildObject","attachedDevObjects","attachedLaunchObjects","discoveryServerStatus","image","loaderJobStatus","nodeName","persistentDirs","phase","robotDevSuiteStatus","rosBridgeStatus","uid","workspaceManagerStatus"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class RobotStatus implements io.fabric8.kubernetes.api.model.KubernetesResource {
@@ -119,6 +119,22 @@ public class RobotStatus implements io.fabric8.kubernetes.api.model.KubernetesRe
     }
 
     /**
+     * [*alpha*] Status of PVCs of persistent directories.
+     */
+    @com.fasterxml.jackson.annotation.JsonProperty("persistentDirs")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("[*alpha*] Status of PVCs of persistent directories.")
+    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
+    private java.util.List<io.roboscale.robot.v1alpha1.robotstatus.PersistentDirs> persistentDirs;
+
+    public java.util.List<io.roboscale.robot.v1alpha1.robotstatus.PersistentDirs> getPersistentDirs() {
+        return persistentDirs;
+    }
+
+    public void setPersistentDirs(java.util.List<io.roboscale.robot.v1alpha1.robotstatus.PersistentDirs> persistentDirs) {
+        this.persistentDirs = persistentDirs;
+    }
+
+    /**
      * Phase of Robot. It sums the general status of Robot.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("phase")
@@ -180,22 +196,6 @@ public class RobotStatus implements io.fabric8.kubernetes.api.model.KubernetesRe
 
     public void setUid(Long uid) {
         this.uid = uid;
-    }
-
-    /**
-     * Robot persists some of the directories of underlying OS inside persistent volumes. This field exposes persistent volume claims that dynamically provision PVs.
-     */
-    @com.fasterxml.jackson.annotation.JsonProperty("volumeStatuses")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Robot persists some of the directories of underlying OS inside persistent volumes. This field exposes persistent volume claims that dynamically provision PVs.")
-    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private io.roboscale.robot.v1alpha1.robotstatus.VolumeStatuses volumeStatuses;
-
-    public io.roboscale.robot.v1alpha1.robotstatus.VolumeStatuses getVolumeStatuses() {
-        return volumeStatuses;
-    }
-
-    public void setVolumeStatuses(io.roboscale.robot.v1alpha1.robotstatus.VolumeStatuses volumeStatuses) {
-        this.volumeStatuses = volumeStatuses;
     }
 
     /**
