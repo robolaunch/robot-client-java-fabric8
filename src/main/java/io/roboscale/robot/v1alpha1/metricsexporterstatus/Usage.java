@@ -1,7 +1,7 @@
 package io.roboscale.robot.v1alpha1.metricsexporterstatus;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"gpu","gpuInstanceUsage","gpuModel","network"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"gpu","gpuInstanceUsage","gpuModel","network","storage"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class Usage implements io.fabric8.kubernetes.api.model.KubernetesResource {
@@ -68,6 +68,22 @@ public class Usage implements io.fabric8.kubernetes.api.model.KubernetesResource
 
     public void setNetwork(io.roboscale.robot.v1alpha1.metricsexporterstatus.usage.Network network) {
         this.network = network;
+    }
+
+    /**
+     * Storage usage information
+     */
+    @com.fasterxml.jackson.annotation.JsonProperty("storage")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Storage usage information")
+    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
+    private io.roboscale.robot.v1alpha1.metricsexporterstatus.usage.Storage storage;
+
+    public io.roboscale.robot.v1alpha1.metricsexporterstatus.usage.Storage getStorage() {
+        return storage;
+    }
+
+    public void setStorage(io.roboscale.robot.v1alpha1.metricsexporterstatus.usage.Storage storage) {
+        this.storage = storage;
     }
 }
 

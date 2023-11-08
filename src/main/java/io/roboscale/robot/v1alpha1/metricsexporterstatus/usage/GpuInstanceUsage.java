@@ -12,7 +12,7 @@ public class GpuInstanceUsage implements io.fabric8.kubernetes.api.model.Kuberne
     @com.fasterxml.jackson.annotation.JsonProperty("allocated")
     @com.fasterxml.jackson.annotation.JsonPropertyDescription("Number of allocated virtual cores.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private String allocated;
+    private String allocated = "0";
 
     public String getAllocated() {
         return allocated;
