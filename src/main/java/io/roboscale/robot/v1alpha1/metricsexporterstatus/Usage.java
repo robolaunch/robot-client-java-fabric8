@@ -1,25 +1,25 @@
 package io.roboscale.robot.v1alpha1.metricsexporterstatus;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"gpu","gpuInstanceUsage","gpuModel","network","storage"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"gpuDeviceStatuses","gpuInstanceUsage","network","storage"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class Usage implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * GPU usage information. Will be deprecated after implementing checks for each GPU instance.
+     * GPU device information.
      */
-    @com.fasterxml.jackson.annotation.JsonProperty("gpu")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("GPU usage information. Will be deprecated after implementing checks for each GPU instance.")
+    @com.fasterxml.jackson.annotation.JsonProperty("gpuDeviceStatuses")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("GPU device information.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private io.roboscale.robot.v1alpha1.metricsexporterstatus.usage.Gpu gpu;
+    private io.roboscale.robot.v1alpha1.metricsexporterstatus.usage.GpuDeviceStatuses gpuDeviceStatuses;
 
-    public io.roboscale.robot.v1alpha1.metricsexporterstatus.usage.Gpu getGpu() {
-        return gpu;
+    public io.roboscale.robot.v1alpha1.metricsexporterstatus.usage.GpuDeviceStatuses getGpuDeviceStatuses() {
+        return gpuDeviceStatuses;
     }
 
-    public void setGpu(io.roboscale.robot.v1alpha1.metricsexporterstatus.usage.Gpu gpu) {
-        this.gpu = gpu;
+    public void setGpuDeviceStatuses(io.roboscale.robot.v1alpha1.metricsexporterstatus.usage.GpuDeviceStatuses gpuDeviceStatuses) {
+        this.gpuDeviceStatuses = gpuDeviceStatuses;
     }
 
     /**
@@ -36,22 +36,6 @@ public class Usage implements io.fabric8.kubernetes.api.model.KubernetesResource
 
     public void setGpuInstanceUsage(java.util.Map<java.lang.String, io.roboscale.robot.v1alpha1.metricsexporterstatus.usage.GpuInstanceUsage> gpuInstanceUsage) {
         this.gpuInstanceUsage = gpuInstanceUsage;
-    }
-
-    /**
-     * GPU model
-     */
-    @com.fasterxml.jackson.annotation.JsonProperty("gpuModel")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("GPU model")
-    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private String gpuModel;
-
-    public String getGpuModel() {
-        return gpuModel;
-    }
-
-    public void setGpuModel(String gpuModel) {
-        this.gpuModel = gpuModel;
     }
 
     /**

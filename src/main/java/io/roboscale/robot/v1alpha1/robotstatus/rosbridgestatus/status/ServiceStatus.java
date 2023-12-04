@@ -1,7 +1,7 @@
 package io.roboscale.robot.v1alpha1.robotstatus.rosbridgestatus.status;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"resource","url"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"resource","urls"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class ServiceStatus implements io.fabric8.kubernetes.api.model.KubernetesResource {
@@ -25,17 +25,17 @@ public class ServiceStatus implements io.fabric8.kubernetes.api.model.Kubernetes
     /**
      * Connection URL.
      */
-    @com.fasterxml.jackson.annotation.JsonProperty("url")
+    @com.fasterxml.jackson.annotation.JsonProperty("urls")
     @com.fasterxml.jackson.annotation.JsonPropertyDescription("Connection URL.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private String url;
+    private java.util.Map<java.lang.String, String> urls;
 
-    public String getUrl() {
-        return url;
+    public java.util.Map<java.lang.String, String> getUrls() {
+        return urls;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setUrls(java.util.Map<java.lang.String, String> urls) {
+        this.urls = urls;
     }
 }
 
