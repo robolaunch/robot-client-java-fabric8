@@ -82,6 +82,10 @@ jobs:
       run: |
         sudo /usr/local/bin/java-gen -s crds/federated --target src/main/java
 
+    - name: Generate Models for External CRDs
+      run: |
+        sudo /usr/local/bin/java-gen -s crds/external --target src/main/java
+
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: "build(ci): generate fabric8 models ${{ github.event.inputs.clientTag }} for robot.roboscale.io ${{ github.event.inputs.robotOperatorTag }}, fleet.roboscale.io ${{ github.event.inputs.fleetOperatorTag }} and connection-hub.roboscale.io ${{ github.event.inputs.connectionHubOperatorTag }}"
