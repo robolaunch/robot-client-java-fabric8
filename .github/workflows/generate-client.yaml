@@ -82,9 +82,9 @@ jobs:
       run: |
         sudo /usr/local/bin/java-gen -s crds/federated --target src/main/java
 
-    - name: Generate Models for External CRDs
-      run: |
-        sudo /usr/local/bin/java-gen -s crds/external --target src/main/java
+    # - name: Generate Models for External CRDs
+    #   run: |
+    #     sudo /usr/local/bin/java-gen -s crds/external --target src/main/java
 
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
