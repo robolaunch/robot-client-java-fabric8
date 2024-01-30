@@ -1,4 +1,4 @@
-package io.roboscale.robot.v1alpha1.robotstatus.attachedbuildobject.status.steps.step;
+package io.roboscale.robot.v1alpha1.launchmanagerspec.launches;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
 @com.fasterxml.jackson.annotation.JsonPropertyOrder({"path","scopeType","workspace"})

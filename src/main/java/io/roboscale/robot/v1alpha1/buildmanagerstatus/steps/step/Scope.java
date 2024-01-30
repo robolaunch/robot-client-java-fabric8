@@ -23,11 +23,11 @@ public class Scope implements io.fabric8.kubernetes.api.model.KubernetesResource
     }
 
     /**
-     * Type of the BuildManager scope. Allowed scopes are `Workspace` and `Path`.
+     * Type of the scope. Allowed scopes are `Workspace` and `Path`.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("scopeType")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Type of the BuildManager scope. Allowed scopes are `Workspace` and `Path`.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Type of the scope. Allowed scopes are `Workspace` and `Path`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String scopeType;
 
