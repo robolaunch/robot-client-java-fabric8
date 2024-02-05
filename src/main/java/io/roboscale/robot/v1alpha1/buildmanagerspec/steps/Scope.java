@@ -22,6 +22,24 @@ public class Scope implements io.fabric8.kubernetes.api.model.KubernetesResource
         this.path = path;
     }
 
+    public enum ScopeType {
+
+        @com.fasterxml.jackson.annotation.JsonProperty("Workspace")
+        WORKSPACE("Workspace"), @com.fasterxml.jackson.annotation.JsonProperty("Path")
+        PATH("Path");
+
+        java.lang.String value;
+
+        ScopeType(java.lang.String value) {
+            this.value = value;
+        }
+
+        @com.fasterxml.jackson.annotation.JsonValue()
+        public java.lang.String getValue() {
+            return value;
+        }
+    }
+
     /**
      * Type of the scope. Allowed scopes are `Workspace` and `Path`.
      */
@@ -29,13 +47,13 @@ public class Scope implements io.fabric8.kubernetes.api.model.KubernetesResource
     @io.fabric8.generator.annotation.Required()
     @com.fasterxml.jackson.annotation.JsonPropertyDescription("Type of the scope. Allowed scopes are `Workspace` and `Path`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private String scopeType;
+    private ScopeType scopeType;
 
-    public String getScopeType() {
+    public ScopeType getScopeType() {
         return scopeType;
     }
 
-    public void setScopeType(String scopeType) {
+    public void setScopeType(ScopeType scopeType) {
         this.scopeType = scopeType;
     }
 
