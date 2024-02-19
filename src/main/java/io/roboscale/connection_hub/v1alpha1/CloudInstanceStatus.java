@@ -1,10 +1,22 @@
 package io.roboscale.connection_hub.v1alpha1;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"connectionResources","deployerStatus","gatewayConnection","phase"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"bootID","connectionResources","deployerStatus","gatewayConnection","phase"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class CloudInstanceStatus implements io.fabric8.kubernetes.api.model.KubernetesResource {
+
+    @com.fasterxml.jackson.annotation.JsonProperty("bootID")
+    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
+    private String bootID;
+
+    public String getBootID() {
+        return bootID;
+    }
+
+    public void setBootID(String bootID) {
+        this.bootID = bootID;
+    }
 
     @com.fasterxml.jackson.annotation.JsonProperty("connectionResources")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
