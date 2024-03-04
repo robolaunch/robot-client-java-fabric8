@@ -51,16 +51,19 @@ jobs:
       run: |
         rm -rf src/
         rm -rf crds/base/*.yaml
-        # connection-hub.roboscale.io
+        # robot.roboscale.io/v1alpha2
+        wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_ros2workloads.yaml
+        wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_ros2bridges.yaml
+        # connection-hub.roboscale.io/v1alpha1
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/connection-hub-operator/${{ github.event.inputs.connectionHubOperatorTag }}/config/crd/bases/connection-hub.roboscale.io_connectionhubs.yaml
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/connection-hub-operator/${{ github.event.inputs.connectionHubOperatorTag }}/config/crd/bases/connection-hub.roboscale.io_cloudinstances.yaml
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/connection-hub-operator/${{ github.event.inputs.connectionHubOperatorTag }}/config/crd/bases/connection-hub.roboscale.io_physicalinstances.yaml
-        # fleet.roboscale.io
+        # fleet.roboscale.io/v1alpha1
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/fleet-operator/${{ github.event.inputs.fleetOperatorTag }}/config/crd/bases/fleet.roboscale.io_fleets.yaml
-        # dev.roboscale.io
+        # dev.roboscale.io/v1alpha1
         # wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/devspace-operator/${{ github.event.inputs.devspaceOperatorTag }}/config/crd/bases/dev.roboscale.io_devspaces.yaml
         # wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/devspace-operator/${{ github.event.inputs.devspaceOperatorTag }}/config/crd/bases/dev.roboscale.io_workspacemanagers.yaml
-        # robot.roboscale.io
+        # robot.roboscale.io/v1alpha1
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_robots.yaml
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_workspacemanagers.yaml
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_buildmanagers.yaml
