@@ -1,7 +1,7 @@
 package io.roboscale.robot.v1alpha1.launchmanagerspec;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"container","entrypoint","instances","namespacing","workspace"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"container","entrypoint","instances","namespacing","scope"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class Launches implements io.fabric8.kubernetes.api.model.KubernetesResource {
@@ -71,20 +71,20 @@ public class Launches implements io.fabric8.kubernetes.api.model.KubernetesResou
     }
 
     /**
-     * Name of the workspace. Should be selected among the existing workspaces in WorkspaceManager's manifests.
+     * Selects the scope for launch.
      */
-    @com.fasterxml.jackson.annotation.JsonProperty("workspace")
+    @com.fasterxml.jackson.annotation.JsonProperty("scope")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Name of the workspace. Should be selected among the existing workspaces in WorkspaceManager's manifests.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Selects the scope for launch.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private String workspace;
+    private io.roboscale.robot.v1alpha1.launchmanagerspec.launches.Scope scope;
 
-    public String getWorkspace() {
-        return workspace;
+    public io.roboscale.robot.v1alpha1.launchmanagerspec.launches.Scope getScope() {
+        return scope;
     }
 
-    public void setWorkspace(String workspace) {
-        this.workspace = workspace;
+    public void setScope(io.roboscale.robot.v1alpha1.launchmanagerspec.launches.Scope scope) {
+        this.scope = scope;
     }
 }
 

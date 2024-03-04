@@ -1,7 +1,7 @@
 package io.roboscale.robot.v1alpha1.robotspec;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"ideEnabled","remoteIDEEnabled","remoteIDERelayServerTemplate","robotIDETemplate","robotVDITemplate","vdiEnabled"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"ideEnabled","notebookEnabled","notebookTemplate","remoteIDEEnabled","remoteIDERelayServerTemplate","robotIDETemplate","robotVDITemplate","vdiEnabled"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class RobotDevSuiteTemplate implements io.fabric8.kubernetes.api.model.KubernetesResource {
@@ -20,6 +20,38 @@ public class RobotDevSuiteTemplate implements io.fabric8.kubernetes.api.model.Ku
 
     public void setIdeEnabled(Boolean ideEnabled) {
         this.ideEnabled = ideEnabled;
+    }
+
+    /**
+     * If `true`, a Notebook will be provisioned inside development suite.
+     */
+    @com.fasterxml.jackson.annotation.JsonProperty("notebookEnabled")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("If `true`, a Notebook will be provisioned inside development suite.")
+    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
+    private Boolean notebookEnabled;
+
+    public Boolean getNotebookEnabled() {
+        return notebookEnabled;
+    }
+
+    public void setNotebookEnabled(Boolean notebookEnabled) {
+        this.notebookEnabled = notebookEnabled;
+    }
+
+    /**
+     * Configurational parameters of Notebook. Applied if `.spec.notebookEnabled` is set to `true`.
+     */
+    @com.fasterxml.jackson.annotation.JsonProperty("notebookTemplate")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Configurational parameters of Notebook. Applied if `.spec.notebookEnabled` is set to `true`.")
+    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
+    private io.roboscale.robot.v1alpha1.robotspec.robotdevsuitetemplate.NotebookTemplate notebookTemplate;
+
+    public io.roboscale.robot.v1alpha1.robotspec.robotdevsuitetemplate.NotebookTemplate getNotebookTemplate() {
+        return notebookTemplate;
+    }
+
+    public void setNotebookTemplate(io.roboscale.robot.v1alpha1.robotspec.robotdevsuitetemplate.NotebookTemplate notebookTemplate) {
+        this.notebookTemplate = notebookTemplate;
     }
 
     /**

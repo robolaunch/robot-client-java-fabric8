@@ -1,7 +1,7 @@
 package io.roboscale.robot.v1alpha1.robotstatus.attachedbuildobject.status.steps;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"command","env","instances","name","script","workspace"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"command","env","instances","name","scope","script"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class Step implements io.fabric8.kubernetes.api.model.KubernetesResource {
@@ -72,6 +72,23 @@ public class Step implements io.fabric8.kubernetes.api.model.KubernetesResource 
     }
 
     /**
+     * Selects the scope for BuildManager step.
+     */
+    @com.fasterxml.jackson.annotation.JsonProperty("scope")
+    @io.fabric8.generator.annotation.Required()
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Selects the scope for BuildManager step.")
+    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
+    private io.roboscale.robot.v1alpha1.robotstatus.attachedbuildobject.status.steps.step.Scope scope;
+
+    public io.roboscale.robot.v1alpha1.robotstatus.attachedbuildobject.status.steps.step.Scope getScope() {
+        return scope;
+    }
+
+    public void setScope(io.roboscale.robot.v1alpha1.robotstatus.attachedbuildobject.status.steps.step.Scope scope) {
+        this.scope = scope;
+    }
+
+    /**
      * Bash script to run.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("script")
@@ -85,23 +102,6 @@ public class Step implements io.fabric8.kubernetes.api.model.KubernetesResource 
 
     public void setScript(String script) {
         this.script = script;
-    }
-
-    /**
-     * Name of the workspace. Should be selected among the existing workspaces in WorkspaceManager's manifests.
-     */
-    @com.fasterxml.jackson.annotation.JsonProperty("workspace")
-    @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Name of the workspace. Should be selected among the existing workspaces in WorkspaceManager's manifests.")
-    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private String workspace;
-
-    public String getWorkspace() {
-        return workspace;
-    }
-
-    public void setWorkspace(String workspace) {
-        this.workspace = workspace;
     }
 }
 

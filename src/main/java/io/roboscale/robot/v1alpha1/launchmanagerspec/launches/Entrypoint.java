@@ -10,7 +10,6 @@ public class Entrypoint implements io.fabric8.kubernetes.api.model.KubernetesRes
      * Custom command to launch packages or start nodes. Required if the launch type is `Custom`.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("cmd")
-    @io.fabric8.generator.annotation.Required()
     @com.fasterxml.jackson.annotation.JsonPropertyDescription("Custom command to launch packages or start nodes. Required if the launch type is `Custom`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String cmd;
@@ -27,7 +26,6 @@ public class Entrypoint implements io.fabric8.kubernetes.api.model.KubernetesRes
      * If `true`, workspaces are not sourced by default. Used if the launch type is `Custom`.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("disableSourcingWs")
-    @io.fabric8.generator.annotation.Required()
     @com.fasterxml.jackson.annotation.JsonPropertyDescription("If `true`, workspaces are not sourced by default. Used if the launch type is `Custom`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean disableSourcingWs;
@@ -44,7 +42,6 @@ public class Entrypoint implements io.fabric8.kubernetes.api.model.KubernetesRes
      * Executable file name. (eg. `webcam_pub.py`) Required and used if the launch type is `Run`.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("executable")
-    @io.fabric8.generator.annotation.Required()
     @com.fasterxml.jackson.annotation.JsonPropertyDescription("Executable file name. (eg. `webcam_pub.py`) Required and used if the launch type is `Run`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String executable;
@@ -61,7 +58,6 @@ public class Entrypoint implements io.fabric8.kubernetes.api.model.KubernetesRes
      * Launchfile. (eg. `nav_launch.py`) Required and used if the launch type is `Launch`.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("launchfile")
-    @io.fabric8.generator.annotation.Required()
     @com.fasterxml.jackson.annotation.JsonPropertyDescription("Launchfile. (eg. `nav_launch.py`) Required and used if the launch type is `Launch`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String launchfile;
@@ -78,7 +74,6 @@ public class Entrypoint implements io.fabric8.kubernetes.api.model.KubernetesRes
      * Package name. (eg. `robolaunch_cloudy_navigation`)
      */
     @com.fasterxml.jackson.annotation.JsonProperty("package")
-    @io.fabric8.generator.annotation.Required()
     @com.fasterxml.jackson.annotation.JsonPropertyDescription("Package name. (eg. `robolaunch_cloudy_navigation`)")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String _package;
