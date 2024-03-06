@@ -1,26 +1,10 @@
 package io.roboscale.robot.v1alpha2;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"containers","discoveryServerTemplate","ros2BridgeTemplate","volumeClaimTemplates"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"discoveryServerTemplate","launchContainers","ros2BridgeTemplate","volumeClaimTemplates"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class ROS2WorkloadSpec implements io.fabric8.kubernetes.api.model.KubernetesResource {
-
-    /**
-     * Configurational parameters for containers that will be encapsulated within the ROS 2 workload StatefulSet.
-     */
-    @com.fasterxml.jackson.annotation.JsonProperty("containers")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Configurational parameters for containers that will be encapsulated within the ROS 2 workload StatefulSet.")
-    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private java.util.List<io.roboscale.robot.v1alpha2.ros2workloadspec.Containers> containers;
-
-    public java.util.List<io.roboscale.robot.v1alpha2.ros2workloadspec.Containers> getContainers() {
-        return containers;
-    }
-
-    public void setContainers(java.util.List<io.roboscale.robot.v1alpha2.ros2workloadspec.Containers> containers) {
-        this.containers = containers;
-    }
 
     /**
      * Discovery server configurational parameters.
@@ -37,6 +21,22 @@ public class ROS2WorkloadSpec implements io.fabric8.kubernetes.api.model.Kuberne
 
     public void setDiscoveryServerTemplate(io.roboscale.robot.v1alpha2.ros2workloadspec.DiscoveryServerTemplate discoveryServerTemplate) {
         this.discoveryServerTemplate = discoveryServerTemplate;
+    }
+
+    /**
+     * Configurational parameters for containers that will be encapsulated within the ROS 2 workload StatefulSet.
+     */
+    @com.fasterxml.jackson.annotation.JsonProperty("launchContainers")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Configurational parameters for containers that will be encapsulated within the ROS 2 workload StatefulSet.")
+    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
+    private java.util.List<io.roboscale.robot.v1alpha2.ros2workloadspec.LaunchContainers> launchContainers;
+
+    public java.util.List<io.roboscale.robot.v1alpha2.ros2workloadspec.LaunchContainers> getLaunchContainers() {
+        return launchContainers;
+    }
+
+    public void setLaunchContainers(java.util.List<io.roboscale.robot.v1alpha2.ros2workloadspec.LaunchContainers> launchContainers) {
+        this.launchContainers = launchContainers;
     }
 
     /**
