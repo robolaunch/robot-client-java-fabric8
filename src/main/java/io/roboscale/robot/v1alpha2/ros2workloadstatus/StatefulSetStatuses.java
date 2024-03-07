@@ -39,10 +39,10 @@ public class StatefulSetStatuses implements io.fabric8.kubernetes.api.model.Kube
     }
 
     /**
-     * Status of the ROS2Bridge instance.
+     * Status of the StatefulSet.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("status")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Status of the ROS2Bridge instance.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Status of the StatefulSet.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.ros2workloadstatus.statefulsetstatuses.Status status;
 
