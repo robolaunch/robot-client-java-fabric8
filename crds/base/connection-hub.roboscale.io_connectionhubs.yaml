@@ -145,6 +145,11 @@ spec:
                     - releaseName
                     - version
                     type: object
+                  cableDriver:
+                    enum:
+                    - libreswan
+                    - wireguard
+                    type: string
                   clusterCIDR:
                     type: string
                   helmRepository:
@@ -346,6 +351,11 @@ spec:
                             - releaseName
                             - version
                             type: object
+                          cableDriver:
+                            enum:
+                            - libreswan
+                            - wireguard
+                            type: string
                           clusterCIDR:
                             type: string
                           helmRepository:

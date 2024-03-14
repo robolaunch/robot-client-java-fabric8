@@ -1,7 +1,7 @@
 package io.roboscale.connection_hub.v1alpha1.connectionhubspec;
 
 @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
-@com.fasterxml.jackson.annotation.JsonPropertyOrder({"apiServerURL","broker","brokerHelmChart","clusterCIDR","helmRepository","instanceType","networkType","operatorHelmChart","presharedKey","serviceCIDR"})
+@com.fasterxml.jackson.annotation.JsonPropertyOrder({"apiServerURL","broker","brokerHelmChart","cableDriver","clusterCIDR","helmRepository","instanceType","networkType","operatorHelmChart","presharedKey","serviceCIDR"})
 @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.databind.JsonDeserializer.None.class)
 @javax.annotation.processing.Generated("io.fabric8.java.generator.CRGeneratorRunner")
 public class SubmarinerSpec implements io.fabric8.kubernetes.api.model.KubernetesResource {
@@ -42,6 +42,36 @@ public class SubmarinerSpec implements io.fabric8.kubernetes.api.model.Kubernete
 
     public void setBrokerHelmChart(io.roboscale.connection_hub.v1alpha1.connectionhubspec.submarinerspec.BrokerHelmChart brokerHelmChart) {
         this.brokerHelmChart = brokerHelmChart;
+    }
+
+    public enum CableDriver {
+
+        @com.fasterxml.jackson.annotation.JsonProperty("libreswan")
+        LIBRESWAN("libreswan"), @com.fasterxml.jackson.annotation.JsonProperty("wireguard")
+        WIREGUARD("wireguard");
+
+        java.lang.String value;
+
+        CableDriver(java.lang.String value) {
+            this.value = value;
+        }
+
+        @com.fasterxml.jackson.annotation.JsonValue()
+        public java.lang.String getValue() {
+            return value;
+        }
+    }
+
+    @com.fasterxml.jackson.annotation.JsonProperty("cableDriver")
+    @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
+    private CableDriver cableDriver;
+
+    public CableDriver getCableDriver() {
+        return cableDriver;
+    }
+
+    public void setCableDriver(CableDriver cableDriver) {
+        this.cableDriver = cableDriver;
     }
 
     @com.fasterxml.jackson.annotation.JsonProperty("clusterCIDR")
