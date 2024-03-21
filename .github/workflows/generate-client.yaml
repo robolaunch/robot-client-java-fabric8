@@ -54,6 +54,7 @@ jobs:
         # robot.roboscale.io/v1alpha2
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_ros2workloads.yaml
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_ros2bridges.yaml
+        wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/robot-operator/${{ github.event.inputs.robotOperatorTag }}/config/crd/bases/robot.roboscale.io_codeeditors.yaml
         # connection-hub.roboscale.io/v1alpha1
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/connection-hub-operator/${{ github.event.inputs.connectionHubOperatorTag }}/config/crd/bases/connection-hub.roboscale.io_connectionhubs.yaml
         wget -P ./crds/base/ https://raw.githubusercontent.com/robolaunch/connection-hub-operator/${{ github.event.inputs.connectionHubOperatorTag }}/config/crd/bases/connection-hub.roboscale.io_cloudinstances.yaml
