@@ -57,15 +57,33 @@ public class DiscoveryServerTemplate implements io.fabric8.kubernetes.api.model.
         this.hostname = hostname;
     }
 
+    public enum Protocol {
+
+        @com.fasterxml.jackson.annotation.JsonProperty("TCP")
+        TCP("TCP"), @com.fasterxml.jackson.annotation.JsonProperty("UDP")
+        UDP("UDP");
+
+        java.lang.String value;
+
+        Protocol(java.lang.String value) {
+            this.value = value;
+        }
+
+        @com.fasterxml.jackson.annotation.JsonValue()
+        public java.lang.String getValue() {
+            return value;
+        }
+    }
+
     @com.fasterxml.jackson.annotation.JsonProperty("protocol")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
-    private String protocol = "TCP";
+    private Protocol protocol;
 
-    public String getProtocol() {
+    public Protocol getProtocol() {
         return protocol;
     }
 
-    public void setProtocol(String protocol) {
+    public void setProtocol(Protocol protocol) {
         this.protocol = protocol;
     }
 
