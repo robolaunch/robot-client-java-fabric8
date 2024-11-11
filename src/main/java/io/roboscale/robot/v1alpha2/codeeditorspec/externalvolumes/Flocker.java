@@ -7,10 +7,11 @@ package io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes;
 public class Flocker implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * datasetName is Name of the dataset stored as metadata -> name on the dataset for Flocker should be considered as deprecated
+     * datasetName is Name of the dataset stored as metadata -> name on the dataset for Flocker
+     * should be considered as deprecated
      */
     @com.fasterxml.jackson.annotation.JsonProperty("datasetName")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("datasetName is Name of the dataset stored as metadata -> name on the dataset for Flocker should be considered as deprecated")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("datasetName is Name of the dataset stored as metadata -> name on the dataset for Flocker\nshould be considered as deprecated")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String datasetName;
 

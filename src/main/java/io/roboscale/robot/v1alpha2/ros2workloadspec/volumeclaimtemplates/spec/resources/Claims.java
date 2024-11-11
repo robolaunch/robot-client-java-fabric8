@@ -7,11 +7,13 @@ package io.roboscale.robot.v1alpha2.ros2workloadspec.volumeclaimtemplates.spec.r
 public class Claims implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container.
+     * Name must match the name of one entry in pod.spec.resourceClaims of
+     * the Pod where this field is used. It makes that resource available
+     * inside a container.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("name")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Name must match the name of one entry in pod.spec.resourceClaims of\nthe Pod where this field is used. It makes that resource available\ninside a container.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String name;
 

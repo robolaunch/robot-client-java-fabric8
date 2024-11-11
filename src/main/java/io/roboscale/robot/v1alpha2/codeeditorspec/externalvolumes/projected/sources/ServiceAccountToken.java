@@ -7,10 +7,13 @@ package io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.projected.sou
 public class ServiceAccountToken implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * audience is the intended audience of the token. A recipient of a token must identify itself with an identifier specified in the audience of the token, and otherwise should reject the token. The audience defaults to the identifier of the apiserver.
+     * audience is the intended audience of the token. A recipient of a token
+     * must identify itself with an identifier specified in the audience of the
+     * token, and otherwise should reject the token. The audience defaults to the
+     * identifier of the apiserver.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("audience")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("audience is the intended audience of the token. A recipient of a token must identify itself with an identifier specified in the audience of the token, and otherwise should reject the token. The audience defaults to the identifier of the apiserver.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("audience is the intended audience of the token. A recipient of a token\nmust identify itself with an identifier specified in the audience of the\ntoken, and otherwise should reject the token. The audience defaults to the\nidentifier of the apiserver.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String audience;
 
@@ -23,10 +26,15 @@ public class ServiceAccountToken implements io.fabric8.kubernetes.api.model.Kube
     }
 
     /**
-     * expirationSeconds is the requested duration of validity of the service account token. As the token approaches expiration, the kubelet volume plugin will proactively rotate the service account token. The kubelet will start trying to rotate the token if the token is older than 80 percent of its time to live or if the token is older than 24 hours.Defaults to 1 hour and must be at least 10 minutes.
+     * expirationSeconds is the requested duration of validity of the service
+     * account token. As the token approaches expiration, the kubelet volume
+     * plugin will proactively rotate the service account token. The kubelet will
+     * start trying to rotate the token if the token is older than 80 percent of
+     * its time to live or if the token is older than 24 hours.Defaults to 1 hour
+     * and must be at least 10 minutes.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("expirationSeconds")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("expirationSeconds is the requested duration of validity of the service account token. As the token approaches expiration, the kubelet volume plugin will proactively rotate the service account token. The kubelet will start trying to rotate the token if the token is older than 80 percent of its time to live or if the token is older than 24 hours.Defaults to 1 hour and must be at least 10 minutes.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("expirationSeconds is the requested duration of validity of the service\naccount token. As the token approaches expiration, the kubelet volume\nplugin will proactively rotate the service account token. The kubelet will\nstart trying to rotate the token if the token is older than 80 percent of\nits time to live or if the token is older than 24 hours.Defaults to 1 hour\nand must be at least 10 minutes.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Long expirationSeconds;
 
@@ -39,11 +47,12 @@ public class ServiceAccountToken implements io.fabric8.kubernetes.api.model.Kube
     }
 
     /**
-     * path is the path relative to the mount point of the file to project the token into.
+     * path is the path relative to the mount point of the file to project the
+     * token into.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("path")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("path is the path relative to the mount point of the file to project the token into.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("path is the path relative to the mount point of the file to project the\ntoken into.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String path;
 

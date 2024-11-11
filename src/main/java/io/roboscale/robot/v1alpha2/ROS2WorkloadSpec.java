@@ -56,10 +56,12 @@ public class ROS2WorkloadSpec implements io.fabric8.kubernetes.api.model.Kuberne
     }
 
     /**
-     * Volume templates for ROS 2 workload. For each volume template, operator will create a PersistentVolumeClaim that can be mounted to the ROS 2 workload.
+     * Volume templates for ROS 2 workload.
+     * For each volume template, operator will create a PersistentVolumeClaim
+     * that can be mounted to the ROS 2 workload.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("volumeClaimTemplates")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Volume templates for ROS 2 workload. For each volume template, operator will create a PersistentVolumeClaim that can be mounted to the ROS 2 workload.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Volume templates for ROS 2 workload.\nFor each volume template, operator will create a PersistentVolumeClaim\nthat can be mounted to the ROS 2 workload.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.List<io.roboscale.robot.v1alpha2.ros2workloadspec.VolumeClaimTemplates> volumeClaimTemplates;
 

@@ -24,10 +24,18 @@ public class Env implements io.fabric8.kubernetes.api.model.KubernetesResource {
     }
 
     /**
-     * Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".
+     * Variable references $(VAR_NAME) are expanded
+     * using the previously defined environment variables in the container and
+     * any service environment variables. If a variable cannot be resolved,
+     * the reference in the input string will be unchanged. Double $$ are reduced
+     * to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e.
+     * "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)".
+     * Escaped references will never be expanded, regardless of whether the variable
+     * exists or not.
+     * Defaults to "".
      */
     @com.fasterxml.jackson.annotation.JsonProperty("value")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to \"\".")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Variable references $(VAR_NAME) are expanded\nusing the previously defined environment variables in the container and\nany service environment variables. If a variable cannot be resolved,\nthe reference in the input string will be unchanged. Double $$ are reduced\nto a single $, which allows for escaping the $(VAR_NAME) syntax: i.e.\n\"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\".\nEscaped references will never be expanded, regardless of whether the variable\nexists or not.\nDefaults to \"\".")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String value;
 

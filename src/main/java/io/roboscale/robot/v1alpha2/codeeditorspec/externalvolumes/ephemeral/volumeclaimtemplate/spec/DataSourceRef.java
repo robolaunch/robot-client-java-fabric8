@@ -7,10 +7,12 @@ package io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.ephemeral.vol
 public class DataSourceRef implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
+     * APIGroup is the group for the resource being referenced.
+     * If APIGroup is not specified, the specified Kind must be in the core API group.
+     * For any other third-party types, APIGroup is required.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("apiGroup")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("APIGroup is the group for the resource being referenced.\nIf APIGroup is not specified, the specified Kind must be in the core API group.\nFor any other third-party types, APIGroup is required.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String apiGroup;
 
@@ -57,10 +59,12 @@ public class DataSourceRef implements io.fabric8.kubernetes.api.model.Kubernetes
     }
 
     /**
-     * Namespace is the namespace of resource being referenced Note that when a namespace is specified, a gateway.networking.k8s.io/ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details. (Alpha) This field requires the CrossNamespaceVolumeDataSource feature gate to be enabled.
+     * Namespace is the namespace of resource being referenced
+     * Note that when a namespace is specified, a gateway.networking.k8s.io/ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details.
+     * (Alpha) This field requires the CrossNamespaceVolumeDataSource feature gate to be enabled.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("namespace")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Namespace is the namespace of resource being referenced Note that when a namespace is specified, a gateway.networking.k8s.io/ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details. (Alpha) This field requires the CrossNamespaceVolumeDataSource feature gate to be enabled.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Namespace is the namespace of resource being referenced\nNote that when a namespace is specified, a gateway.networking.k8s.io/ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details.\n(Alpha) This field requires the CrossNamespaceVolumeDataSource feature gate to be enabled.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String namespace;
 

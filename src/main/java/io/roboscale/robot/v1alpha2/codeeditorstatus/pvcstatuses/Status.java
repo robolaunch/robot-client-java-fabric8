@@ -7,10 +7,11 @@ package io.roboscale.robot.v1alpha2.codeeditorstatus.pvcstatuses;
 public class Status implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * accessModes contains the actual access modes the volume backing the PVC has. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
+     * accessModes contains the actual access modes the volume backing the PVC has.
+     * More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
      */
     @com.fasterxml.jackson.annotation.JsonProperty("accessModes")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("accessModes contains the actual access modes the volume backing the PVC has. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("accessModes contains the actual access modes the volume backing the PVC has.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.List<String> accessModes;
 
@@ -23,10 +24,17 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * allocatedResources is the storage resource within AllocatedResources tracks the capacity allocated to a PVC. It may be larger than the actual capacity when a volume expansion operation is requested. For storage quota, the larger value from allocatedResources and PVC.spec.resources is used. If allocatedResources is not set, PVC.spec.resources alone is used for quota calculation. If a volume expansion capacity request is lowered, allocatedResources is only lowered if there are no expansion operations in progress and if the actual volume capacity is equal or lower than the requested capacity. This is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.
+     * allocatedResources is the storage resource within AllocatedResources tracks the capacity allocated to a PVC. It may
+     * be larger than the actual capacity when a volume expansion operation is requested.
+     * For storage quota, the larger value from allocatedResources and PVC.spec.resources is used.
+     * If allocatedResources is not set, PVC.spec.resources alone is used for quota calculation.
+     * If a volume expansion capacity request is lowered, allocatedResources is only
+     * lowered if there are no expansion operations in progress and if the actual volume capacity
+     * is equal or lower than the requested capacity.
+     * This is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("allocatedResources")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("allocatedResources is the storage resource within AllocatedResources tracks the capacity allocated to a PVC. It may be larger than the actual capacity when a volume expansion operation is requested. For storage quota, the larger value from allocatedResources and PVC.spec.resources is used. If allocatedResources is not set, PVC.spec.resources alone is used for quota calculation. If a volume expansion capacity request is lowered, allocatedResources is only lowered if there are no expansion operations in progress and if the actual volume capacity is equal or lower than the requested capacity. This is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("allocatedResources is the storage resource within AllocatedResources tracks the capacity allocated to a PVC. It may\nbe larger than the actual capacity when a volume expansion operation is requested.\nFor storage quota, the larger value from allocatedResources and PVC.spec.resources is used.\nIf allocatedResources is not set, PVC.spec.resources alone is used for quota calculation.\nIf a volume expansion capacity request is lowered, allocatedResources is only\nlowered if there are no expansion operations in progress and if the actual volume capacity\nis equal or lower than the requested capacity.\nThis is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.Map<java.lang.String, io.fabric8.kubernetes.api.model.IntOrString> allocatedResources;
 
@@ -55,10 +63,11 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * conditions is the current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to 'ResizeStarted'.
+     * conditions is the current Condition of persistent volume claim. If underlying persistent volume is being
+     * resized then the Condition will be set to 'ResizeStarted'.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("conditions")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("conditions is the current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to 'ResizeStarted'.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("conditions is the current Condition of persistent volume claim. If underlying persistent volume is being\nresized then the Condition will be set to 'ResizeStarted'.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.List<io.roboscale.robot.v1alpha2.codeeditorstatus.pvcstatuses.status.Conditions> conditions;
 
@@ -87,10 +96,13 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * resizeStatus stores status of resize operation. ResizeStatus is not set by default but when expansion is complete resizeStatus is set to empty string by resize controller or kubelet. This is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.
+     * resizeStatus stores status of resize operation.
+     * ResizeStatus is not set by default but when expansion is complete resizeStatus is set to empty
+     * string by resize controller or kubelet.
+     * This is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("resizeStatus")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("resizeStatus stores status of resize operation. ResizeStatus is not set by default but when expansion is complete resizeStatus is set to empty string by resize controller or kubelet. This is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("resizeStatus stores status of resize operation.\nResizeStatus is not set by default but when expansion is complete resizeStatus is set to empty\nstring by resize controller or kubelet.\nThis is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String resizeStatus;
 

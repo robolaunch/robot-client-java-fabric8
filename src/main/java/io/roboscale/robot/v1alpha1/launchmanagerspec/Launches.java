@@ -39,10 +39,11 @@ public class Launches implements io.fabric8.kubernetes.api.model.KubernetesResou
     }
 
     /**
-     * Cluster selector. If the current instance name is on the list, LaunchManager creates launch pods.
+     * Cluster selector.
+     * If the current instance name is on the list, LaunchManager creates launch pods.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("instances")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Cluster selector. If the current instance name is on the list, LaunchManager creates launch pods.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Cluster selector.\nIf the current instance name is on the list, LaunchManager creates launch pods.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.List<String> instances;
 
@@ -55,10 +56,12 @@ public class Launches implements io.fabric8.kubernetes.api.model.KubernetesResou
     }
 
     /**
-     * ROS 2 namespacing. May not be suitable for all launchfiles. If used, all the node names and topic names should be defined relative, not absolute. (eg. `cmd_vel` instead of /cmd_vel``)
+     * ROS 2 namespacing. May not be suitable for all launchfiles.
+     * If used, all the node names and topic names should be defined relative, not absolute.
+     * (eg. `cmd_vel` instead of /cmd_vel``)
      */
     @com.fasterxml.jackson.annotation.JsonProperty("namespacing")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ROS 2 namespacing. May not be suitable for all launchfiles. If used, all the node names and topic names should be defined relative, not absolute. (eg. `cmd_vel` instead of /cmd_vel``)")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ROS 2 namespacing. May not be suitable for all launchfiles.\nIf used, all the node names and topic names should be defined relative, not absolute.\n(eg. `cmd_vel` instead of /cmd_vel``)")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean namespacing;
 

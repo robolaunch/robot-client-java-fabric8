@@ -55,10 +55,11 @@ public class WorkspaceManagerStatus implements io.fabric8.kubernetes.api.model.K
     }
 
     /**
-     * Incremental version of workspace configuration map. Used to determine changes in configuration.
+     * Incremental version of workspace configuration map.
+     * Used to determine changes in configuration.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("version")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Incremental version of workspace configuration map. Used to determine changes in configuration.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Incremental version of workspace configuration map.\nUsed to determine changes in configuration.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Long version;
 

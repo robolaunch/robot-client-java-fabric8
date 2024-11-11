@@ -7,10 +7,11 @@ package io.roboscale.robot.v1alpha1.buildmanagerspec.steps;
 public class Scope implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * Absolute path of the directory. It's being applied if the scope type is `Path`.
+     * Absolute path of the directory.
+     * It's being applied if the scope type is `Path`.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("path")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Absolute path of the directory. It's being applied if the scope type is `Path`.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Absolute path of the directory.\nIt's being applied if the scope type is `Path`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String path;
 
@@ -41,11 +42,12 @@ public class Scope implements io.fabric8.kubernetes.api.model.KubernetesResource
     }
 
     /**
-     * Type of the scope. Allowed scopes are `Workspace` and `Path`.
+     * Type of the scope.
+     * Allowed scopes are `Workspace` and `Path`.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("scopeType")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Type of the scope. Allowed scopes are `Workspace` and `Path`.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Type of the scope.\nAllowed scopes are `Workspace` and `Path`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private ScopeType scopeType;
 
@@ -58,10 +60,12 @@ public class Scope implements io.fabric8.kubernetes.api.model.KubernetesResource
     }
 
     /**
-     * Name of the workspace. Should be selected among the existing workspaces in WorkspaceManager's manifests. It's being applied if the scope type is `Workspace`.
+     * Name of the workspace.
+     * Should be selected among the existing workspaces in WorkspaceManager's manifests.
+     * It's being applied if the scope type is `Workspace`.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("workspace")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Name of the workspace. Should be selected among the existing workspaces in WorkspaceManager's manifests. It's being applied if the scope type is `Workspace`.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Name of the workspace.\nShould be selected among the existing workspaces in WorkspaceManager's manifests.\nIt's being applied if the scope type is `Workspace`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String workspace;
 

@@ -7,10 +7,12 @@ package io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes;
 public class PortworxVolume implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * fSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs". Implicitly inferred to be "ext4" if unspecified.
+     * fSType represents the filesystem type to mount
+     * Must be a filesystem type supported by the host operating system.
+     * Ex. "ext4", "xfs". Implicitly inferred to be "ext4" if unspecified.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("fsType")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\". Implicitly inferred to be \"ext4\" if unspecified.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fSType represents the filesystem type to mount\nMust be a filesystem type supported by the host operating system.\nEx. \"ext4\", \"xfs\". Implicitly inferred to be \"ext4\" if unspecified.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String fsType;
 
@@ -23,10 +25,11 @@ public class PortworxVolume implements io.fabric8.kubernetes.api.model.Kubernete
     }
 
     /**
-     * readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * readOnly defaults to false (read/write). ReadOnly here will force
+     * the ReadOnly setting in VolumeMounts.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("readOnly")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly defaults to false (read/write). ReadOnly here will force\nthe ReadOnly setting in VolumeMounts.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean readOnly;
 

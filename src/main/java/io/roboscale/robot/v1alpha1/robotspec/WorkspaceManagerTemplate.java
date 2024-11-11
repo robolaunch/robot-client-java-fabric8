@@ -7,10 +7,12 @@ package io.roboscale.robot.v1alpha1.robotspec;
 public class WorkspaceManagerTemplate implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * WorkspaceManager is triggered if this field is set to `true`. Then the workspaces are being configured again while backing up the old configurations. This field is often used by operator.
+     * WorkspaceManager is triggered if this field is set to `true`.
+     * Then the workspaces are being configured again while backing up the old configurations.
+     * This field is often used by operator.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("updateNeeded")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("WorkspaceManager is triggered if this field is set to `true`. Then the workspaces are being configured again while backing up the old configurations. This field is often used by operator.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("WorkspaceManager is triggered if this field is set to `true`.\nThen the workspaces are being configured again while backing up the old configurations.\nThis field is often used by operator.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean updateNeeded;
 
@@ -23,10 +25,11 @@ public class WorkspaceManagerTemplate implements io.fabric8.kubernetes.api.model
     }
 
     /**
-     * Workspace definitions of robot. Multiple ROS 2 workspaces can be configured over this field.
+     * Workspace definitions of robot.
+     * Multiple ROS 2 workspaces can be configured over this field.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("workspaces")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Workspace definitions of robot. Multiple ROS 2 workspaces can be configured over this field.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Workspace definitions of robot.\nMultiple ROS 2 workspaces can be configured over this field.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.List<io.roboscale.robot.v1alpha1.robotspec.workspacemanagertemplate.Workspaces> workspaces;
 

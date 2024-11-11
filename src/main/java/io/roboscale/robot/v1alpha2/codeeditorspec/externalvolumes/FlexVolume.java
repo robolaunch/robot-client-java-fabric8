@@ -24,10 +24,12 @@ public class FlexVolume implements io.fabric8.kubernetes.api.model.KubernetesRes
     }
 
     /**
-     * fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". The default filesystem depends on FlexVolume script.
+     * fsType is the filesystem type to mount.
+     * Must be a filesystem type supported by the host operating system.
+     * Ex. "ext4", "xfs", "ntfs". The default filesystem depends on FlexVolume script.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("fsType")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\", \"ntfs\". The default filesystem depends on FlexVolume script.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType is the filesystem type to mount.\nMust be a filesystem type supported by the host operating system.\nEx. \"ext4\", \"xfs\", \"ntfs\". The default filesystem depends on FlexVolume script.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String fsType;
 
@@ -56,10 +58,11 @@ public class FlexVolume implements io.fabric8.kubernetes.api.model.KubernetesRes
     }
 
     /**
-     * readOnly is Optional: defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * readOnly is Optional: defaults to false (read/write). ReadOnly here will force
+     * the ReadOnly setting in VolumeMounts.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("readOnly")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly is Optional: defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly is Optional: defaults to false (read/write). ReadOnly here will force\nthe ReadOnly setting in VolumeMounts.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean readOnly;
 
@@ -72,10 +75,14 @@ public class FlexVolume implements io.fabric8.kubernetes.api.model.KubernetesRes
     }
 
     /**
-     * secretRef is Optional: secretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.
+     * secretRef is Optional: secretRef is reference to the secret object containing
+     * sensitive information to pass to the plugin scripts. This may be
+     * empty if no secret object is specified. If the secret object
+     * contains more than one secret, all secrets are passed to the plugin
+     * scripts.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("secretRef")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("secretRef is Optional: secretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("secretRef is Optional: secretRef is reference to the secret object containing\nsensitive information to pass to the plugin scripts. This may be\nempty if no secret object is specified. If the secret object\ncontains more than one secret, all secrets are passed to the plugin\nscripts.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.flexvolume.SecretRef secretRef;
 

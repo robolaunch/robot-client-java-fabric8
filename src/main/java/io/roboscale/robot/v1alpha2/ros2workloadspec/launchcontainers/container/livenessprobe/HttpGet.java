@@ -7,10 +7,11 @@ package io.roboscale.robot.v1alpha2.ros2workloadspec.launchcontainers.container.
 public class HttpGet implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.
+     * Host name to connect to, defaults to the pod IP. You probably want to set
+     * "Host" in httpHeaders instead.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("host")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Host name to connect to, defaults to the pod IP. You probably want to set \"Host\" in httpHeaders instead.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Host name to connect to, defaults to the pod IP. You probably want to set\n\"Host\" in httpHeaders instead.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String host;
 
@@ -55,11 +56,13 @@ public class HttpGet implements io.fabric8.kubernetes.api.model.KubernetesResour
     }
 
     /**
-     * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
+     * Name or number of the port to access on the container.
+     * Number must be in the range 1 to 65535.
+     * Name must be an IANA_SVC_NAME.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("port")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Name or number of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.fabric8.kubernetes.api.model.IntOrString port;
 
@@ -72,10 +75,11 @@ public class HttpGet implements io.fabric8.kubernetes.api.model.KubernetesResour
     }
 
     /**
-     * Scheme to use for connecting to the host. Defaults to HTTP.
+     * Scheme to use for connecting to the host.
+     * Defaults to HTTP.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("scheme")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Scheme to use for connecting to the host. Defaults to HTTP.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Scheme to use for connecting to the host.\nDefaults to HTTP.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String scheme;
 

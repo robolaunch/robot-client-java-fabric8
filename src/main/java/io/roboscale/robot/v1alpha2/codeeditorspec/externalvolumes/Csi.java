@@ -7,11 +7,12 @@ package io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes;
 public class Csi implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.
+     * driver is the name of the CSI driver that handles this volume.
+     * Consult with your admin for the correct name as registered in the cluster.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("driver")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("driver is the name of the CSI driver that handles this volume.\nConsult with your admin for the correct name as registered in the cluster.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String driver;
 
@@ -24,10 +25,12 @@ public class Csi implements io.fabric8.kubernetes.api.model.KubernetesResource {
     }
 
     /**
-     * fsType to mount. Ex. "ext4", "xfs", "ntfs". If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
+     * fsType to mount. Ex. "ext4", "xfs", "ntfs".
+     * If not provided, the empty value is passed to the associated CSI driver
+     * which will determine the default filesystem to apply.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("fsType")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType to mount. Ex. \"ext4\", \"xfs\", \"ntfs\". If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType to mount. Ex. \"ext4\", \"xfs\", \"ntfs\".\nIf not provided, the empty value is passed to the associated CSI driver\nwhich will determine the default filesystem to apply.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String fsType;
 
@@ -40,10 +43,14 @@ public class Csi implements io.fabric8.kubernetes.api.model.KubernetesResource {
     }
 
     /**
-     * nodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.
+     * nodePublishSecretRef is a reference to the secret object containing
+     * sensitive information to pass to the CSI driver to complete the CSI
+     * NodePublishVolume and NodeUnpublishVolume calls.
+     * This field is optional, and  may be empty if no secret is required. If the
+     * secret object contains more than one secret, all secret references are passed.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("nodePublishSecretRef")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("nodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("nodePublishSecretRef is a reference to the secret object containing\nsensitive information to pass to the CSI driver to complete the CSI\nNodePublishVolume and NodeUnpublishVolume calls.\nThis field is optional, and  may be empty if no secret is required. If the\nsecret object contains more than one secret, all secret references are passed.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.csi.NodePublishSecretRef nodePublishSecretRef;
 
@@ -56,10 +63,11 @@ public class Csi implements io.fabric8.kubernetes.api.model.KubernetesResource {
     }
 
     /**
-     * readOnly specifies a read-only configuration for the volume. Defaults to false (read/write).
+     * readOnly specifies a read-only configuration for the volume.
+     * Defaults to false (read/write).
      */
     @com.fasterxml.jackson.annotation.JsonProperty("readOnly")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly specifies a read-only configuration for the volume. Defaults to false (read/write).")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly specifies a read-only configuration for the volume.\nDefaults to false (read/write).")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean readOnly;
 
@@ -72,10 +80,11 @@ public class Csi implements io.fabric8.kubernetes.api.model.KubernetesResource {
     }
 
     /**
-     * volumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver's documentation for supported values.
+     * volumeAttributes stores driver-specific properties that are passed to the CSI
+     * driver. Consult your driver's documentation for supported values.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("volumeAttributes")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("volumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver's documentation for supported values.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("volumeAttributes stores driver-specific properties that are passed to the CSI\ndriver. Consult your driver's documentation for supported values.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.Map<java.lang.String, String> volumeAttributes;
 

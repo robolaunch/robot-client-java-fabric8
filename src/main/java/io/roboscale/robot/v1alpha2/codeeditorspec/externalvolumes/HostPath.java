@@ -7,11 +7,13 @@ package io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes;
 public class HostPath implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+     * path of the directory on the host.
+     * If the path is a symlink, it will follow the link to the real path.
+     * More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
      */
     @com.fasterxml.jackson.annotation.JsonProperty("path")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("path of the directory on the host.\nIf the path is a symlink, it will follow the link to the real path.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String path;
 
@@ -24,10 +26,12 @@ public class HostPath implements io.fabric8.kubernetes.api.model.KubernetesResou
     }
 
     /**
-     * type for HostPath Volume Defaults to "" More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+     * type for HostPath Volume
+     * Defaults to ""
+     * More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
      */
     @com.fasterxml.jackson.annotation.JsonProperty("type")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("type for HostPath Volume Defaults to \"\" More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("type for HostPath Volume\nDefaults to \"\"\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String type;
 

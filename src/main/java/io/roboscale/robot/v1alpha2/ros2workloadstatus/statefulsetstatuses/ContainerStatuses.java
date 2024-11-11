@@ -23,11 +23,12 @@ public class ContainerStatuses implements io.fabric8.kubernetes.api.model.Kubern
     }
 
     /**
-     * The image the container is running. More info: https://kubernetes.io/docs/concepts/containers/images.
+     * The image the container is running.
+     * More info: https://kubernetes.io/docs/concepts/containers/images.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("image")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("The image the container is running. More info: https://kubernetes.io/docs/concepts/containers/images.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("The image the container is running.\nMore info: https://kubernetes.io/docs/concepts/containers/images.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String image;
 
@@ -73,11 +74,12 @@ public class ContainerStatuses implements io.fabric8.kubernetes.api.model.Kubern
     }
 
     /**
-     * This must be a DNS_LABEL. Each container in a pod must have a unique name. Cannot be updated.
+     * This must be a DNS_LABEL. Each container in a pod must have a unique name.
+     * Cannot be updated.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("name")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("This must be a DNS_LABEL. Each container in a pod must have a unique name. Cannot be updated.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("This must be a DNS_LABEL. Each container in a pod must have a unique name.\nCannot be updated.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String name;
 
@@ -124,10 +126,13 @@ public class ContainerStatuses implements io.fabric8.kubernetes.api.model.Kubern
     }
 
     /**
-     * Specifies whether the container has passed its startup probe. Initialized as false, becomes true after startupProbe is considered successful. Resets to false when the container is restarted, or if kubelet loses state temporarily. Is always true when no startupProbe is defined.
+     * Specifies whether the container has passed its startup probe.
+     * Initialized as false, becomes true after startupProbe is considered successful.
+     * Resets to false when the container is restarted, or if kubelet loses state temporarily.
+     * Is always true when no startupProbe is defined.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("started")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Specifies whether the container has passed its startup probe. Initialized as false, becomes true after startupProbe is considered successful. Resets to false when the container is restarted, or if kubelet loses state temporarily. Is always true when no startupProbe is defined.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Specifies whether the container has passed its startup probe.\nInitialized as false, becomes true after startupProbe is considered successful.\nResets to false when the container is restarted, or if kubelet loses state temporarily.\nIs always true when no startupProbe is defined.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean started;
 

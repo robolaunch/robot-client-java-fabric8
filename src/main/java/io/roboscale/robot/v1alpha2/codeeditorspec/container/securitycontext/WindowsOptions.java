@@ -7,10 +7,12 @@ package io.roboscale.robot.v1alpha2.codeeditorspec.container.securitycontext;
 public class WindowsOptions implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field.
+     * GMSACredentialSpec is where the GMSA admission webhook
+     * (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the
+     * GMSA credential spec named by the GMSACredentialSpecName field.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("gmsaCredentialSpec")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("GMSACredentialSpec is where the GMSA admission webhook\n(https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the\nGMSA credential spec named by the GMSACredentialSpecName field.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String gmsaCredentialSpec;
 
@@ -39,10 +41,16 @@ public class WindowsOptions implements io.fabric8.kubernetes.api.model.Kubernete
     }
 
     /**
-     * HostProcess determines if a container should be run as a 'Host Process' container. This field is alpha-level and will only be honored by components that enable the WindowsHostProcessContainers feature flag. Setting this field without the feature flag will result in errors when validating the Pod. All of a Pod's containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).  In addition, if HostProcess is true then HostNetwork must also be set to true.
+     * HostProcess determines if a container should be run as a 'Host Process' container.
+     * This field is alpha-level and will only be honored by components that enable the
+     * WindowsHostProcessContainers feature flag. Setting this field without the feature
+     * flag will result in errors when validating the Pod. All of a Pod's containers must
+     * have the same effective HostProcess value (it is not allowed to have a mix of HostProcess
+     * containers and non-HostProcess containers).  In addition, if HostProcess is true
+     * then HostNetwork must also be set to true.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("hostProcess")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("HostProcess determines if a container should be run as a 'Host Process' container. This field is alpha-level and will only be honored by components that enable the WindowsHostProcessContainers feature flag. Setting this field without the feature flag will result in errors when validating the Pod. All of a Pod's containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).  In addition, if HostProcess is true then HostNetwork must also be set to true.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("HostProcess determines if a container should be run as a 'Host Process' container.\nThis field is alpha-level and will only be honored by components that enable the\nWindowsHostProcessContainers feature flag. Setting this field without the feature\nflag will result in errors when validating the Pod. All of a Pod's containers must\nhave the same effective HostProcess value (it is not allowed to have a mix of HostProcess\ncontainers and non-HostProcess containers).  In addition, if HostProcess is true\nthen HostNetwork must also be set to true.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean hostProcess;
 
@@ -55,10 +63,13 @@ public class WindowsOptions implements io.fabric8.kubernetes.api.model.Kubernete
     }
 
     /**
-     * The UserName in Windows to run the entrypoint of the container process. Defaults to the user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.
+     * The UserName in Windows to run the entrypoint of the container process.
+     * Defaults to the user specified in image metadata if unspecified.
+     * May also be set in PodSecurityContext. If set in both SecurityContext and
+     * PodSecurityContext, the value specified in SecurityContext takes precedence.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("runAsUserName")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("The UserName in Windows to run the entrypoint of the container process. Defaults to the user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("The UserName in Windows to run the entrypoint of the container process.\nDefaults to the user specified in image metadata if unspecified.\nMay also be set in PodSecurityContext. If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String runAsUserName;
 

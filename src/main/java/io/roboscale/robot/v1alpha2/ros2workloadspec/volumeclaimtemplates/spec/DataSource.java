@@ -7,10 +7,12 @@ package io.roboscale.robot.v1alpha2.ros2workloadspec.volumeclaimtemplates.spec;
 public class DataSource implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
+     * APIGroup is the group for the resource being referenced.
+     * If APIGroup is not specified, the specified Kind must be in the core API group.
+     * For any other third-party types, APIGroup is required.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("apiGroup")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("APIGroup is the group for the resource being referenced.\nIf APIGroup is not specified, the specified Kind must be in the core API group.\nFor any other third-party types, APIGroup is required.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String apiGroup;
 

@@ -7,10 +7,11 @@ package io.roboscale.robot.v1alpha1;
 public class LaunchManagerSpec implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * Launch descriptions. Every object defined here generates a launching command in the specified workspace.
+     * Launch descriptions.
+     * Every object defined here generates a launching command in the specified workspace.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("launches")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Launch descriptions. Every object defined here generates a launching command in the specified workspace.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Launch descriptions.\nEvery object defined here generates a launching command in the specified workspace.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.Map<java.lang.String, io.roboscale.robot.v1alpha1.launchmanagerspec.Launches> launches;
 

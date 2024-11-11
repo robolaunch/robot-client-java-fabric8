@@ -7,10 +7,12 @@ package io.roboscale.robot.v1alpha2.codeeditorspec;
 public class ExternalVolumes implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * awsElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * awsElasticBlockStore represents an AWS Disk resource that is attached to a
+     * kubelet's host machine and then exposed to the pod.
+     * More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
      */
     @com.fasterxml.jackson.annotation.JsonProperty("awsElasticBlockStore")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("awsElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("awsElasticBlockStore represents an AWS Disk resource that is attached to a\nkubelet's host machine and then exposed to the pod.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.AwsElasticBlockStore awsElasticBlockStore;
 
@@ -71,10 +73,11 @@ public class ExternalVolumes implements io.fabric8.kubernetes.api.model.Kubernet
     }
 
     /**
-     * cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     * cinder represents a cinder volume attached and mounted on kubelets host machine.
+     * More info: https://examples.k8s.io/mysql-cinder-pd/README.md
      */
     @com.fasterxml.jackson.annotation.JsonProperty("cinder")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("cinder represents a cinder volume attached and mounted on kubelets host machine.\nMore info: https://examples.k8s.io/mysql-cinder-pd/README.md")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.Cinder cinder;
 
@@ -135,10 +138,11 @@ public class ExternalVolumes implements io.fabric8.kubernetes.api.model.Kubernet
     }
 
     /**
-     * emptyDir represents a temporary directory that shares a pod's lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
+     * emptyDir represents a temporary directory that shares a pod's lifetime.
+     * More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
      */
     @com.fasterxml.jackson.annotation.JsonProperty("emptyDir")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("emptyDir represents a temporary directory that shares a pod's lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("emptyDir represents a temporary directory that shares a pod's lifetime.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.EmptyDir emptyDir;
 
@@ -151,14 +155,33 @@ public class ExternalVolumes implements io.fabric8.kubernetes.api.model.Kubernet
     }
 
     /**
-     * ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
-     *  Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity tracking are needed, c) the storage driver is specified through a storage class, and d) the storage driver supports dynamic volume provisioning through a PersistentVolumeClaim (see EphemeralVolumeSource for more information on the connection between this volume type and PersistentVolumeClaim).
-     *  Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that persist for longer than the lifecycle of an individual pod.
-     *  Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information.
-     *  A pod can use both types of ephemeral volumes and persistent volumes at the same time.
+     * ephemeral represents a volume that is handled by a cluster storage driver.
+     * The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts,
+     * and deleted when the pod is removed.
+     *
+     * Use this if:
+     * a) the volume is only needed while the pod runs,
+     * b) features of normal volumes like restoring from snapshot or capacity
+     *    tracking are needed,
+     * c) the storage driver is specified through a storage class, and
+     * d) the storage driver supports dynamic volume provisioning through
+     *    a PersistentVolumeClaim (see EphemeralVolumeSource for more
+     *    information on the connection between this volume type
+     *    and PersistentVolumeClaim).
+     *
+     * Use PersistentVolumeClaim or one of the vendor-specific
+     * APIs for volumes that persist for longer than the lifecycle
+     * of an individual pod.
+     *
+     * Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to
+     * be used that way - see the documentation of the driver for
+     * more information.
+     *
+     * A pod can use both types of ephemeral volumes and
+     * persistent volumes at the same time.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("ephemeral")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed. \n Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity tracking are needed, c) the storage driver is specified through a storage class, and d) the storage driver supports dynamic volume provisioning through a PersistentVolumeClaim (see EphemeralVolumeSource for more information on the connection between this volume type and PersistentVolumeClaim). \n Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that persist for longer than the lifecycle of an individual pod. \n Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information. \n A pod can use both types of ephemeral volumes and persistent volumes at the same time.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ephemeral represents a volume that is handled by a cluster storage driver.\nThe volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts,\nand deleted when the pod is removed.\n\n\nUse this if:\na) the volume is only needed while the pod runs,\nb) features of normal volumes like restoring from snapshot or capacity\n   tracking are needed,\nc) the storage driver is specified through a storage class, and\nd) the storage driver supports dynamic volume provisioning through\n   a PersistentVolumeClaim (see EphemeralVolumeSource for more\n   information on the connection between this volume type\n   and PersistentVolumeClaim).\n\n\nUse PersistentVolumeClaim or one of the vendor-specific\nAPIs for volumes that persist for longer than the lifecycle\nof an individual pod.\n\n\nUse CSI for light-weight local ephemeral volumes if the CSI driver is meant to\nbe used that way - see the documentation of the driver for\nmore information.\n\n\nA pod can use both types of ephemeral volumes and\npersistent volumes at the same time.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.Ephemeral ephemeral;
 
@@ -187,10 +210,11 @@ public class ExternalVolumes implements io.fabric8.kubernetes.api.model.Kubernet
     }
 
     /**
-     * flexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.
+     * flexVolume represents a generic volume resource that is
+     * provisioned/attached using an exec based plugin.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("flexVolume")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("flexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("flexVolume represents a generic volume resource that is\nprovisioned/attached using an exec based plugin.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.FlexVolume flexVolume;
 
@@ -219,10 +243,12 @@ public class ExternalVolumes implements io.fabric8.kubernetes.api.model.Kubernet
     }
 
     /**
-     * gcePersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
+     * gcePersistentDisk represents a GCE Disk resource that is attached to a
+     * kubelet's host machine and then exposed to the pod.
+     * More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
      */
     @com.fasterxml.jackson.annotation.JsonProperty("gcePersistentDisk")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("gcePersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("gcePersistentDisk represents a GCE Disk resource that is attached to a\nkubelet's host machine and then exposed to the pod.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.GcePersistentDisk gcePersistentDisk;
 
@@ -235,10 +261,13 @@ public class ExternalVolumes implements io.fabric8.kubernetes.api.model.Kubernet
     }
 
     /**
-     * gitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.
+     * gitRepo represents a git repository at a particular revision.
+     * DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an
+     * EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir
+     * into the Pod's container.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("gitRepo")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("gitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("gitRepo represents a git repository at a particular revision.\nDEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an\nEmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir\ninto the Pod's container.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.GitRepo gitRepo;
 
@@ -251,10 +280,11 @@ public class ExternalVolumes implements io.fabric8.kubernetes.api.model.Kubernet
     }
 
     /**
-     * glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md
+     * glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime.
+     * More info: https://examples.k8s.io/volumes/glusterfs/README.md
      */
     @com.fasterxml.jackson.annotation.JsonProperty("glusterfs")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime.\nMore info: https://examples.k8s.io/volumes/glusterfs/README.md")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.Glusterfs glusterfs;
 
@@ -267,10 +297,17 @@ public class ExternalVolumes implements io.fabric8.kubernetes.api.model.Kubernet
     }
 
     /**
-     * hostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath --- TODO(jonesdl) We need to restrict who can use host directory mounts and who can/can not mount host directories as read/write.
+     * hostPath represents a pre-existing file or directory on the host
+     * machine that is directly exposed to the container. This is generally
+     * used for system agents or other privileged things that are allowed
+     * to see the host machine. Most containers will NOT need this.
+     * More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+     * ---
+     * TODO(jonesdl) We need to restrict who can use host directory mounts and who can/can not
+     * mount host directories as read/write.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("hostPath")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("hostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath --- TODO(jonesdl) We need to restrict who can use host directory mounts and who can/can not mount host directories as read/write.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("hostPath represents a pre-existing file or directory on the host\nmachine that is directly exposed to the container. This is generally\nused for system agents or other privileged things that are allowed\nto see the host machine. Most containers will NOT need this.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath\n---\nTODO(jonesdl) We need to restrict who can use host directory mounts and who can/can not\nmount host directories as read/write.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.HostPath hostPath;
 
@@ -283,10 +320,12 @@ public class ExternalVolumes implements io.fabric8.kubernetes.api.model.Kubernet
     }
 
     /**
-     * iscsi represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md
+     * iscsi represents an ISCSI Disk resource that is attached to a
+     * kubelet's host machine and then exposed to the pod.
+     * More info: https://examples.k8s.io/volumes/iscsi/README.md
      */
     @com.fasterxml.jackson.annotation.JsonProperty("iscsi")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("iscsi represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("iscsi represents an ISCSI Disk resource that is attached to a\nkubelet's host machine and then exposed to the pod.\nMore info: https://examples.k8s.io/volumes/iscsi/README.md")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.Iscsi iscsi;
 
@@ -299,11 +338,13 @@ public class ExternalVolumes implements io.fabric8.kubernetes.api.model.Kubernet
     }
 
     /**
-     * name of the volume. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+     * name of the volume.
+     * Must be a DNS_LABEL and unique within the pod.
+     * More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
      */
     @com.fasterxml.jackson.annotation.JsonProperty("name")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("name of the volume. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("name of the volume.\nMust be a DNS_LABEL and unique within the pod.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String name;
 
@@ -316,10 +357,11 @@ public class ExternalVolumes implements io.fabric8.kubernetes.api.model.Kubernet
     }
 
     /**
-     * nfs represents an NFS mount on the host that shares a pod's lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * nfs represents an NFS mount on the host that shares a pod's lifetime
+     * More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      */
     @com.fasterxml.jackson.annotation.JsonProperty("nfs")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("nfs represents an NFS mount on the host that shares a pod's lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("nfs represents an NFS mount on the host that shares a pod's lifetime\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#nfs")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.Nfs nfs;
 
@@ -332,10 +374,12 @@ public class ExternalVolumes implements io.fabric8.kubernetes.api.model.Kubernet
     }
 
     /**
-     * persistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+     * persistentVolumeClaimVolumeSource represents a reference to a
+     * PersistentVolumeClaim in the same namespace.
+     * More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
      */
     @com.fasterxml.jackson.annotation.JsonProperty("persistentVolumeClaim")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("persistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("persistentVolumeClaimVolumeSource represents a reference to a\nPersistentVolumeClaim in the same namespace.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.PersistentVolumeClaim persistentVolumeClaim;
 
@@ -412,10 +456,11 @@ public class ExternalVolumes implements io.fabric8.kubernetes.api.model.Kubernet
     }
 
     /**
-     * rbd represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
+     * rbd represents a Rados Block Device mount on the host that shares a pod's lifetime.
+     * More info: https://examples.k8s.io/volumes/rbd/README.md
      */
     @com.fasterxml.jackson.annotation.JsonProperty("rbd")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("rbd represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("rbd represents a Rados Block Device mount on the host that shares a pod's lifetime.\nMore info: https://examples.k8s.io/volumes/rbd/README.md")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.Rbd rbd;
 
@@ -444,10 +489,11 @@ public class ExternalVolumes implements io.fabric8.kubernetes.api.model.Kubernet
     }
 
     /**
-     * secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
+     * secret represents a secret that should populate this volume.
+     * More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
      */
     @com.fasterxml.jackson.annotation.JsonProperty("secret")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("secret represents a secret that should populate this volume.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#secret")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.Secret secret;
 

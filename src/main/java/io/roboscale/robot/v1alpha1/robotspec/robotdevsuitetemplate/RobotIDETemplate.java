@@ -7,10 +7,11 @@ package io.roboscale.robot.v1alpha1.robotspec.robotdevsuitetemplate;
 public class RobotIDETemplate implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * Cloud IDE connects an X11 socket if it's set to `true` and a target RobotVDI resource is set in labels with key `robolaunch.io/target-vdi`. Applications that requires GUI can be executed such as rViz.
+     * Cloud IDE connects an X11 socket if it's set to `true` and a target RobotVDI resource is set in labels with key `robolaunch.io/target-vdi`.
+     * Applications that requires GUI can be executed such as rViz.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("display")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Cloud IDE connects an X11 socket if it's set to `true` and a target RobotVDI resource is set in labels with key `robolaunch.io/target-vdi`. Applications that requires GUI can be executed such as rViz.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Cloud IDE connects an X11 socket if it's set to `true` and a target RobotVDI resource is set in labels with key `robolaunch.io/target-vdi`.\nApplications that requires GUI can be executed such as rViz.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean display;
 
@@ -39,10 +40,13 @@ public class RobotIDETemplate implements io.fabric8.kubernetes.api.model.Kuberne
     }
 
     /**
-     * If `true`, containers of RobotIDE will be privileged containers. It can be used in physical instances where it's necessary to access I/O devices on the host machine. Not recommended to activate this field on cloud instances.
+     * If `true`, containers of RobotIDE will be privileged containers.
+     * It can be used in physical instances where it's necessary to access
+     * I/O devices on the host machine.
+     * Not recommended to activate this field on cloud instances.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("privileged")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("If `true`, containers of RobotIDE will be privileged containers. It can be used in physical instances where it's necessary to access I/O devices on the host machine. Not recommended to activate this field on cloud instances.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("If `true`, containers of RobotIDE will be privileged containers.\nIt can be used in physical instances where it's necessary to access\nI/O devices on the host machine.\nNot recommended to activate this field on cloud instances.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean privileged;
 

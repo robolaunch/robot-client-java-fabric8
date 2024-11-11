@@ -24,11 +24,13 @@ public class Grpc implements io.fabric8.kubernetes.api.model.KubernetesResource 
     }
 
     /**
-     * Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).
-     *  If this is not specified, the default behavior is defined by gRPC.
+     * Service is the name of the service to place in the gRPC HealthCheckRequest
+     * (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).
+     *
+     * If this is not specified, the default behavior is defined by gRPC.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("service")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md). \n If this is not specified, the default behavior is defined by gRPC.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Service is the name of the service to place in the gRPC HealthCheckRequest\n(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).\n\n\nIf this is not specified, the default behavior is defined by gRPC.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String service;
 

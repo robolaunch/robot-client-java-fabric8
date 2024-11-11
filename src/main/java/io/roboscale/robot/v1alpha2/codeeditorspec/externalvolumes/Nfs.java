@@ -7,11 +7,12 @@ package io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes;
 public class Nfs implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * path that is exported by the NFS server.
+     * More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      */
     @com.fasterxml.jackson.annotation.JsonProperty("path")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("path that is exported by the NFS server.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#nfs")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String path;
 
@@ -24,10 +25,12 @@ public class Nfs implements io.fabric8.kubernetes.api.model.KubernetesResource {
     }
 
     /**
-     * readOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * readOnly here will force the NFS export to be mounted with read-only permissions.
+     * Defaults to false.
+     * More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      */
     @com.fasterxml.jackson.annotation.JsonProperty("readOnly")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly here will force the NFS export to be mounted with read-only permissions.\nDefaults to false.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#nfs")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean readOnly;
 
@@ -40,11 +43,12 @@ public class Nfs implements io.fabric8.kubernetes.api.model.KubernetesResource {
     }
 
     /**
-     * server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * server is the hostname or IP address of the NFS server.
+     * More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      */
     @com.fasterxml.jackson.annotation.JsonProperty("server")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("server is the hostname or IP address of the NFS server.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#nfs")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String server;
 

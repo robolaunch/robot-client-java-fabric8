@@ -7,10 +7,14 @@ package io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes;
 public class AwsElasticBlockStore implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore TODO: how do we prevent errors in the filesystem from compromising the machine
+     * fsType is the filesystem type of the volume that you want to mount.
+     * Tip: Ensure that the filesystem type is supported by the host operating system.
+     * Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
+     * More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * TODO: how do we prevent errors in the filesystem from compromising the machine
      */
     @com.fasterxml.jackson.annotation.JsonProperty("fsType")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore TODO: how do we prevent errors in the filesystem from compromising the machine")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType is the filesystem type of the volume that you want to mount.\nTip: Ensure that the filesystem type is supported by the host operating system.\nExamples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore\nTODO: how do we prevent errors in the filesystem from compromising the machine")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String fsType;
 
@@ -23,10 +27,13 @@ public class AwsElasticBlockStore implements io.fabric8.kubernetes.api.model.Kub
     }
 
     /**
-     * partition is the partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as "1". Similarly, the volume partition for /dev/sda is "0" (or you can leave the property empty).
+     * partition is the partition in the volume that you want to mount.
+     * If omitted, the default is to mount by volume name.
+     * Examples: For volume /dev/sda1, you specify the partition as "1".
+     * Similarly, the volume partition for /dev/sda is "0" (or you can leave the property empty).
      */
     @com.fasterxml.jackson.annotation.JsonProperty("partition")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("partition is the partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as \"1\". Similarly, the volume partition for /dev/sda is \"0\" (or you can leave the property empty).")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("partition is the partition in the volume that you want to mount.\nIf omitted, the default is to mount by volume name.\nExamples: For volume /dev/sda1, you specify the partition as \"1\".\nSimilarly, the volume partition for /dev/sda is \"0\" (or you can leave the property empty).")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Integer partition;
 
@@ -39,10 +46,11 @@ public class AwsElasticBlockStore implements io.fabric8.kubernetes.api.model.Kub
     }
 
     /**
-     * readOnly value true will force the readOnly setting in VolumeMounts. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * readOnly value true will force the readOnly setting in VolumeMounts.
+     * More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
      */
     @com.fasterxml.jackson.annotation.JsonProperty("readOnly")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly value true will force the readOnly setting in VolumeMounts. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly value true will force the readOnly setting in VolumeMounts.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean readOnly;
 
@@ -55,11 +63,12 @@ public class AwsElasticBlockStore implements io.fabric8.kubernetes.api.model.Kub
     }
 
     /**
-     * volumeID is unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * volumeID is unique ID of the persistent disk resource in AWS (Amazon EBS volume).
+     * More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
      */
     @com.fasterxml.jackson.annotation.JsonProperty("volumeID")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("volumeID is unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("volumeID is unique ID of the persistent disk resource in AWS (Amazon EBS volume).\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String volumeID;
 

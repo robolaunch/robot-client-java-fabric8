@@ -57,10 +57,12 @@ public class AzureDisk implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * fsType is Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
+     * fsType is Filesystem type to mount.
+     * Must be a filesystem type supported by the host operating system.
+     * Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("fsType")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType is Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType is Filesystem type to mount.\nMust be a filesystem type supported by the host operating system.\nEx. \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String fsType;
 
@@ -89,10 +91,11 @@ public class AzureDisk implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * readOnly Defaults to false (read/write). ReadOnly here will force
+     * the ReadOnly setting in VolumeMounts.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("readOnly")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly Defaults to false (read/write). ReadOnly here will force\nthe ReadOnly setting in VolumeMounts.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean readOnly;
 

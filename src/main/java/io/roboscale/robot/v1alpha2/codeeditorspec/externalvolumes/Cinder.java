@@ -7,10 +7,13 @@ package io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes;
 public class Cinder implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     * fsType is the filesystem type to mount.
+     * Must be a filesystem type supported by the host operating system.
+     * Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
+     * More info: https://examples.k8s.io/mysql-cinder-pd/README.md
      */
     @com.fasterxml.jackson.annotation.JsonProperty("fsType")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType is the filesystem type to mount.\nMust be a filesystem type supported by the host operating system.\nExamples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified.\nMore info: https://examples.k8s.io/mysql-cinder-pd/README.md")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String fsType;
 
@@ -23,10 +26,12 @@ public class Cinder implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     * readOnly defaults to false (read/write). ReadOnly here will force
+     * the ReadOnly setting in VolumeMounts.
+     * More info: https://examples.k8s.io/mysql-cinder-pd/README.md
      */
     @com.fasterxml.jackson.annotation.JsonProperty("readOnly")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly defaults to false (read/write). ReadOnly here will force\nthe ReadOnly setting in VolumeMounts.\nMore info: https://examples.k8s.io/mysql-cinder-pd/README.md")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean readOnly;
 
@@ -39,10 +44,11 @@ public class Cinder implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * secretRef is optional: points to a secret object containing parameters used to connect to OpenStack.
+     * secretRef is optional: points to a secret object containing parameters used to connect
+     * to OpenStack.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("secretRef")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("secretRef is optional: points to a secret object containing parameters used to connect to OpenStack.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("secretRef is optional: points to a secret object containing parameters used to connect\nto OpenStack.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.cinder.SecretRef secretRef;
 
@@ -55,11 +61,12 @@ public class Cinder implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * volumeID used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     * volumeID used to identify the volume in cinder.
+     * More info: https://examples.k8s.io/mysql-cinder-pd/README.md
      */
     @com.fasterxml.jackson.annotation.JsonProperty("volumeID")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("volumeID used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("volumeID used to identify the volume in cinder.\nMore info: https://examples.k8s.io/mysql-cinder-pd/README.md")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String volumeID;
 

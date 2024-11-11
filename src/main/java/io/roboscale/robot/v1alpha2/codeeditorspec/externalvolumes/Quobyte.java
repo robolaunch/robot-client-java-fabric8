@@ -7,10 +7,11 @@ package io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes;
 public class Quobyte implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * group to map volume access to Default is no group
+     * group to map volume access to
+     * Default is no group
      */
     @com.fasterxml.jackson.annotation.JsonProperty("group")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("group to map volume access to Default is no group")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("group to map volume access to\nDefault is no group")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String group;
 
@@ -23,10 +24,11 @@ public class Quobyte implements io.fabric8.kubernetes.api.model.KubernetesResour
     }
 
     /**
-     * readOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.
+     * readOnly here will force the Quobyte volume to be mounted with read-only permissions.
+     * Defaults to false.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("readOnly")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly here will force the Quobyte volume to be mounted with read-only permissions.\nDefaults to false.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean readOnly;
 
@@ -39,11 +41,13 @@ public class Quobyte implements io.fabric8.kubernetes.api.model.KubernetesResour
     }
 
     /**
-     * registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes
+     * registry represents a single or multiple Quobyte Registry services
+     * specified as a string as host:port pair (multiple entries are separated with commas)
+     * which acts as the central registry for volumes
      */
     @com.fasterxml.jackson.annotation.JsonProperty("registry")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("registry represents a single or multiple Quobyte Registry services\nspecified as a string as host:port pair (multiple entries are separated with commas)\nwhich acts as the central registry for volumes")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String registry;
 
@@ -56,10 +60,11 @@ public class Quobyte implements io.fabric8.kubernetes.api.model.KubernetesResour
     }
 
     /**
-     * tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin
+     * tenant owning the given Quobyte volume in the Backend
+     * Used with dynamically provisioned Quobyte volumes, value is set by the plugin
      */
     @com.fasterxml.jackson.annotation.JsonProperty("tenant")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("tenant owning the given Quobyte volume in the Backend\nUsed with dynamically provisioned Quobyte volumes, value is set by the plugin")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String tenant;
 
@@ -72,10 +77,11 @@ public class Quobyte implements io.fabric8.kubernetes.api.model.KubernetesResour
     }
 
     /**
-     * user to map volume access to Defaults to serivceaccount user
+     * user to map volume access to
+     * Defaults to serivceaccount user
      */
     @com.fasterxml.jackson.annotation.JsonProperty("user")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("user to map volume access to Defaults to serivceaccount user")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("user to map volume access to\nDefaults to serivceaccount user")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String user;
 

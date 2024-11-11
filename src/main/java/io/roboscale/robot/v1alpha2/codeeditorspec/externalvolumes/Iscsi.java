@@ -39,10 +39,14 @@ public class Iscsi implements io.fabric8.kubernetes.api.model.KubernetesResource
     }
 
     /**
-     * fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi TODO: how do we prevent errors in the filesystem from compromising the machine
+     * fsType is the filesystem type of the volume that you want to mount.
+     * Tip: Ensure that the filesystem type is supported by the host operating system.
+     * Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
+     * More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi
+     * TODO: how do we prevent errors in the filesystem from compromising the machine
      */
     @com.fasterxml.jackson.annotation.JsonProperty("fsType")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi TODO: how do we prevent errors in the filesystem from compromising the machine")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType is the filesystem type of the volume that you want to mount.\nTip: Ensure that the filesystem type is supported by the host operating system.\nExamples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi\nTODO: how do we prevent errors in the filesystem from compromising the machine")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String fsType;
 
@@ -55,10 +59,12 @@ public class Iscsi implements io.fabric8.kubernetes.api.model.KubernetesResource
     }
 
     /**
-     * initiatorName is the custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface <target portal>:<volume name> will be created for the connection.
+     * initiatorName is the custom iSCSI Initiator Name.
+     * If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface
+     * <target portal>:<volume name> will be created for the connection.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("initiatorName")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("initiatorName is the custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface <target portal>:<volume name> will be created for the connection.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("initiatorName is the custom iSCSI Initiator Name.\nIf initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface\n<target portal>:<volume name> will be created for the connection.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String initiatorName;
 
@@ -88,10 +94,11 @@ public class Iscsi implements io.fabric8.kubernetes.api.model.KubernetesResource
     }
 
     /**
-     * iscsiInterface is the interface Name that uses an iSCSI transport. Defaults to 'default' (tcp).
+     * iscsiInterface is the interface Name that uses an iSCSI transport.
+     * Defaults to 'default' (tcp).
      */
     @com.fasterxml.jackson.annotation.JsonProperty("iscsiInterface")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("iscsiInterface is the interface Name that uses an iSCSI transport. Defaults to 'default' (tcp).")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("iscsiInterface is the interface Name that uses an iSCSI transport.\nDefaults to 'default' (tcp).")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String iscsiInterface;
 
@@ -121,10 +128,11 @@ public class Iscsi implements io.fabric8.kubernetes.api.model.KubernetesResource
     }
 
     /**
-     * portals is the iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+     * portals is the iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port
+     * is other than default (typically TCP ports 860 and 3260).
      */
     @com.fasterxml.jackson.annotation.JsonProperty("portals")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("portals is the iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("portals is the iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port\nis other than default (typically TCP ports 860 and 3260).")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.List<String> portals;
 
@@ -137,10 +145,11 @@ public class Iscsi implements io.fabric8.kubernetes.api.model.KubernetesResource
     }
 
     /**
-     * readOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.
+     * readOnly here will force the ReadOnly setting in VolumeMounts.
+     * Defaults to false.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("readOnly")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly here will force the ReadOnly setting in VolumeMounts.\nDefaults to false.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean readOnly;
 
@@ -169,11 +178,12 @@ public class Iscsi implements io.fabric8.kubernetes.api.model.KubernetesResource
     }
 
     /**
-     * targetPortal is iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+     * targetPortal is iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port
+     * is other than default (typically TCP ports 860 and 3260).
      */
     @com.fasterxml.jackson.annotation.JsonProperty("targetPortal")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("targetPortal is iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("targetPortal is iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port\nis other than default (typically TCP ports 860 and 3260).")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String targetPortal;
 

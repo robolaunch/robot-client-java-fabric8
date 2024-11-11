@@ -7,11 +7,12 @@ package io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes;
 public class Cephfs implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * monitors is Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * monitors is Required: Monitors is a collection of Ceph monitors
+     * More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
      */
     @com.fasterxml.jackson.annotation.JsonProperty("monitors")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("monitors is Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("monitors is Required: Monitors is a collection of Ceph monitors\nMore info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.List<String> monitors;
 
@@ -40,10 +41,12 @@ public class Cephfs implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * readOnly is Optional: Defaults to false (read/write). ReadOnly here will force
+     * the ReadOnly setting in VolumeMounts.
+     * More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
      */
     @com.fasterxml.jackson.annotation.JsonProperty("readOnly")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly is Optional: Defaults to false (read/write). ReadOnly here will force\nthe ReadOnly setting in VolumeMounts.\nMore info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean readOnly;
 
@@ -56,10 +59,11 @@ public class Cephfs implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * secretFile is Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * secretFile is Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret
+     * More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
      */
     @com.fasterxml.jackson.annotation.JsonProperty("secretFile")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("secretFile is Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("secretFile is Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret\nMore info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String secretFile;
 
@@ -72,10 +76,11 @@ public class Cephfs implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty.
+     * More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
      */
     @com.fasterxml.jackson.annotation.JsonProperty("secretRef")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty.\nMore info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.cephfs.SecretRef secretRef;
 
@@ -88,10 +93,11 @@ public class Cephfs implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * user is optional: User is the rados user name, default is admin More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * user is optional: User is the rados user name, default is admin
+     * More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
      */
     @com.fasterxml.jackson.annotation.JsonProperty("user")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("user is optional: User is the rados user name, default is admin More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("user is optional: User is the rados user name, default is admin\nMore info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String user;
 

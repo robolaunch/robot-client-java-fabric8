@@ -7,10 +7,12 @@ package io.roboscale.robot.v1alpha2.codeeditorspec;
 public class VolumeClaimTemplates implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.
+     * May contain labels and annotations that will be copied into the PVC
+     * when creating it. No other fields are allowed and will be rejected during
+     * validation.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("metadata")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("May contain labels and annotations that will be copied into the PVC\nwhen creating it. No other fields are allowed and will be rejected during\nvalidation.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.volumeclaimtemplates.Metadata metadata;
 
@@ -23,11 +25,14 @@ public class VolumeClaimTemplates implements io.fabric8.kubernetes.api.model.Kub
     }
 
     /**
-     * The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here.
+     * The specification for the PersistentVolumeClaim. The entire content is
+     * copied unchanged into the PVC that gets created from this
+     * template. The same fields as in a PersistentVolumeClaim
+     * are also valid here.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("spec")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("The specification for the PersistentVolumeClaim. The entire content is\ncopied unchanged into the PVC that gets created from this\ntemplate. The same fields as in a PersistentVolumeClaim\nare also valid here.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.volumeclaimtemplates.Spec spec;
 

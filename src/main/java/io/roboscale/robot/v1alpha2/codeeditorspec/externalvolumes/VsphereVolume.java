@@ -7,10 +7,12 @@ package io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes;
 public class VsphereVolume implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * fsType is filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
+     * fsType is filesystem type to mount.
+     * Must be a filesystem type supported by the host operating system.
+     * Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("fsType")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType is filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType is filesystem type to mount.\nMust be a filesystem type supported by the host operating system.\nEx. \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String fsType;
 

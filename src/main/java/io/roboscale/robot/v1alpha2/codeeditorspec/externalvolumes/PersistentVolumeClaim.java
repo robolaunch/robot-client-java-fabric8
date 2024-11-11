@@ -7,11 +7,12 @@ package io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes;
 public class PersistentVolumeClaim implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * claimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+     * claimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume.
+     * More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
      */
     @com.fasterxml.jackson.annotation.JsonProperty("claimName")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("claimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("claimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String claimName;
 
@@ -24,10 +25,11 @@ public class PersistentVolumeClaim implements io.fabric8.kubernetes.api.model.Ku
     }
 
     /**
-     * readOnly Will force the ReadOnly setting in VolumeMounts. Default false.
+     * readOnly Will force the ReadOnly setting in VolumeMounts.
+     * Default false.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("readOnly")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly Will force the ReadOnly setting in VolumeMounts. Default false.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly Will force the ReadOnly setting in VolumeMounts.\nDefault false.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean readOnly;
 

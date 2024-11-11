@@ -23,10 +23,12 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * Count of hash collisions for the Deployment. The Deployment controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ReplicaSet.
+     * Count of hash collisions for the Deployment. The Deployment controller uses this
+     * field as a collision avoidance mechanism when it needs to create the name for the
+     * newest ReplicaSet.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("collisionCount")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Count of hash collisions for the Deployment. The Deployment controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ReplicaSet.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Count of hash collisions for the Deployment. The Deployment controller uses this\nfield as a collision avoidance mechanism when it needs to create the name for the\nnewest ReplicaSet.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Integer collisionCount;
 
@@ -103,10 +105,12 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * Total number of unavailable pods targeted by this deployment. This is the total number of pods that are still required for the deployment to have 100% available capacity. They may either be pods that are running but not yet available or pods that still have not been created.
+     * Total number of unavailable pods targeted by this deployment. This is the total number of
+     * pods that are still required for the deployment to have 100% available capacity. They may
+     * either be pods that are running but not yet available or pods that still have not been created.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("unavailableReplicas")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Total number of unavailable pods targeted by this deployment. This is the total number of pods that are still required for the deployment to have 100% available capacity. They may either be pods that are running but not yet available or pods that still have not been created.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Total number of unavailable pods targeted by this deployment. This is the total number of\npods that are still required for the deployment to have 100% available capacity. They may\neither be pods that are running but not yet available or pods that still have not been created.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Integer unavailableReplicas;
 

@@ -39,10 +39,11 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * Status of the ConfigMap that holds scripts. If a script is specified inside `.spec.steps[k]`, they are mounted to the step jobs via this ConfigMap.
+     * Status of the ConfigMap that holds scripts.
+     * If a script is specified inside `.spec.steps[k]`, they are mounted to the step jobs via this ConfigMap.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("scriptConfigMapStatus")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Status of the ConfigMap that holds scripts. If a script is specified inside `.spec.steps[k]`, they are mounted to the step jobs via this ConfigMap.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Status of the ConfigMap that holds scripts.\nIf a script is specified inside `.spec.steps[k]`, they are mounted to the step jobs via this ConfigMap.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.attachedbuildobject.status.ScriptConfigMapStatus scriptConfigMapStatus;
 

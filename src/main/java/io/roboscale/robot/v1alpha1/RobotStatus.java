@@ -7,10 +7,13 @@ package io.roboscale.robot.v1alpha1;
 public class RobotStatus implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * Attached build object information. A BuildManager can be attached with a label on it with key `robolaunch.io/target-robot` and value of the target robot's name. Robot sorts the BuildManagers targeted itself, and picks the last created object to process.
+     * Attached build object information.
+     * A BuildManager can be attached with a label on it with key `robolaunch.io/target-robot`
+     * and value of the target robot's name.
+     * Robot sorts the BuildManagers targeted itself, and picks the last created object to process.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("attachedBuildObject")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Attached build object information. A BuildManager can be attached with a label on it with key `robolaunch.io/target-robot` and value of the target robot's name. Robot sorts the BuildManagers targeted itself, and picks the last created object to process.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Attached build object information.\nA BuildManager can be attached with a label on it with key `robolaunch.io/target-robot`\nand value of the target robot's name.\nRobot sorts the BuildManagers targeted itself, and picks the last created object to process.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotstatus.AttachedBuildObject attachedBuildObject;
 
@@ -39,10 +42,13 @@ public class RobotStatus implements io.fabric8.kubernetes.api.model.KubernetesRe
     }
 
     /**
-     * Attached launch object information. A LaunchManager can be attached with a label on it with key `robolaunch.io/target-robot` and value of the target robot's name. Multiple LaunchManager could work together if they targeted the same Robot.
+     * Attached launch object information.
+     * A LaunchManager can be attached with a label on it with key `robolaunch.io/target-robot`
+     * and value of the target robot's name.
+     * Multiple LaunchManager could work together if they targeted the same Robot.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("attachedLaunchObjects")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Attached launch object information. A LaunchManager can be attached with a label on it with key `robolaunch.io/target-robot` and value of the target robot's name. Multiple LaunchManager could work together if they targeted the same Robot.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Attached launch object information.\nA LaunchManager can be attached with a label on it with key `robolaunch.io/target-robot`\nand value of the target robot's name.\nMultiple LaunchManager could work together if they targeted the same Robot.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.List<io.roboscale.robot.v1alpha1.robotstatus.AttachedLaunchObjects> attachedLaunchObjects;
 

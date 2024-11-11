@@ -23,10 +23,11 @@ public class ConnectionInfo implements io.fabric8.kubernetes.api.model.Kubernete
     }
 
     /**
-     * IP of the discovery server. IP is being obtained from the DNS name, which is being built according to the discovery server configuration.
+     * IP of the discovery server.
+     * IP is being obtained from the DNS name, which is being built according to the discovery server configuration.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("ip")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("IP of the discovery server. IP is being obtained from the DNS name, which is being built according to the discovery server configuration.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("IP of the discovery server.\nIP is being obtained from the DNS name, which is being built according to the discovery server configuration.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String ip;
 
@@ -39,10 +40,11 @@ public class ConnectionInfo implements io.fabric8.kubernetes.api.model.Kubernete
     }
 
     /**
-     * URI of the discovery server. Discovery server instance tries to ping this address to see if it's reachable.
+     * URI of the discovery server.
+     * Discovery server instance tries to ping this address to see if it's reachable.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("uri")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("URI of the discovery server. Discovery server instance tries to ping this address to see if it's reachable.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("URI of the discovery server.\nDiscovery server instance tries to ping this address to see if it's reachable.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String uri;
 

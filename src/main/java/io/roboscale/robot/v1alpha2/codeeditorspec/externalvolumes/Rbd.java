@@ -7,10 +7,14 @@ package io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes;
 public class Rbd implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd TODO: how do we prevent errors in the filesystem from compromising the machine
+     * fsType is the filesystem type of the volume that you want to mount.
+     * Tip: Ensure that the filesystem type is supported by the host operating system.
+     * Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
+     * More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd
+     * TODO: how do we prevent errors in the filesystem from compromising the machine
      */
     @com.fasterxml.jackson.annotation.JsonProperty("fsType")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd TODO: how do we prevent errors in the filesystem from compromising the machine")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType is the filesystem type of the volume that you want to mount.\nTip: Ensure that the filesystem type is supported by the host operating system.\nExamples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#rbd\nTODO: how do we prevent errors in the filesystem from compromising the machine")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String fsType;
 
@@ -23,11 +27,12 @@ public class Rbd implements io.fabric8.kubernetes.api.model.KubernetesResource {
     }
 
     /**
-     * image is the rados image name. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * image is the rados image name.
+     * More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      */
     @com.fasterxml.jackson.annotation.JsonProperty("image")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("image is the rados image name. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("image is the rados image name.\nMore info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String image;
 
@@ -40,10 +45,12 @@ public class Rbd implements io.fabric8.kubernetes.api.model.KubernetesResource {
     }
 
     /**
-     * keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * keyring is the path to key ring for RBDUser.
+     * Default is /etc/ceph/keyring.
+     * More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      */
     @com.fasterxml.jackson.annotation.JsonProperty("keyring")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("keyring is the path to key ring for RBDUser.\nDefault is /etc/ceph/keyring.\nMore info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String keyring;
 
@@ -56,11 +63,12 @@ public class Rbd implements io.fabric8.kubernetes.api.model.KubernetesResource {
     }
 
     /**
-     * monitors is a collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * monitors is a collection of Ceph monitors.
+     * More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      */
     @com.fasterxml.jackson.annotation.JsonProperty("monitors")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("monitors is a collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("monitors is a collection of Ceph monitors.\nMore info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.List<String> monitors;
 
@@ -73,10 +81,12 @@ public class Rbd implements io.fabric8.kubernetes.api.model.KubernetesResource {
     }
 
     /**
-     * pool is the rados pool name. Default is rbd. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * pool is the rados pool name.
+     * Default is rbd.
+     * More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      */
     @com.fasterxml.jackson.annotation.JsonProperty("pool")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("pool is the rados pool name. Default is rbd. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("pool is the rados pool name.\nDefault is rbd.\nMore info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String pool;
 
@@ -89,10 +99,12 @@ public class Rbd implements io.fabric8.kubernetes.api.model.KubernetesResource {
     }
 
     /**
-     * readOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * readOnly here will force the ReadOnly setting in VolumeMounts.
+     * Defaults to false.
+     * More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      */
     @com.fasterxml.jackson.annotation.JsonProperty("readOnly")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly here will force the ReadOnly setting in VolumeMounts.\nDefaults to false.\nMore info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean readOnly;
 
@@ -105,10 +117,13 @@ public class Rbd implements io.fabric8.kubernetes.api.model.KubernetesResource {
     }
 
     /**
-     * secretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * secretRef is name of the authentication secret for RBDUser. If provided
+     * overrides keyring.
+     * Default is nil.
+     * More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      */
     @com.fasterxml.jackson.annotation.JsonProperty("secretRef")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("secretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("secretRef is name of the authentication secret for RBDUser. If provided\noverrides keyring.\nDefault is nil.\nMore info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.rbd.SecretRef secretRef;
 
@@ -121,10 +136,12 @@ public class Rbd implements io.fabric8.kubernetes.api.model.KubernetesResource {
     }
 
     /**
-     * user is the rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * user is the rados user name.
+     * Default is admin.
+     * More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      */
     @com.fasterxml.jackson.annotation.JsonProperty("user")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("user is the rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("user is the rados user name.\nDefault is admin.\nMore info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String user;
 

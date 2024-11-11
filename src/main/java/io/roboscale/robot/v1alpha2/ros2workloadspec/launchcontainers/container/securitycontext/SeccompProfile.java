@@ -7,10 +7,13 @@ package io.roboscale.robot.v1alpha2.ros2workloadspec.launchcontainers.container.
 public class SeccompProfile implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must only be set if type is "Localhost".
+     * localhostProfile indicates a profile defined in a file on the node should be used.
+     * The profile must be preconfigured on the node to work.
+     * Must be a descending path, relative to the kubelet's configured seccomp profile location.
+     * Must only be set if type is "Localhost".
      */
     @com.fasterxml.jackson.annotation.JsonProperty("localhostProfile")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must only be set if type is \"Localhost\".")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("localhostProfile indicates a profile defined in a file on the node should be used.\nThe profile must be preconfigured on the node to work.\nMust be a descending path, relative to the kubelet's configured seccomp profile location.\nMust only be set if type is \"Localhost\".")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String localhostProfile;
 
@@ -23,12 +26,16 @@ public class SeccompProfile implements io.fabric8.kubernetes.api.model.Kubernete
     }
 
     /**
-     * type indicates which kind of seccomp profile will be applied. Valid options are:
-     *  Localhost - a profile defined in a file on the node should be used. RuntimeDefault - the container runtime default profile should be used. Unconfined - no profile should be applied.
+     * type indicates which kind of seccomp profile will be applied.
+     * Valid options are:
+     *
+     * Localhost - a profile defined in a file on the node should be used.
+     * RuntimeDefault - the container runtime default profile should be used.
+     * Unconfined - no profile should be applied.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("type")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("type indicates which kind of seccomp profile will be applied. Valid options are: \n Localhost - a profile defined in a file on the node should be used. RuntimeDefault - the container runtime default profile should be used. Unconfined - no profile should be applied.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("type indicates which kind of seccomp profile will be applied.\nValid options are:\n\n\nLocalhost - a profile defined in a file on the node should be used.\nRuntimeDefault - the container runtime default profile should be used.\nUnconfined - no profile should be applied.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String type;
 

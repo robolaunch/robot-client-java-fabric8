@@ -7,10 +7,14 @@ package io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes;
 public class GcePersistentDisk implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * fsType is filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk TODO: how do we prevent errors in the filesystem from compromising the machine
+     * fsType is filesystem type of the volume that you want to mount.
+     * Tip: Ensure that the filesystem type is supported by the host operating system.
+     * Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
+     * More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
+     * TODO: how do we prevent errors in the filesystem from compromising the machine
      */
     @com.fasterxml.jackson.annotation.JsonProperty("fsType")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType is filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk TODO: how do we prevent errors in the filesystem from compromising the machine")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType is filesystem type of the volume that you want to mount.\nTip: Ensure that the filesystem type is supported by the host operating system.\nExamples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk\nTODO: how do we prevent errors in the filesystem from compromising the machine")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String fsType;
 
@@ -23,10 +27,14 @@ public class GcePersistentDisk implements io.fabric8.kubernetes.api.model.Kubern
     }
 
     /**
-     * partition is the partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as "1". Similarly, the volume partition for /dev/sda is "0" (or you can leave the property empty). More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
+     * partition is the partition in the volume that you want to mount.
+     * If omitted, the default is to mount by volume name.
+     * Examples: For volume /dev/sda1, you specify the partition as "1".
+     * Similarly, the volume partition for /dev/sda is "0" (or you can leave the property empty).
+     * More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
      */
     @com.fasterxml.jackson.annotation.JsonProperty("partition")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("partition is the partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as \"1\". Similarly, the volume partition for /dev/sda is \"0\" (or you can leave the property empty). More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("partition is the partition in the volume that you want to mount.\nIf omitted, the default is to mount by volume name.\nExamples: For volume /dev/sda1, you specify the partition as \"1\".\nSimilarly, the volume partition for /dev/sda is \"0\" (or you can leave the property empty).\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Integer partition;
 
@@ -39,11 +47,12 @@ public class GcePersistentDisk implements io.fabric8.kubernetes.api.model.Kubern
     }
 
     /**
-     * pdName is unique name of the PD resource in GCE. Used to identify the disk in GCE. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
+     * pdName is unique name of the PD resource in GCE. Used to identify the disk in GCE.
+     * More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
      */
     @com.fasterxml.jackson.annotation.JsonProperty("pdName")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("pdName is unique name of the PD resource in GCE. Used to identify the disk in GCE. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("pdName is unique name of the PD resource in GCE. Used to identify the disk in GCE.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String pdName;
 
@@ -56,10 +65,12 @@ public class GcePersistentDisk implements io.fabric8.kubernetes.api.model.Kubern
     }
 
     /**
-     * readOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
+     * readOnly here will force the ReadOnly setting in VolumeMounts.
+     * Defaults to false.
+     * More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
      */
     @com.fasterxml.jackson.annotation.JsonProperty("readOnly")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly here will force the ReadOnly setting in VolumeMounts.\nDefaults to false.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean readOnly;
 

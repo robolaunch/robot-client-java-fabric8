@@ -7,10 +7,11 @@ package io.roboscale.robot.v1alpha1.launchmanagerstatus.launchpodstatus;
 public class LaunchStatus implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * Inditaces if the launch process are actively running on cluster. It may not be selected by launch cluster selectors.
+     * Inditaces if the launch process are actively running on cluster.
+     * It may not be selected by launch cluster selectors.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("active")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Inditaces if the launch process are actively running on cluster. It may not be selected by launch cluster selectors.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Inditaces if the launch process are actively running on cluster.\nIt may not be selected by launch cluster selectors.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean active;
 

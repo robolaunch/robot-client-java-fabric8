@@ -7,10 +7,13 @@ package io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes;
 public class ScaleIO implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Default is "xfs".
+     * fsType is the filesystem type to mount.
+     * Must be a filesystem type supported by the host operating system.
+     * Ex. "ext4", "xfs", "ntfs".
+     * Default is "xfs".
      */
     @com.fasterxml.jackson.annotation.JsonProperty("fsType")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\", \"ntfs\". Default is \"xfs\".")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType is the filesystem type to mount.\nMust be a filesystem type supported by the host operating system.\nEx. \"ext4\", \"xfs\", \"ntfs\".\nDefault is \"xfs\".")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String fsType;
 
@@ -56,10 +59,11 @@ public class ScaleIO implements io.fabric8.kubernetes.api.model.KubernetesResour
     }
 
     /**
-     * readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * readOnly Defaults to false (read/write). ReadOnly here will force
+     * the ReadOnly setting in VolumeMounts.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("readOnly")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly Defaults to false (read/write). ReadOnly here will force\nthe ReadOnly setting in VolumeMounts.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean readOnly;
 
@@ -72,11 +76,12 @@ public class ScaleIO implements io.fabric8.kubernetes.api.model.KubernetesResour
     }
 
     /**
-     * secretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.
+     * secretRef references to the secret for ScaleIO user and other
+     * sensitive information. If this is not provided, Login operation will fail.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("secretRef")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("secretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("secretRef references to the secret for ScaleIO user and other\nsensitive information. If this is not provided, Login operation will fail.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.scaleio.SecretRef secretRef;
 
@@ -105,10 +110,11 @@ public class ScaleIO implements io.fabric8.kubernetes.api.model.KubernetesResour
     }
 
     /**
-     * storageMode indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.
+     * storageMode indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned.
+     * Default is ThinProvisioned.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("storageMode")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("storageMode indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("storageMode indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned.\nDefault is ThinProvisioned.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String storageMode;
 
@@ -154,10 +160,11 @@ public class ScaleIO implements io.fabric8.kubernetes.api.model.KubernetesResour
     }
 
     /**
-     * volumeName is the name of a volume already created in the ScaleIO system that is associated with this volume source.
+     * volumeName is the name of a volume already created in the ScaleIO system
+     * that is associated with this volume source.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("volumeName")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("volumeName is the name of a volume already created in the ScaleIO system that is associated with this volume source.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("volumeName is the name of a volume already created in the ScaleIO system\nthat is associated with this volume source.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String volumeName;
 

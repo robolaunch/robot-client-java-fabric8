@@ -58,10 +58,11 @@ public class Robot implements io.fabric8.kubernetes.api.model.KubernetesResource
     }
 
     /**
-     * ROS 2 distributions to be used. You can select multiple distributions if they are supported in the same underlying OS. (eg. `foxy` and `galactic` are supported in Ubuntu Focal, so they can be used together but both cannot be used with `humble`)
+     * ROS 2 distributions to be used. You can select multiple distributions if they are supported in the same underlying OS.
+     * (eg. `foxy` and `galactic` are supported in Ubuntu Focal, so they can be used together but both cannot be used with `humble`)
      */
     @com.fasterxml.jackson.annotation.JsonProperty("distributions")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ROS 2 distributions to be used. You can select multiple distributions if they are supported in the same underlying OS. (eg. `foxy` and `galactic` are supported in Ubuntu Focal, so they can be used together but both cannot be used with `humble`)")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("ROS 2 distributions to be used. You can select multiple distributions if they are supported in the same underlying OS.\n(eg. `foxy` and `galactic` are supported in Ubuntu Focal, so they can be used together but both cannot be used with `humble`)")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.List<Distributions> distributions;
 

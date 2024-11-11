@@ -7,11 +7,12 @@ package io.roboscale.robot.v1alpha2.codeeditorspec.container;
 public class VolumeMounts implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * Path within the container at which the volume should be mounted.  Must not contain ':'.
+     * Path within the container at which the volume should be mounted.  Must
+     * not contain ':'.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("mountPath")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Path within the container at which the volume should be mounted.  Must not contain ':'.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Path within the container at which the volume should be mounted.  Must\nnot contain ':'.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String mountPath;
 
@@ -24,10 +25,13 @@ public class VolumeMounts implements io.fabric8.kubernetes.api.model.KubernetesR
     }
 
     /**
-     * mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationNone is used. This field is beta in 1.10.
+     * mountPropagation determines how mounts are propagated from the host
+     * to container and the other way around.
+     * When not set, MountPropagationNone is used.
+     * This field is beta in 1.10.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("mountPropagation")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationNone is used. This field is beta in 1.10.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("mountPropagation determines how mounts are propagated from the host\nto container and the other way around.\nWhen not set, MountPropagationNone is used.\nThis field is beta in 1.10.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String mountPropagation;
 
@@ -57,10 +61,11 @@ public class VolumeMounts implements io.fabric8.kubernetes.api.model.KubernetesR
     }
 
     /**
-     * Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false.
+     * Mounted read-only if true, read-write otherwise (false or unspecified).
+     * Defaults to false.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("readOnly")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Mounted read-only if true, read-write otherwise (false or unspecified).\nDefaults to false.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean readOnly;
 
@@ -73,10 +78,11 @@ public class VolumeMounts implements io.fabric8.kubernetes.api.model.KubernetesR
     }
 
     /**
-     * Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).
+     * Path within the volume from which the container's volume should be mounted.
+     * Defaults to "" (volume's root).
      */
     @com.fasterxml.jackson.annotation.JsonProperty("subPath")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Path within the volume from which the container's volume should be mounted. Defaults to \"\" (volume's root).")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Path within the volume from which the container's volume should be mounted.\nDefaults to \"\" (volume's root).")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String subPath;
 
@@ -89,10 +95,13 @@ public class VolumeMounts implements io.fabric8.kubernetes.api.model.KubernetesR
     }
 
     /**
-     * Expanded path within the volume from which the container's volume should be mounted. Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container's environment. Defaults to "" (volume's root). SubPathExpr and SubPath are mutually exclusive.
+     * Expanded path within the volume from which the container's volume should be mounted.
+     * Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container's environment.
+     * Defaults to "" (volume's root).
+     * SubPathExpr and SubPath are mutually exclusive.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("subPathExpr")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Expanded path within the volume from which the container's volume should be mounted. Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container's environment. Defaults to \"\" (volume's root). SubPathExpr and SubPath are mutually exclusive.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Expanded path within the volume from which the container's volume should be mounted.\nBehaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container's environment.\nDefaults to \"\" (volume's root).\nSubPathExpr and SubPath are mutually exclusive.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String subPathExpr;
 

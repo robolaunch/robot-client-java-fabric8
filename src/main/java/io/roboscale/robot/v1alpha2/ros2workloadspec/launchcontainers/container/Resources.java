@@ -7,12 +7,16 @@ package io.roboscale.robot.v1alpha2.ros2workloadspec.launchcontainers.container;
 public class Resources implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container.
-     *  This is an alpha field and requires enabling the DynamicResourceAllocation feature gate.
-     *  This field is immutable.
+     * Claims lists the names of resources, defined in spec.resourceClaims,
+     * that are used by this container.
+     *
+     * This is an alpha field and requires enabling the
+     * DynamicResourceAllocation feature gate.
+     *
+     * This field is immutable.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("claims")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Claims lists the names of resources, defined in spec.resourceClaims,\nthat are used by this container.\n\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\n\nThis field is immutable.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.List<io.roboscale.robot.v1alpha2.ros2workloadspec.launchcontainers.container.resources.Claims> claims;
 
@@ -25,10 +29,11 @@ public class Resources implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
+     * Limits describes the maximum amount of compute resources allowed.
+     * More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
      */
     @com.fasterxml.jackson.annotation.JsonProperty("limits")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Limits describes the maximum amount of compute resources allowed.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.Map<java.lang.String, io.fabric8.kubernetes.api.model.IntOrString> limits;
 
@@ -41,10 +46,13 @@ public class Resources implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
+     * Requests describes the minimum amount of compute resources required.
+     * If Requests is omitted for a container, it defaults to Limits if that is explicitly specified,
+     * otherwise to an implementation-defined value.
+     * More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
      */
     @com.fasterxml.jackson.annotation.JsonProperty("requests")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Requests describes the minimum amount of compute resources required.\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\notherwise to an implementation-defined value.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.Map<java.lang.String, io.fabric8.kubernetes.api.model.IntOrString> requests;
 

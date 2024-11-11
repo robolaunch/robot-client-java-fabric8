@@ -23,10 +23,11 @@ public class Storage implements io.fabric8.kubernetes.api.model.KubernetesResour
     }
 
     /**
-     * MetricsExporter watches storage usage in the host machine if it's set to `true`.
+     * MetricsExporter watches storage usage in the host machine
+     * if it's set to `true`.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("track")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("MetricsExporter watches storage usage in the host machine if it's set to `true`.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("MetricsExporter watches storage usage in the host machine\nif it's set to `true`.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean track;
 

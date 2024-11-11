@@ -7,10 +7,12 @@ package io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes;
 public class Storageos implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
+     * fsType is the filesystem type to mount.
+     * Must be a filesystem type supported by the host operating system.
+     * Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("fsType")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("fsType is the filesystem type to mount.\nMust be a filesystem type supported by the host operating system.\nEx. \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String fsType;
 
@@ -23,10 +25,11 @@ public class Storageos implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * readOnly defaults to false (read/write). ReadOnly here will force
+     * the ReadOnly setting in VolumeMounts.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("readOnly")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly defaults to false (read/write). ReadOnly here will force\nthe ReadOnly setting in VolumeMounts.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean readOnly;
 
@@ -39,10 +42,11 @@ public class Storageos implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * secretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.
+     * secretRef specifies the secret to use for obtaining the StorageOS API
+     * credentials.  If not specified, default values will be attempted.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("secretRef")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("secretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("secretRef specifies the secret to use for obtaining the StorageOS API\ncredentials.  If not specified, default values will be attempted.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes.storageos.SecretRef secretRef;
 
@@ -55,10 +59,11 @@ public class Storageos implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * volumeName is the human-readable name of the StorageOS volume.  Volume names are only unique within a namespace.
+     * volumeName is the human-readable name of the StorageOS volume.  Volume
+     * names are only unique within a namespace.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("volumeName")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("volumeName is the human-readable name of the StorageOS volume.  Volume names are only unique within a namespace.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("volumeName is the human-readable name of the StorageOS volume.  Volume\nnames are only unique within a namespace.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String volumeName;
 
@@ -71,10 +76,15 @@ public class Storageos implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * volumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod's namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to "default" if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
+     * volumeNamespace specifies the scope of the volume within StorageOS.  If no
+     * namespace is specified then the Pod's namespace will be used.  This allows the
+     * Kubernetes name scoping to be mirrored within StorageOS for tighter integration.
+     * Set VolumeName to any name to override the default behaviour.
+     * Set to "default" if you are not using namespaces within StorageOS.
+     * Namespaces that do not pre-exist within StorageOS will be created.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("volumeNamespace")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("volumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod's namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to \"default\" if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("volumeNamespace specifies the scope of the volume within StorageOS.  If no\nnamespace is specified then the Pod's namespace will be used.  This allows the\nKubernetes name scoping to be mirrored within StorageOS for tighter integration.\nSet VolumeName to any name to override the default behaviour.\nSet to \"default\" if you are not using namespaces within StorageOS.\nNamespaces that do not pre-exist within StorageOS will be created.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String volumeNamespace;
 

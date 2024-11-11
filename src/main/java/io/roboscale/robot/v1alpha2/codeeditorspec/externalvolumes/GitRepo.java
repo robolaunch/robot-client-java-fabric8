@@ -7,10 +7,13 @@ package io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes;
 public class GitRepo implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * directory is the target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
+     * directory is the target directory name.
+     * Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the
+     * git repository.  Otherwise, if specified, the volume will contain the git repository in
+     * the subdirectory with the given name.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("directory")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("directory is the target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("directory is the target directory name.\nMust not contain or start with '..'.  If '.' is supplied, the volume directory will be the\ngit repository.  Otherwise, if specified, the volume will contain the git repository in\nthe subdirectory with the given name.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String directory;
 

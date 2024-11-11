@@ -39,10 +39,12 @@ public class PostStart implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.
+     * Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept
+     * for the backward compatibility. There are no validation of this field and
+     * lifecycle hooks will fail in runtime when tcp handler is specified.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("tcpSocket")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\nfor the backward compatibility. There are no validation of this field and\nlifecycle hooks will fail in runtime when tcp handler is specified.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha2.ros2workloadspec.launchcontainers.container.lifecycle.poststart.TcpSocket tcpSocket;
 

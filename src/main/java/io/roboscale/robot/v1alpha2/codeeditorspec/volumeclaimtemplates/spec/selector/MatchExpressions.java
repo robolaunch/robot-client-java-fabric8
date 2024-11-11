@@ -24,11 +24,12 @@ public class MatchExpressions implements io.fabric8.kubernetes.api.model.Kuberne
     }
 
     /**
-     * operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
+     * operator represents a key's relationship to a set of values.
+     * Valid operators are In, NotIn, Exists and DoesNotExist.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("operator")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String operator;
 
@@ -41,10 +42,13 @@ public class MatchExpressions implements io.fabric8.kubernetes.api.model.Kuberne
     }
 
     /**
-     * values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
+     * values is an array of string values. If the operator is In or NotIn,
+     * the values array must be non-empty. If the operator is Exists or DoesNotExist,
+     * the values array must be empty. This array is replaced during a strategic
+     * merge patch.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("values")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.List<String> values;
 

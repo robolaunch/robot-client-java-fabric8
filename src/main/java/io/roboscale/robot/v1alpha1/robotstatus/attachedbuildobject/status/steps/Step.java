@@ -7,10 +7,12 @@ package io.roboscale.robot.v1alpha1.robotstatus.attachedbuildobject.status.steps
 public class Step implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * Bash command to run. Assume that your command will be `/bin/bash -c <COMMAND>`. Use logical operators (eg. `&&`) and pipes if the multiple dependent commands will be executed.
+     * Bash command to run.
+     * Assume that your command will be `/bin/bash -c <COMMAND>`.
+     * Use logical operators (eg. `&&`) and pipes if the multiple dependent commands will be executed.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("command")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Bash command to run. Assume that your command will be `/bin/bash -c <COMMAND>`. Use logical operators (eg. `&&`) and pipes if the multiple dependent commands will be executed.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Bash command to run.\nAssume that your command will be `/bin/bash -c <COMMAND>`.\nUse logical operators (eg. `&&`) and pipes if the multiple dependent commands will be executed.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String command;
 
@@ -39,10 +41,11 @@ public class Step implements io.fabric8.kubernetes.api.model.KubernetesResource 
     }
 
     /**
-     * Cluster selector. If the current instance name is on the list, BuildManager creates building jobs.
+     * Cluster selector.
+     * If the current instance name is on the list, BuildManager creates building jobs.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("instances")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Cluster selector. If the current instance name is on the list, BuildManager creates building jobs.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Cluster selector.\nIf the current instance name is on the list, BuildManager creates building jobs.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private java.util.List<String> instances;
 

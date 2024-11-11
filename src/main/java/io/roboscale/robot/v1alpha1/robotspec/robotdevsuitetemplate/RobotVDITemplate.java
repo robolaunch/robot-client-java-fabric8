@@ -55,10 +55,13 @@ public class RobotVDITemplate implements io.fabric8.kubernetes.api.model.Kuberne
     }
 
     /**
-     * If `true`, containers of RobotIDE will be privileged containers. It can be used in physical instances where it's necessary to access I/O devices on the host machine. Not recommended to activate this field on cloud instances.
+     * If `true`, containers of RobotIDE will be privileged containers.
+     * It can be used in physical instances where it's necessary to access
+     * I/O devices on the host machine.
+     * Not recommended to activate this field on cloud instances.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("privileged")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("If `true`, containers of RobotIDE will be privileged containers. It can be used in physical instances where it's necessary to access I/O devices on the host machine. Not recommended to activate this field on cloud instances.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("If `true`, containers of RobotIDE will be privileged containers.\nIt can be used in physical instances where it's necessary to access\nI/O devices on the host machine.\nNot recommended to activate this field on cloud instances.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean privileged;
 

@@ -55,10 +55,12 @@ public class Conditions implements io.fabric8.kubernetes.api.model.KubernetesRes
     }
 
     /**
-     * reason is a unique, this should be a short, machine understandable string that gives the reason for condition's last transition. If it reports "ResizeStarted" that means the underlying persistent volume is being resized.
+     * reason is a unique, this should be a short, machine understandable string that gives the reason
+     * for condition's last transition. If it reports "ResizeStarted" that means the underlying
+     * persistent volume is being resized.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("reason")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("reason is a unique, this should be a short, machine understandable string that gives the reason for condition's last transition. If it reports \"ResizeStarted\" that means the underlying persistent volume is being resized.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("reason is a unique, this should be a short, machine understandable string that gives the reason\nfor condition's last transition. If it reports \"ResizeStarted\" that means the underlying\npersistent volume is being resized.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String reason;
 

@@ -23,10 +23,11 @@ public class RobotSpec implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * Holds environment's configuration. Applied if `.spec.type` is `Environment` and must be `nil` otherwise.
+     * Holds environment's configuration.
+     * Applied if `.spec.type` is `Environment` and must be `nil` otherwise.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("environment")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Holds environment's configuration. Applied if `.spec.type` is `Environment` and must be `nil` otherwise.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Holds environment's configuration.\nApplied if `.spec.type` is `Environment` and must be `nil` otherwise.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotspec.Environment environment;
 
@@ -39,10 +40,11 @@ public class RobotSpec implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * Holds robot's configuration. Applied if `.spec.type` is `Robot` and must be `nil` otherwise.
+     * Holds robot's configuration.
+     * Applied if `.spec.type` is `Robot` and must be `nil` otherwise.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("robot")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Holds robot's configuration. Applied if `.spec.type` is `Robot` and must be `nil` otherwise.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Holds robot's configuration.\nApplied if `.spec.type` is `Robot` and must be `nil` otherwise.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotspec.Robot robot;
 
@@ -87,10 +89,11 @@ public class RobotSpec implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * Total storage amount to persist via Robot. Unit of measurement is MB. (eg. `10240` corresponds 10 GB) This amount is being shared between different components.
+     * Total storage amount to persist via Robot. Unit of measurement is MB. (eg. `10240` corresponds 10 GB)
+     * This amount is being shared between different components.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("storage")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Total storage amount to persist via Robot. Unit of measurement is MB. (eg. `10240` corresponds 10 GB) This amount is being shared between different components.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Total storage amount to persist via Robot. Unit of measurement is MB. (eg. `10240` corresponds 10 GB)\nThis amount is being shared between different components.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.roboscale.robot.v1alpha1.robotspec.Storage storage;
 
@@ -119,10 +122,12 @@ public class RobotSpec implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * Determines the object type. If "Environment", operator will provision an environment according to the specifications. (`.spec.environment`) If "Robot", operator will provision an environment specialized for ROS 2 according to the specifications. (`.spec.robot`)
+     * Determines the object type.
+     * If "Environment", operator will provision an environment according to the specifications. (`.spec.environment`)
+     * If "Robot", operator will provision an environment specialized for ROS 2 according to the specifications. (`.spec.robot`)
      */
     @com.fasterxml.jackson.annotation.JsonProperty("type")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Determines the object type. If \"Environment\", operator will provision an environment according to the specifications. (`.spec.environment`) If \"Robot\", operator will provision an environment specialized for ROS 2 according to the specifications. (`.spec.robot`)")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Determines the object type.\nIf \"Environment\", operator will provision an environment according to the specifications. (`.spec.environment`)\nIf \"Robot\", operator will provision an environment specialized for ROS 2 according to the specifications. (`.spec.robot`)")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String type;
 

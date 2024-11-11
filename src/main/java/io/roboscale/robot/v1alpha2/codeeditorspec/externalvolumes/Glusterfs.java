@@ -7,11 +7,12 @@ package io.roboscale.robot.v1alpha2.codeeditorspec.externalvolumes;
 public class Glusterfs implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * endpoints is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+     * endpoints is the endpoint name that details Glusterfs topology.
+     * More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
      */
     @com.fasterxml.jackson.annotation.JsonProperty("endpoints")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("endpoints is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("endpoints is the endpoint name that details Glusterfs topology.\nMore info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String endpoints;
 
@@ -24,11 +25,12 @@ public class Glusterfs implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+     * path is the Glusterfs volume path.
+     * More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
      */
     @com.fasterxml.jackson.annotation.JsonProperty("path")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("path is the Glusterfs volume path.\nMore info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String path;
 
@@ -41,10 +43,12 @@ public class Glusterfs implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * readOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+     * readOnly here will force the Glusterfs volume to be mounted with read-only permissions.
+     * Defaults to false.
+     * More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
      */
     @com.fasterxml.jackson.annotation.JsonProperty("readOnly")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("readOnly here will force the Glusterfs volume to be mounted with read-only permissions.\nDefaults to false.\nMore info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean readOnly;
 

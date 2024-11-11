@@ -7,10 +7,11 @@ package io.roboscale.robot.v1alpha1.robotspec.robotdevsuitetemplate;
 public class NotebookTemplate implements io.fabric8.kubernetes.api.model.KubernetesResource {
 
     /**
-     * Notebook connects an X11 socket if it's set to `true` and a target Notebook resource is set in labels with key `robolaunch.io/target-vdi`. Applications that requires GUI can be executed such as VLC.
+     * Notebook connects an X11 socket if it's set to `true` and a target Notebook resource is set in labels with key `robolaunch.io/target-vdi`.
+     * Applications that requires GUI can be executed such as VLC.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("display")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Notebook connects an X11 socket if it's set to `true` and a target Notebook resource is set in labels with key `robolaunch.io/target-vdi`. Applications that requires GUI can be executed such as VLC.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Notebook connects an X11 socket if it's set to `true` and a target Notebook resource is set in labels with key `robolaunch.io/target-vdi`.\nApplications that requires GUI can be executed such as VLC.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean display;
 
@@ -39,10 +40,13 @@ public class NotebookTemplate implements io.fabric8.kubernetes.api.model.Kuberne
     }
 
     /**
-     * If `true`, containers of Notebook will be privileged containers. It can be used in physical instances where it's necessary to access I/O devices on the host machine. Not recommended to activate this field on cloud instances.
+     * If `true`, containers of Notebook will be privileged containers.
+     * It can be used in physical instances where it's necessary to access
+     * I/O devices on the host machine.
+     * Not recommended to activate this field on cloud instances.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("privileged")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("If `true`, containers of Notebook will be privileged containers. It can be used in physical instances where it's necessary to access I/O devices on the host machine. Not recommended to activate this field on cloud instances.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("If `true`, containers of Notebook will be privileged containers.\nIt can be used in physical instances where it's necessary to access\nI/O devices on the host machine.\nNot recommended to activate this field on cloud instances.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Boolean privileged;
 

@@ -23,10 +23,12 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * collisionCount is the count of hash collisions for the StatefulSet. The StatefulSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision.
+     * collisionCount is the count of hash collisions for the StatefulSet. The StatefulSet controller
+     * uses this field as a collision avoidance mechanism when it needs to create the name for the
+     * newest ControllerRevision.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("collisionCount")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("collisionCount is the count of hash collisions for the StatefulSet. The StatefulSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("collisionCount is the count of hash collisions for the StatefulSet. The StatefulSet controller\nuses this field as a collision avoidance mechanism when it needs to create the name for the\nnewest ControllerRevision.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Integer collisionCount;
 
@@ -55,10 +57,11 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * currentReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by currentRevision.
+     * currentReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version
+     * indicated by currentRevision.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("currentReplicas")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("currentReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by currentRevision.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("currentReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version\nindicated by currentRevision.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Integer currentReplicas;
 
@@ -71,10 +74,11 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * currentRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence [0,currentReplicas).
+     * currentRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the
+     * sequence [0,currentReplicas).
      */
     @com.fasterxml.jackson.annotation.JsonProperty("currentRevision")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("currentRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence [0,currentReplicas).")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("currentRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the\nsequence [0,currentReplicas).")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String currentRevision;
 
@@ -87,10 +91,11 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * observedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet's generation, which is updated on mutation by the API Server.
+     * observedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the
+     * StatefulSet's generation, which is updated on mutation by the API Server.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("observedGeneration")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("observedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet's generation, which is updated on mutation by the API Server.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("observedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the\nStatefulSet's generation, which is updated on mutation by the API Server.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Long observedGeneration;
 
@@ -136,10 +141,11 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * updateRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence [replicas-updatedReplicas,replicas)
+     * updateRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence
+     * [replicas-updatedReplicas,replicas)
      */
     @com.fasterxml.jackson.annotation.JsonProperty("updateRevision")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("updateRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence [replicas-updatedReplicas,replicas)")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("updateRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence\n[replicas-updatedReplicas,replicas)")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private String updateRevision;
 
@@ -152,10 +158,11 @@ public class Status implements io.fabric8.kubernetes.api.model.KubernetesResourc
     }
 
     /**
-     * updatedReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by updateRevision.
+     * updatedReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version
+     * indicated by updateRevision.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("updatedReplicas")
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("updatedReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by updateRevision.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("updatedReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version\nindicated by updateRevision.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private Integer updatedReplicas;
 

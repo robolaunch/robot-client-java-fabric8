@@ -23,11 +23,13 @@ public class TcpSocket implements io.fabric8.kubernetes.api.model.KubernetesReso
     }
 
     /**
-     * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
+     * Number or name of the port to access on the container.
+     * Number must be in the range 1 to 65535.
+     * Name must be an IANA_SVC_NAME.
      */
     @com.fasterxml.jackson.annotation.JsonProperty("port")
     @io.fabric8.generator.annotation.Required()
-    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.")
+    @com.fasterxml.jackson.annotation.JsonPropertyDescription("Number or name of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME.")
     @com.fasterxml.jackson.annotation.JsonSetter(nulls = com.fasterxml.jackson.annotation.Nulls.SKIP)
     private io.fabric8.kubernetes.api.model.IntOrString port;
 
